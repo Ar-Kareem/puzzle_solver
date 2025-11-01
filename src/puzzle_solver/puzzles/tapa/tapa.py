@@ -4,7 +4,7 @@ from itertools import combinations
 import numpy as np
 from ortools.sat.python import cp_model
 
-from puzzle_solver.core.utils import Direction8, Pos, get_all_pos, set_char, get_char, in_bounds, Direction, get_next_pos, get_pos
+from puzzle_solver.core.utils import Direction8, Pos, get_all_pos, get_char, in_bounds, Direction, get_next_pos, get_pos, get_neighbors4
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution, force_connected_component
 from puzzle_solver.core.utils_visualizer import combined_function
 
@@ -71,6 +71,8 @@ class Board:
             self.enforce_clue(pos, clue)  # each clue must be satisfied
         # all blacks are connected
         force_connected_component(self.model, self.model_vars)
+        for pos in get_all_pos(self.V, self.H):
+            self.model.Add(sum([self.model_vars[n] for n in get_neighbors4(pos, self.V, self.H)]) > 0).OnlyEnforceIf(self.model_vars[pos])
 
     def enforce_clue(self, pos: Pos, clue: Union[int, tuple[int, int]]):
         neighbors = []
@@ -82,21 +84,16 @@ class Board:
 
     def solve_and_print(self, verbose: bool = True):
         def board_to_solution(board: Board, solver: cp_model.CpSolverSolutionCallback) -> SingleSolution:
-            assignment: dict[Pos, int] = {}
-            for pos, var in board.model_vars.items():
-                assignment[pos] = solver.Value(var)
-            return SingleSolution(assignment=assignment)
+            return SingleSolution(assignment={pos: solver.Value(var) for pos, var in board.model_vars.items()})
         def callback(single_res: SingleSolution):
             print("Solution found")
-            board_justified = np.full((self.V, self.H), ' ', dtype=object)
-            for pos in get_all_pos(self.V, self.H):
-                c = get_char(self.board, pos).strip()
+            def get_c(c: str) -> str:
                 if len(c) > 3:
                     c = '...'
-                set_char(board_justified, pos, ' ' * (2 - len(c)) + c)
+                return ' ' * (2 - len(c)) + c
             print(combined_function(self.V, self.H,
                 is_shaded=lambda r, c: single_res.assignment[get_pos(x=c, y=r)] == 1,
-                center_char=lambda r, c: str(board_justified[r, c]),
+                center_char=lambda r, c: get_c(self.board[r, c]),
                 text_on_shaded_cells=False
             ))
         return generic_solve_all(self, board_to_solution, callback=callback if verbose else None, verbose=verbose, max_solutions=5)
