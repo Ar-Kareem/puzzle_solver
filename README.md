@@ -392,17 +392,12 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-    <a href="#split-ends-puzzle-type-60"><b>N-Queens</b><br><br>
-      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/7_queens_solved.png" alt="N-Queens" width="140">
-    </a>
-  </td>
-</tr>
-<tr>
-  <td align="center">
     <a href="#split-ends-puzzle-type-60"><b>Split Ends</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/split_ends_solved.png" alt="Split Ends" width="140">
     </a>
   </td>
+</tr>
+<tr>
   <td align="center">
     <a href="#n-queens-puzzle-type-61"><b>N-Queens</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/7_queens_solved.png" alt="N-Queens" width="140">
