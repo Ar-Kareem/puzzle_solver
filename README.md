@@ -408,6 +408,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/troix_solved.png" alt="Troix" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="#dumplings-puzzle-type-63"><b>Dumplings</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/dumplings_solved.png" alt="Dumplings" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
@@ -485,6 +490,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
   - [Split Ends (Puzzle Type #60)](#split-ends-puzzle-type-60)
   - [N-Queens (Puzzle Type #61)](#n-queens-puzzle-type-61)
   - [Troix (Puzzle Type #62)](#troix-puzzle-type-62)
+  - [Dumplings (Puzzle Type #63)](#dumplings-puzzle-type-63)
   - [Why SAT / CP-SAT?](#why-sat--cp-sat)
   - [Testing](#testing)
   - [Contributing](#contributing)
@@ -6162,6 +6168,72 @@ Time taken: 0.02 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/troix_solved.png" alt="Troix solved" width="500">
+
+---
+
+## Dumplings (Puzzle Type #63)
+
+* [**Play online**](https://krazydad.com/play/dumplings/)
+
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/dumplings)
+
+<details>
+  <summary><strong>Rules</strong></summary>
+
+The finished puzzle should be filled with soup dumplings. There are an equal number of each flavor in each row and column. 
+
+This is very similar to Troix, except the grid is only 6x6 and the rule disallowing 3 consecutive symbols in a row no longer applies here (since each row and column only has 2 of each symbol)
+
+</details>
+
+**Unsolved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/dumplings_unsolved.png" alt="Dumplings unsolved" width="500">
+
+Code to utilize this package and solve the puzzle:
+
+```python
+import numpy as np
+from puzzle_solver import dumplings_solver as solver
+board = np.array([
+    ['W', ' ', 'G', ' ', ' ', 'G'],
+    ['W', 'W', ' ', ' ', 'O', ' '],
+    [' ', ' ', ' ', 'G', 'O', 'G'],
+    [' ', ' ', ' ', 'O', ' ', 'O'],
+    ['G', ' ', ' ', ' ', ' ', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' '],
+])
+binst = solver.Board(board=board)
+solutions = binst.solve_and_print()
+```
+
+**Script Output**
+
+```python
+Solution found
+
+    0   1   2   3   4   5
+  ┌───┬───┬───┬───┬───┬───┐
+ 0│ W │ O │ G │ O │ W │ G │
+  ├───┼───┼───┼───┼───┼───┤
+ 1│ W │ W │ G │ G │ O │ O │
+  ├───┼───┼───┼───┼───┼───┤
+ 2│ O │ W │ W │ G │ O │ G │
+  ├───┼───┼───┼───┼───┼───┤
+ 3│ G │ G │ W │ O │ W │ O │
+  ├───┼───┼───┼───┼───┼───┤
+ 4│ G │ O │ O │ W │ G │ W │
+  ├───┼───┼───┼───┼───┼───┤
+ 5│ O │ G │ O │ W │ G │ W │
+  └───┴───┴───┴───┴───┴───┘
+Solutions found: 1
+status: OPTIMAL
+Time taken: 0.00 seconds
+```
+
+**Solved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/dumplings_solved.png" alt="Dumplings solved" width="500">
 
 ---
 
