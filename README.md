@@ -5625,6 +5625,8 @@ Time taken: 5.65 seconds
 
 ## Connect the Dots (Puzzle Type #56)
 
+Also called Numberlink.
+
 * [**Mobile App (Android)**](https://play.google.com/store/apps/details?id=com.playvalve.connect.dots&hl=en_US)
 
 * [**Mobile App (iOS)**](https://apps.apple.com/us/app/dot-link-connect-the-dots/id6444312485)
