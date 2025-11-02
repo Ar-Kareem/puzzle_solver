@@ -3427,6 +3427,8 @@ Time taken: 24.53 seconds
 
 ## Galaxies (Puzzle Type #35)
 
+Also called Spiral Galaxy.
+
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/galaxies.html)
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/galaxies.html#galaxies)
