@@ -156,6 +156,64 @@ def force_connected_component(model: cp_model.CpModel, vars_to_force: dict[Any, 
     }
     return all_new_vars
 
+def force_connected_component_using_demand(model: cp_model.CpModel, nodes: dict[Any, cp_model.IntVar], is_neighbor: Callable[[Any, Any], bool] = None):
+    """
+    Forces a single connected component of the given variables and any abstract function that defines adjacency using demand variables.
+    Warning: This method will not have a unique feasible assignment of variable, thus this function MUST be used in conjunction with the unique projection method.
+    """
+    if is_neighbor is None:
+        is_neighbor = lambda p1, p2: manhattan_distance(p1, p2) <= 1  # noqa: E731
+
+    n = len(nodes)
+    if n <= 2:  # graph must have at least 3 nodes to possibly be disconnected
+        return {}
+
+    neighs = {}
+    for ki in nodes.keys():
+        neighs[ki] = []
+        for kj in nodes.keys():
+            if is_neighbor(ki, kj):
+                neighs[ki].append(kj)
+    if sum(len(neighs[ki]) for ki in nodes.keys()) == 0:  # no edges in the graph
+        model.Add(sum(nodes.values()) <= 1)
+        return
+
+    # Parent choice variables:
+    #   parent[i][j] = 1  if node i chooses neighbor j as parent (if either i or j is inactive, parent[i][j] must be 0)
+    #   is_root[i] = 1 if node i is the (unique) root attached to the dummy source (if i is inactive, is_root[i] must be 0)
+    parent = {}
+    is_root = {}
+    for ki in nodes.keys():
+        for kj in neighs[ki]:
+            pij = model.NewBoolVar(f"par_{ki}_from_{kj}")
+            parent[(ki, kj)] = pij
+            # gate on endpoint selections
+            model.Add(pij <= nodes[ki])
+            model.Add(pij <= nodes[kj])
+        ps = model.NewBoolVar(f"par_{ki}_from_src")
+        is_root[ki] = ps
+        model.Add(ps <= nodes[ki])  # only active node may be root
+        # Exactly one parent if selected, none if root or inactive
+        model.Add(sum(parent[(ki, kj)] for kj in neighs[ki]) + ps == nodes[ki])  # ∀i: (Σ_{j∈N(i)} p[i→j]) + r[i] == v[i]
+    model.Add(sum(is_root.values()) <= 1)  # at most one root
+
+    # Depth variables to break cycles and form a tree
+    # depth in [0, n-1]; root has depth 0; other selected nodes have >=1; unselected -> 0
+    depth = {ki: model.NewIntVar(0, n - 1, f"depth_{ki}") for ki in nodes.keys()}
+    for ki in nodes.keys():
+        vi = nodes[ki]
+        model.Add(depth[ki] == 0).OnlyEnforceIf(vi.Not())  # inactive => depth 0
+        model.Add(depth[ki] == 0).OnlyEnforceIf(is_root[ki])  # if root => depth 0
+        model.Add(depth[ki] >= 1).OnlyEnforceIf([vi, is_root[ki].Not()])  # if active and not root => depth >= 1
+        for kj in neighs[ki]:  # every parent's depth < child's depth
+            pij = parent[(ki, kj)]
+            model.Add(depth[ki] >= depth[kj] + 1).OnlyEnforceIf(pij)
+
+    return {
+        "parent": parent,
+        "is_root": is_root,
+        "depth": depth,
+    }
 
 def force_no_loops(model: cp_model.CpModel, vars_to_force: dict[Any, cp_model.IntVar], is_neighbor: Callable[[Any, Any], bool] = None):
     """
