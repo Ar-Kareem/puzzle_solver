@@ -24,6 +24,8 @@ Below we list the puzzles that are yet to be implemented in the websites listed 
 
 ## Website 1 ✅
 
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_1.png" alt="Website 1" width="500">
+
 **https://www.chiark.greenend.org.uk/~sgtatham/puzzles (All puzzles are playable)**
 
 All pen and paper puzzles have been implemented. 
@@ -31,6 +33,8 @@ All pen and paper puzzles have been implemented.
 A total of 33 puzzles were implemented, and 7 remaining puzzles we aren't targeting which are all dynamic.
 
 ## Website 2 ✅
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_2.png" alt="Website 2" width="500">
 
 **https://www.puzzle-kurodoko.com/ (All puzzles are playable)**
 
@@ -40,6 +44,8 @@ All pen and paper logic puzzles have been implemented.
 
 ## Website 3 (In Progress)
 
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_3_full.png" alt="Website 3" width="500">
+
 **https://www.nikoli.co.jp/en/puzzles/ (Does not have playable puzzles, only instructions)**
 
 Only 15 out of 45 puzzles are implemented.
@@ -48,6 +54,8 @@ There are still several puzzles in here that we plan on implementing in the futu
 
 ## Website 4 ✅
 
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_4.png" alt="Website 4" width="500">
+
 **https://www.brainbashers.com/puzzles.asp (All puzzles are playable; Website up since 1997)**
 
 All pen and paper puzzles have been implemented.
@@ -55,6 +63,8 @@ All pen and paper puzzles have been implemented.
 21 puzzles were implemented, and only 1 remaining puzzle we aren't targeting which is a dynamic puzzle (Net Slide also on website 1).
 
 ## Website 5 (In Progress)
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_5.png" alt="Website 5" width="500">
 
 **https://krazydad.com (Some puzzles are playable, some are only printable)**
 
@@ -67,6 +77,8 @@ The website has exactly 86 puzzles in total:
 Sudoku variants are so abundant so they are currently not prioritized.
 
 ## Website 6 (Not Started)
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_6.png" alt="Website 6" width="500">
 
 **https://puzzlemadness.co.uk/ (All puzzles are playable)**
 
