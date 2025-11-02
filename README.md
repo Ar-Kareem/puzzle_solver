@@ -1107,7 +1107,7 @@ Time taken: 0.15 seconds
 
 ## Keen (Puzzle Type #8)
 
-Also known as KenKen, CalcuDoku, Inkies, or Inky.
+Also known as KenKen, CalcuDoku, Mathdoku, Inkies, or Inky.
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/keen.html)
 
