@@ -5,7 +5,7 @@ import numpy as np
 from ortools.sat.python import cp_model
 
 from puzzle_solver.core.utils import Direction8, Pos, get_all_pos, get_char, in_bounds, Direction, get_next_pos, get_pos, get_neighbors4
-from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution, force_connected_component
+from puzzle_solver.core.utils_ortools import SingleSolution, force_connected_component_using_demand, generic_unique_projections
 from puzzle_solver.core.utils_visualizer import combined_function
 
 
@@ -15,8 +15,7 @@ def rotated_assignments_N_nums(Xs: tuple[int, ...], target_length: int = 8) -> s
         where each Ni >= 1 and sum(Xs) + sum(Ni) = target_length,
         including all `target_length` wrap-around rotations, de-duplicated.
     """
-    assert len(Xs) >= 1, "Xs must have at least one block length."
-    assert all(x >= 1 for x in Xs), "All Xi must be >= 1."
+    assert len(Xs) >= 1 and all(x >= 1 for x in Xs), "Xs must have at least one block length and all Xi must be >= 1."
     assert sum(Xs) + len(Xs) <= target_length, f"sum(Xs) + len(Xs) <= target_length required; got {sum(Xs)} + {len(Xs)} > {target_length}"
     num_zero_blocks = len(Xs)
     total_zeros = target_length - sum(Xs)
@@ -70,7 +69,7 @@ class Board:
             self.model.Add(self.model_vars[pos] == 0)  # clue cannot be black
             self.enforce_clue(pos, clue)  # each clue must be satisfied
         # all blacks are connected
-        force_connected_component(self.model, self.model_vars)
+        force_connected_component_using_demand(self.model, self.model_vars)
         for pos in get_all_pos(self.V, self.H):
             self.model.Add(sum([self.model_vars[n] for n in get_neighbors4(pos, self.V, self.H)]) > 0).OnlyEnforceIf(self.model_vars[pos])
 
@@ -88,12 +87,11 @@ class Board:
         def callback(single_res: SingleSolution):
             print("Solution found")
             def get_c(c: str) -> str:
-                if len(c) > 3:
-                    c = '...'
-                return ' ' * (2 - len(c)) + c
+                return (' ' * (2 - len(c)) + c) if len(c) <= 3 else '...'
             print(combined_function(self.V, self.H,
                 is_shaded=lambda r, c: single_res.assignment[get_pos(x=c, y=r)] == 1,
                 center_char=lambda r, c: get_c(self.board[r, c]),
                 text_on_shaded_cells=False
             ))
-        return generic_solve_all(self, board_to_solution, callback=callback if verbose else None, verbose=verbose, max_solutions=5)
+        project_vars = list(self.model_vars.values())
+        return generic_unique_projections(self, project_vars, board_to_solution, callback=callback if verbose else None, verbose=verbose)
