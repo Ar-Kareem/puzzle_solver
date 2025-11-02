@@ -4161,7 +4161,7 @@ Applying the solution to the puzzle visually:
 
 ## Rectangles (Puzzle Type #42)
 
-Also known as Shikaku.
+Also known as Shikaku or CellBlocks.
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/rect.html)
 
