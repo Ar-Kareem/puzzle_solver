@@ -84,6 +84,43 @@ def generic_solve_all(board: Any, board_to_solution: Callable[Any, SingleSolutio
         raise e
 
 
+def generic_unique_projections(board: Any, vars_to_forbid: list[cp_model.IntVar], board_to_solution: Callable[Any, SingleSolution], max_solutions: Optional[int] = None, callback: Optional[Callable[[SingleSolution], None]] = None, verbose: bool = True):
+    tic = time.time()
+    solutions = []
+    solver = cp_model.CpSolver()
+    stopped_early = False
+    try:
+        while True:
+            solver.solve(board.model)
+            if solver.StatusName() not in ['OPTIMAL', 'FEASIBLE']:
+                break
+            solution = board_to_solution(board, solver)
+            solutions.append(solution)
+            if callback is not None:
+                callback(solution)
+            if max_solutions is not None and len(solutions) >= max_solutions:
+                stopped_early = True
+                break
+            board.model.AddForbiddenAssignments(vars_to_forbid, [[solver.Value(v) for v in vars_to_forbid]])
+    except Exception as e:
+        print(e)
+        raise e
+    if verbose:
+        print(f"Solutions found: {len(solutions)}{' (stopped early)' if stopped_early else ''}")
+        if len(solutions) == 0:
+            status = solver.StatusName()
+        elif len(solutions) > 0 and stopped_early:
+            status = 'FEASIBLE'
+        elif len(solutions) > 0 and not stopped_early:
+            status = 'OPTIMAL'
+        else:
+            raise AssertionError("impossible state")
+        print("status:", status)
+        toc = time.time()
+        print(f"Time taken: {toc - tic:.2f} seconds")
+    return solutions
+
+
 def manhattan_distance(p1: Pos, p2: Pos) -> int:
     return abs(p1.x - p2.x) + abs(p1.y - p2.y)
 
