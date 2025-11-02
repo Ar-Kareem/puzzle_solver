@@ -1,5 +1,7 @@
 # Mathema Grids (Puzzle Type #59)
 
+Also called SetSquare grid.
+
 * [**Play online**](https://www.brainbashers.com/showmathemagrids.asp)
 
 Complete the grid using all of the numbers from 1 to 9.

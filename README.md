@@ -5890,6 +5890,8 @@ Time taken: 0.01 seconds
 
 ## Mathema Grids (Puzzle Type #59)
 
+Also called SetSquare grid.
+
 * [**Play online**](https://www.brainbashers.com/showmathemagrids.asp)
 
 * [**Solver Code**][59]
