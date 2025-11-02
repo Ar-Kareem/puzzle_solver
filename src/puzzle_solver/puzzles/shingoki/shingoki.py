@@ -4,7 +4,7 @@ import numpy as np
 from ortools.sat.python import cp_model
 
 from puzzle_solver.core.utils import Direction, Pos, get_all_pos, get_next_pos, get_char, in_bounds, set_char, get_pos, get_opposite_direction
-from puzzle_solver.core.utils_ortools import generic_solve_all, force_connected_component, and_constraint, SingleSolution
+from puzzle_solver.core.utils_ortools import generic_unique_projections, force_connected_component_using_demand, and_constraint, SingleSolution
 from puzzle_solver.core.utils_visualizer import combined_function
 
 
@@ -95,7 +95,7 @@ class Board:
             if get_next_pos(p1, d1) == p2 and d2 == get_opposite_direction(d1):
                 return True
             return False
-        force_connected_component(self.model, self.cell_direction, is_neighbor=is_neighbor)
+        force_connected_component_using_demand(self.model, self.cell_direction, is_neighbor=is_neighbor)
 
     def solve_and_print(self, verbose: bool = True):
         def board_to_solution(board: Board, solver: cp_model.CpSolverSolutionCallback) -> SingleSolution:
@@ -112,4 +112,5 @@ class Board:
                 if not single_res.assignment[pos].strip():  # if the cell does not the line through it, put a dot
                     set_char(output_board, pos, '.')
             print(combined_function(self.V, self.H, show_grid=False, special_content=lambda r, c: single_res.assignment[get_pos(x=c, y=r)], center_char=lambda r, c: output_board[r, c]))
-        return generic_solve_all(self, board_to_solution, callback=callback if verbose else None, verbose=verbose)
+        project_vars = list(self.cell_direction.values())
+        return generic_unique_projections(self, project_vars, board_to_solution, callback=callback if verbose else None, verbose=verbose)
