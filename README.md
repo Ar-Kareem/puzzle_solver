@@ -1565,6 +1565,8 @@ Time taken: 0.07 seconds
 
 ## UnDead (Puzzle Type #14)
 
+Also known as Haunted or Haunted Mirror Maze.
+
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/undead.html)
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/undead.html#undead)

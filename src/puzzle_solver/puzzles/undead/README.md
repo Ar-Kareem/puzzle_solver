@@ -1,6 +1,6 @@
 # UnDead (Puzzle Type #14)
 
-This is a dedicated solver for UnDead
+This is a dedicated solver for UnDead. Also known as Haunted or Haunted Mirror Maze.
 
 Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
 
