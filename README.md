@@ -6175,7 +6175,7 @@ Time taken: 0.02 seconds
 
 * [**Play online**](https://krazydad.com/play/dumplings/)
 
-* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/dumplings)
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/troix)
 
 <details>
   <summary><strong>Rules</strong></summary>
