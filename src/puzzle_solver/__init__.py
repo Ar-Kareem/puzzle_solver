@@ -32,6 +32,7 @@ from puzzle_solver.puzzles.n_queens import n_queens as n_queens_solver
 from puzzle_solver.puzzles.nonograms import nonograms as nonograms_solver
 from puzzle_solver.puzzles.nonograms import nonograms_colored as nonograms_colored_solver
 from puzzle_solver.puzzles.norinori import norinori as norinori_solver
+from puzzle_solver.puzzles.number_path import number_path as number_path_solver
 from puzzle_solver.puzzles.nurikabe import nurikabe as nurikabe_solver
 from puzzle_solver.puzzles.palisade import palisade as palisade_solver
 from puzzle_solver.puzzles.lits import lits as lits_solver
@@ -100,6 +101,7 @@ __all__ = [
     n_queens_solver,
     nonograms_solver,
     norinori_solver,
+    number_path_solver,
     nonograms_colored_solver,
     nurikabe_solver,
     palisade_solver,
