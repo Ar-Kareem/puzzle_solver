@@ -413,6 +413,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/dumplings_solved.png" alt="Dumplings" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="#hidoku-puzzle-type-64"><b>Hidoku</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/hidoku_solved.png" alt="Hidoku" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
@@ -491,6 +496,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
   - [N-Queens (Puzzle Type #61)](#n-queens-puzzle-type-61)
   - [Troix (Puzzle Type #62)](#troix-puzzle-type-62)
   - [Dumplings (Puzzle Type #63)](#dumplings-puzzle-type-63)
+  - [Hidoku (Puzzle Type #64)](#hidoku-puzzle-type-64)
   - [Why SAT / CP-SAT?](#why-sat--cp-sat)
   - [Testing](#testing)
   - [Contributing](#contributing)
@@ -6242,6 +6248,75 @@ Time taken: 0.00 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/dumplings_solved.png" alt="Dumplings solved" width="500">
+
+---
+
+## Hidoku (Puzzle Type #64)
+
+* [**Play online**](https://puzzlemadness.co.uk/hidoku/medium)
+
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/hidoku)
+
+<details>
+  <summary><strong>Rules</strong></summary>
+
+The puzzle starts with a partially filled grid of numbers, and your aim is to fill the grid with unique integers such that you can draw a single continuous line from the number 1 to the number maximum number.
+
+You can move one cell in any direction, including diagonally. 
+
+</details>
+
+**Unsolved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/hidoku_unsolved.png" alt="Hidoku unsolved" width="500">
+
+Code to utilize this package and solve the puzzle:
+
+```python
+import numpy as np
+from puzzle_solver import hidoku_solver as solver
+board = np.array([
+    ['  ', '  ', '24', '  ', '  ', '  ', '  '],
+    ['  ', '25', '  ', '  ', '22', '39', '40'],
+    ['  ', '27', '  ', '  ', '  ', '20', '  '],
+    ['  ', '03', '  ', '01', '  ', '  ', '  '],
+    ['  ', '05', '06', '17', '16', '  ', '  '],
+    ['  ', '08', '  ', '49', '  ', '46', '  '],
+    ['09', '  ', '  ', '  ', '  ', '  ', '  '],
+])
+binst = solver.Board(board=board)
+solutions = binst.solve_and_print()
+```
+
+**Script Output**
+
+```python
+Solution found
+
+    0   1   2   3   4   5   6
+  ┌───┬───┬───┬───┬───┬───┬───┐
+ 0│31 │32 │24 │23 │36 │37 │38 │
+  ├───┼───┼───┼───┼───┼───┼───┤
+ 1│30 │25 │33 │35 │22 │39 │40 │
+  ├───┼───┼───┼───┼───┼───┼───┤
+ 2│29 │27 │26 │34 │21 │20 │41 │
+  ├───┼───┼───┼───┼───┼───┼───┤
+ 3│28 │ 3 │ 2 │ 1 │18 │19 │42 │
+  ├───┼───┼───┼───┼───┼───┼───┤
+ 4│ 4 │ 5 │ 6 │17 │16 │15 │43 │
+  ├───┼───┼───┼───┼───┼───┼───┤
+ 5│10 │ 8 │ 7 │49 │14 │46 │44 │
+  ├───┼───┼───┼───┼───┼───┼───┤
+ 6│ 9 │11 │12 │13 │48 │47 │45 │
+  └───┴───┴───┴───┴───┴───┴───┘
+Solutions found: 1
+status: OPTIMAL
+Time taken: 0.03 seconds
+```
+
+**Solved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/hidoku_solved.png" alt="Hidoku solved" width="500">
 
 ---
 
