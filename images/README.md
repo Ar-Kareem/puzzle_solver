@@ -71,7 +71,7 @@ All pen and paper puzzles have been implemented.
 The website has exactly 86 puzzles in total:
 
 - 54 are Sudoku-like puzzles (?/54 implemented)
-- 22 Interactive and nonudoku puzzles (16/22 implemented; 5 remaining)
+- 22 Interactive and nonudoku puzzles (17/22 implemented; 5 remaining)
 - 10 Printable only non-Sudoku puzzles (4/10 implemented; 6 remaining)
 
 Sudoku variants are so abundant so they are currently not prioritized.
@@ -85,7 +85,7 @@ Sudoku variants are so abundant so they are currently not prioritized.
 The website has exactly 90 puzzles in total:
 
 - 38 are Sudoku-like puzzles (?/38 implemented)
-- 48 logic puzzles (34/48 implemented; 13 remaining)
+- 48 logic puzzles (36/48 implemented; 12 remaining)
 - 4 other puzzles that we aren't targeting (word search, solitaire, 4-in-a-row, pairs)
 
 Sudoku variants are similarly abundant in this website, thus they are currently not prioritized.
