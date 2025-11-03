@@ -17,6 +17,7 @@ from puzzle_solver.puzzles.flip import flip as flip_solver
 from puzzle_solver.puzzles.galaxies import galaxies as galaxies_solver
 from puzzle_solver.puzzles.guess import guess as guess_solver
 from puzzle_solver.puzzles.heyawake import heyawake as heyawake_solver
+from puzzle_solver.puzzles.hidoku import hidoku as hidoku_solver
 from puzzle_solver.puzzles.inertia import inertia as inertia_solver
 from puzzle_solver.puzzles.kakurasu import kakurasu as kakurasu_solver
 from puzzle_solver.puzzles.kakuro import kakuro as kakuro_solver
@@ -83,6 +84,7 @@ __all__ = [
     galaxies_solver,
     guess_solver,
     heyawake_solver,
+    hidoku_solver,
     inertia_solver,
     kakurasu_solver,
     kakuro_solver,
