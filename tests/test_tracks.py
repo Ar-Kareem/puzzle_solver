@@ -39,6 +39,44 @@ def test_easy():
     assert sorted(solution[pos]) == sorted(ground_assignment[pos]), f'solution[{pos}] != ground_assignment[{pos}], "{solution[pos]}" != "{ground_assignment[pos]}"'
 
 
+def test_easy_arbitrary_start_position():
+  # https://puzzlemadness.co.uk/traintracks/small/2025/10/1
+  board = np.array([
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['  ', '  ', '  ', '  ', '  ', 'UD', '  '],
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['  ', '  ', 'UD', '  ', '  ', '  ', 'UR'],
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['  ', 'DL', '  ', '  ', '  ', '  ', 'LR'],
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  '],
+  ])
+  side = np.array([4, 2, 3, 4, 3, 1, 4, 5, 3])
+  top = np.array([5, 4, 6, 4, 2, 5, 3])
+
+  binst = solver.Board(board=board, top=top, side=side)
+  solutions = binst.solve_and_print()
+  assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
+  solution = solutions[0].assignment
+  # print(np.array([[solution[get_pos(x=x, y=y)] for x in range(board.shape[1])] for y in range(board.shape[0])]).astype(str))
+  ground = np.array([
+    ['  ', '  ', 'DR', 'LR', 'LR', 'DL', '  '],
+    ['  ', '  ', 'UD', '  ', '  ', 'UD', '  '],
+    ['  ', '  ', 'UD', '  ', '  ', 'UR', 'DL'],
+    ['DR', 'DL', 'UD', '  ', '  ', '  ', 'UR'],
+    ['UD', 'UR', 'UL', '  ', '  ', '  ', '  '],
+    ['UD', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['UD', '  ', '  ', 'DR', 'LR', 'DL', '  '],
+    ['UR', 'DL', '  ', 'UD', '  ', 'UR', 'LR'],
+    ['  ', 'UR', 'LR', 'UL', '  ', '  ', '  '],
+  ])
+  ground_assignment = {get_pos(x=x, y=y): ground[y][x].strip() for x in range(ground.shape[1]) for y in range(ground.shape[0])}
+  assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
+  for pos in solution.keys():
+    assert sorted(solution[pos]) == sorted(ground_assignment[pos]), f'solution[{pos}] != ground_assignment[{pos}], "{solution[pos]}" != "{ground_assignment[pos]}"'
+
+
 def test_ground():
   # https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/tracks.html#15x15dh%23872777330479824
   # U L D R
@@ -92,3 +130,4 @@ def test_ground():
 if __name__ == '__main__':
   test_ground()
   test_easy()
+  test_easy_arbitrary_start_position()

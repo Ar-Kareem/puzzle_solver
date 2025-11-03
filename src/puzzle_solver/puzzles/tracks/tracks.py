@@ -15,12 +15,6 @@ class Board:
         self.V, self.H = board.shape
         self.side = side
         self.top = top
-        self.first_col_start_pos = [p for p in get_col_pos(0, self.V) if 'L' in get_char(self.board, p)]
-        assert len(self.first_col_start_pos) == 1, 'first column must have exactly one start position'
-        self.first_col_start_pos = self.first_col_start_pos[0]
-        self.last_row_end_pos = [p for p in get_row_pos(self.V - 1, self.H) if 'D' in get_char(self.board, p)]
-        assert len(self.last_row_end_pos) == 1, 'last row must have exactly one end position'
-        self.last_row_end_pos = self.last_row_end_pos[0]
 
         self.model = cp_model.CpModel()
         self.cell_active: dict[Pos, cp_model.IntVar] = {}
@@ -59,17 +53,17 @@ class Board:
             self.model.Add(s == 2).OnlyEnforceIf(self.cell_active[pos])
             self.model.Add(s == 0).OnlyEnforceIf(self.cell_active[pos].Not())
 
-        # force borders
-        for pos in get_col_pos(0, self.V):  # first column cant have L unless it is the start position
-            if pos != self.first_col_start_pos:
-                self.model.Add(self.cell_direction[(pos, Direction.LEFT)] == 0)
-        for pos in get_col_pos(self.H - 1, self.V):  # last column cant have R
-            self.model.Add(self.cell_direction[(pos, Direction.RIGHT)] == 0)
-        for pos in get_row_pos(self.V - 1, self.H):  # last row cant have D unless it is the end position
-            if pos != self.last_row_end_pos:
-                self.model.Add(self.cell_direction[(pos, Direction.DOWN)] == 0)
-        for pos in get_row_pos(0, self.H):  # first row cant have U
-            self.model.Add(self.cell_direction[(pos, Direction.UP)] == 0)
+        # force borders to only have 2 point outside the board
+        pointing_outside = []
+        for pos in get_col_pos(0, self.V):  # left border
+            pointing_outside.append(self.cell_direction[(pos, Direction.LEFT)])
+        for pos in get_col_pos(self.H - 1, self.V):  # right border
+            pointing_outside.append(self.cell_direction[(pos, Direction.RIGHT)])
+        for pos in get_row_pos(0, self.H):  # top border
+            pointing_outside.append(self.cell_direction[(pos, Direction.UP)])
+        for pos in get_row_pos(self.V - 1, self.H):  # bottom border
+            pointing_outside.append(self.cell_direction[(pos, Direction.DOWN)])
+        self.model.Add(sum(pointing_outside) == 2)
 
         # force single connected component
         def is_neighbor(pd1: tuple[Pos, Direction], pd2: tuple[Pos, Direction]) -> bool:
