@@ -85,7 +85,7 @@ Sudoku variants are so abundant so they are currently not prioritized.
 The website has exactly 90 puzzles in total:
 
 - 38 are Sudoku-like puzzles (?/38 implemented)
-- 48 logic puzzles (36/48 implemented; 12 remaining)
+- 48 logic puzzles (37/48 implemented; 11 remaining)
 - 4 other puzzles that we aren't targeting (word search, solitaire, 4-in-a-row, pairs)
 
 Sudoku variants are similarly abundant in this website, thus they are currently not prioritized.
