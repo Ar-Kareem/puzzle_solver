@@ -16,7 +16,7 @@ def extract_lines(bw):
     vertical = np.copy(bw)
 
     cols = horizontal.shape[1]
-    horizontal_size = cols // 5
+    horizontal_size = cols // 9
     # Create structure element for extracting horizontal lines through morphology operations
     horizontalStructure = cv.getStructuringElement(cv.MORPH_RECT, (horizontal_size, 1))
     horizontal = cv.erode(horizontal, horizontalStructure)
@@ -27,10 +27,10 @@ def extract_lines(bw):
     horizontal_idx = np.where(horizontal_means > horizontal_cutoff)[0]
     # print(f"horizontal_idx: {horizontal_idx}")
     # height = len(horizontal_idx)
-    # show_wait_destroy("horizontal", horizontal)  # this has the horizontal lines
+    show_wait_destroy("horizontal", horizontal)  # this has the horizontal lines
 
     rows = vertical.shape[0]
-    verticalsize = rows // 5
+    verticalsize = rows // 9
     # Create structure element for extracting vertical lines through morphology operations
     verticalStructure = cv.getStructuringElement(cv.MORPH_RECT, (1, verticalsize))
     vertical = cv.erode(vertical, verticalStructure)
@@ -42,7 +42,7 @@ def extract_lines(bw):
     # width = len(vertical_idx)
     # print(f"height: {height}, width: {width}")
     # print(f"vertical_means: {vertical_means}")
-    # show_wait_destroy("vertical", vertical)  # this has the vertical lines
+    show_wait_destroy("vertical", vertical)  # this has the vertical lines
 
     vertical = cv.bitwise_not(vertical)
     # show_wait_destroy("vertical_bit", vertical)
@@ -102,7 +102,7 @@ def main(image):
     image_path = Path(image)
     output_path = image_path.parent / (image_path.stem + '.json')
     src = cv.imread(image, cv.IMREAD_COLOR)
-    assert src is not None, f'Error opening image: {image}'
+    assert src is not None, f'Error opening image: {image}. Parent exists: {image_path.parent.exists()}'
     if len(src.shape) != 2:
         gray = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
     else:
@@ -262,5 +262,6 @@ if __name__ == '__main__':
     # main(Path(__file__).parent / 'input_output' / 'sudoku_jigsaw.png')
     # main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-01 025846.png')
     # main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-01 035658.png')
-    main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-01 044110.png')
+    # main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-01 044110.png')
+    main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-03 020828.png')
 

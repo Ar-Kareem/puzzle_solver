@@ -50,6 +50,7 @@ from puzzle_solver.puzzles.star_battle import star_battle as star_battle_solver
 from puzzle_solver.puzzles.star_battle import star_battle_shapeless as star_battle_shapeless_solver
 from puzzle_solver.puzzles.stitches import stitches as stitches_solver
 from puzzle_solver.puzzles.sudoku import sudoku as sudoku_solver
+from puzzle_solver.puzzles.suguru import suguru as suguru_solver
 from puzzle_solver.puzzles.suko import suko as suko_solver
 from puzzle_solver.puzzles.tapa import tapa as tapa_solver
 from puzzle_solver.puzzles.tents import tents as tents_solver
@@ -118,6 +119,7 @@ __all__ = [
     star_battle_shapeless_solver,
     stitches_solver,
     sudoku_solver,
+    suguru_solver,
     suko_solver,
     tapa_solver,
     tents_solver,
