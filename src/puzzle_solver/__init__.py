@@ -40,6 +40,7 @@ from puzzle_solver.puzzles.pearl import pearl as pearl_solver
 from puzzle_solver.puzzles.pipes import pipes as pipes_solver
 from puzzle_solver.puzzles.range import range as range_solver
 from puzzle_solver.puzzles.rectangles import rectangles as rectangles_solver
+from puzzle_solver.puzzles.schurs_numbers import schurs_numbers as schurs_numbers_solver
 from puzzle_solver.puzzles.shakashaka import shakashaka as shakashaka_solver
 from puzzle_solver.puzzles.shingoki import shingoki as shingoki_solver
 from puzzle_solver.puzzles.signpost import signpost as signpost_solver
@@ -110,6 +111,7 @@ __all__ = [
     pipes_solver,
     range_solver,
     rectangles_solver,
+    schurs_numbers_solver,
     shakashaka_solver,
     shingoki_solver,
     signpost_solver,
