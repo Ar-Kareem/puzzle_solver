@@ -16,7 +16,7 @@ Below are the websites from the screenshots:
 
 Most of the puzzles we target in this repo are pen and paper puzzles (i.e. not dynamic puzzles). The simplest and biggest difference is that if the puzzle can be played on a printed sheet of paper then it is not a dynamic puzzle. 
 
-The only exception to the above rule is "Pipes" which might not easilly work on a printed sheet of paper as the icons need to be rotated but I still consider it to be significantly on the pen and paper side of the spectrum.
+The only two exceptions to the above rule are "Pipes" and "Flip", "Pipes" might not easilly work on a printed sheet of paper as the icons need to be rotated but I still consider it to be significantly on the pen and paper side of the spectrum, and "Keen" which is a mathematical puzzle that is more on the pen and paper side of the spectrum. While "Flip" is a dynamic puzzle as flipping a square changes the state of the board but it can be modeled as a static pen and paper puzzle with slight modifications of how the puzzle is represented that does not change the final solution.
 
 We rarely provide solvers for dynamic puzzles except for (at the time of writing) five puzzles which are Minesweeper, Guess, Inertia, Flood it, and Twiddle.
 
@@ -76,10 +76,16 @@ The website has exactly 86 puzzles in total:
 
 Sudoku variants are so abundant so they are currently not prioritized.
 
-## Website 6 (Not Started)
+## Website 6 (In Progress)
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_6.png" alt="Website 6" width="500">
 
 **https://puzzlemadness.co.uk/ (All puzzles are playable)**
 
-We have yet to thoroughly go through the puzzles on this website.
+The website has exactly 90 puzzles in total:
+
+- 38 are Sudoku-like puzzles (?/38 implemented)
+- 48 logic puzzles (32/48 implemented; 16 remaining)
+- 4 other puzzles that we aren't targeting (word search, solitaire, 4-in-a-row, pairs; 0/4 implemented)
+
+Sudoku variants are similarly abundant in this website, thus they are currently not prioritized.
