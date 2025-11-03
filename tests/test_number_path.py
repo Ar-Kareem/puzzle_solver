@@ -42,6 +42,20 @@ def test_ground():
     solutions = binst.solve_and_print()
     assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
     solution = solutions[0].assignment
+    # print(np.array([[solution.get(get_pos(x=x, y=y), '') for x in range(board.shape[1])] for y in range(board.shape[0])]).astype(str))
+    ground = np.array([['DOWN', 'LEFT', 'RIGHT', 'RIGHT', 'RIGHT', 'DOWN_RIGHT', 'RIGHT', 'DOWN'],
+        ['DOWN_RIGHT', 'UP_RIGHT', 'UP_LEFT', 'LEFT', 'LEFT', 'DOWN_LEFT', 'UP', 'DOWN_LEFT'],
+        ['DOWN', 'LEFT', 'UP_LEFT', 'DOWN', 'UP', 'UP', 'RIGHT', 'DOWN_LEFT'],
+        ['DOWN', 'DOWN_RIGHT', 'UP_RIGHT', 'UP_LEFT', 'DOWN_LEFT', 'UP', 'DOWN', 'DOWN'],
+        ['UP_RIGHT', 'DOWN_LEFT', 'UP', 'DOWN_LEFT', 'UP_RIGHT', 'UP_LEFT', 'UP_RIGHT', 'DOWN'],
+        ['RIGHT', 'DOWN_RIGHT', 'UP_LEFT', 'RIGHT', 'UP', 'UP', 'DOWN_RIGHT', 'LEFT'],
+        ['DOWN_RIGHT', 'DOWN_LEFT', 'LEFT', 'UP', 'UP_RIGHT', 'DOWN_LEFT', 'DOWN_RIGHT', ''],
+        ['UP', 'RIGHT', 'RIGHT', 'UP', 'RIGHT', 'UP_LEFT', 'UP_LEFT', 'LEFT']
+    ])
+    ground_assignment = {get_pos(x=x, y=y): ground[y][x] for x in range(ground.shape[1]) for y in range(ground.shape[0]) if ground[y][x].strip()}
+    assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
+    for pos in solution.keys():
+        assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
 
 if __name__ == '__main__':

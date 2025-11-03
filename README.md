@@ -430,6 +430,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/suguru_solved.png" alt="Suguru" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="#number-path-puzzle-type-67"><b>Number Path</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/number_path_solved.png" alt="Number Path" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
@@ -511,6 +516,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
   - [Hidoku (Puzzle Type #64)](#hidoku-puzzle-type-64)
   - [Suko (Puzzle Type #65)](#suko-puzzle-type-65)
   - [Suguru (Puzzle Type #66)](#suguru-puzzle-type-66)
+  - [Number Path (Puzzle Type #67)](#number-path-puzzle-type-67)
   - [Why SAT / CP-SAT?](#why-sat--cp-sat)
   - [Testing](#testing)
   - [Contributing](#contributing)
@@ -6403,9 +6409,11 @@ Time taken: 0.01 seconds
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/suko_solved.png" alt="Suko solved" width="500">
 
+---
+
 ## Suguru (Puzzle Type #66)
 
-* [**Play online 2**](https://krazydad.com/play/suguru/?kind=15x10n6)
+* [**Play online 1**](https://krazydad.com/play/suguru/?kind=15x10n6)
 
 * [**Play online 2**](https://puzzlemadness.co.uk/suguru/large)
 
@@ -6494,6 +6502,82 @@ Time taken: 0.03 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/suguru_solved.png" alt="Suguru solved" width="500">
+
+---
+
+## Number Path (Puzzle Type #67)
+
+* [**Play online**](https://puzzlemadness.co.uk/numberpath/large)
+
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/number_path)
+
+<details>
+  <summary><strong>Rules</strong></summary>
+
+The aim is to draw a single unbroken line from the start cell (green) to the end cell (red).
+
+The numbers along the path must follow the pattern 1, 2, 3, 4, 1, 2, 3, 4, 1 etc.
+
+The path can move in any direction horizontally, vertically or diagonally. 
+
+</details>
+
+**Unsolved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/number_path_unsolved.png" alt="Number Path unsolved" width="500">
+
+Code to utilize this package and solve the puzzle:
+
+```python
+import numpy as np
+from puzzle_solver import number_path_solver as solver
+board = np.array([
+    ['3', '2', '4', '1', '2', '3', '1', '2'],
+    ['4', '3', '1', '4', '3', '1', '4', '3'],
+    ['2', '1', '2', '4', '2', '4', '4', '1'],
+    ['3', '1', '3', '1', '2', '3', '2', '4'],
+    ['4', '1', '2', '3', '2', '1', '3', '1'],
+    ['2', '3', '4', '4', '1', '4', '3', '2'],
+    ['3', '1', '4', '3', '3', '4', '1', '4'],
+    ['2', '4', '1', '2', '1', '2', '3', '2'],
+])
+start = Pos(x=6, y=6)
+end = Pos(x=7, y=6)
+binst = solver.Board(board=board, start=start, end=end)
+solutions = binst.solve_and_print()
+```
+
+**Script Output**
+
+```python
+Solution found
+
+    0   1   2   3   4   5   6   7
+  ┌───┬───┬───┬───┬───┬───┬───┬───┐
+ 0│ ↓ │ ← │ → │ → │ → │ ↘ │ → │ ↓ │
+  ├───┼───┼───┼───┼───┼───┼───┼───┤
+ 1│ ↘ │ ↗ │ ↖ │ ← │ ← │ ↙ │ ↑ │ ↙ │
+  ├───┼───┼───┼───┼───┼───┼───┼───┤
+ 2│ ↓ │ ← │ ↖ │ ↓ │ ↑ │ ↑ │ → │ ↙ │
+  ├───┼───┼───┼───┼───┼───┼───┼───┤
+ 3│ ↓ │ ↘ │ ↗ │ ↖ │ ↙ │ ↑ │ ↓ │ ↓ │
+  ├───┼───┼───┼───┼───┼───┼───┼───┤
+ 4│ ↗ │ ↙ │ ↑ │ ↙ │ ↗ │ ↖ │ ↗ │ ↓ │
+  ├───┼───┼───┼───┼───┼───┼───┼───┤
+ 5│ → │ ↘ │ ↖ │ → │ ↑ │ ↑ │ ↘ │ ← │
+  ├───┼───┼───┼───┼───┼───┼───┼───┤
+ 6│ ↘ │ ↙ │ ← │ ↑ │ ↗ │ ↙ │ ↘ │   │
+  ├───┼───┼───┼───┼───┼───┼───┼───┤
+ 7│ ↑ │ → │ → │ ↑ │ → │ ↖ │ ↖ │ ← │
+  └───┴───┴───┴───┴───┴───┴───┴───┘
+Solutions found: 1
+status: OPTIMAL
+Time taken: 0.02 seconds
+```
+
+**Solved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/number_path_solved.png" alt="Number Path solved" width="500">
 
 ---
 
