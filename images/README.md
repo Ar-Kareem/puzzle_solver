@@ -48,7 +48,7 @@ All pen and paper logic puzzles have been implemented.
 
 **https://www.nikoli.co.jp/en/puzzles/ (Does not have playable puzzles, only instructions)**
 
-Only 15 out of 45 puzzles are implemented.
+Only 16 out of 45 puzzles are implemented.
 
 There are still several puzzles in here that we plan on implementing in the future. As this website does not host playable version of the puzzles, we will slightly deprioritize them unless the puzzles are hosted somewhere else online in another website.
 
@@ -85,7 +85,7 @@ Sudoku variants are so abundant so they are currently not prioritized.
 The website has exactly 90 puzzles in total:
 
 - 38 are Sudoku-like puzzles (?/38 implemented)
-- 48 logic puzzles (37/48 implemented; 11 remaining)
+- 48 logic puzzles (38/48 implemented; 10 remaining)
 - 4 other puzzles that we aren't targeting (word search, solitaire, 4-in-a-row, pairs)
 
 Sudoku variants are similarly abundant in this website, thus they are currently not prioritized.
