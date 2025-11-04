@@ -14,6 +14,7 @@ def combined_function(V: int,
                       scale_y: int = 1,
                       show_axes: bool = True,
                       show_grid: bool = True,
+                      show_border_only: bool = False,
                     ) -> str:
     """
     Render a V x H grid that can:
@@ -27,6 +28,7 @@ def combined_function(V: int,
       • vertical stretch (>=1). Interior height per cell = scale_y (default 1)
       • show_axes: bool = True, show the axes (columns on top, rows on the left).
       • show_grid: bool = True, show the grid lines.
+      • show_border_only: bool = False, show only the border instead of the full grid.
 
     Behavior:
       - If cell_flags is None, draws a full grid (all interior and outer borders present).
@@ -66,10 +68,17 @@ def combined_function(V: int,
     # H_edges[r, c] is the horizontal edge between rows r and r+1 above column segment c (shape: (V+1, H))
     # V_edges[r, c] is the vertical edge between cols c and c+1 left of row segment r (shape: (V, H+1))
     if cell_flags is None:
-        # Full grid: all horizontal and vertical segments are present
-        H_edges = [[show_grid for _ in range(H)] for _ in range(V + 1)]
-        V_edges = [[show_grid for _ in range(H + 1)] for _ in range(V)]
+        if show_border_only:
+            assert show_grid, 'if show_border_only is True, show_grid must be True'
+            H_edges = [[(r == 0 or r == V) for c in range(H)] for r in range(V + 1)]
+            V_edges = [[(c == 0 or c == H) for c in range(H + 1)] for r in range(V)]
+        else:
+            # Full grid: all horizontal and vertical segments are present
+            H_edges = [[show_grid for _ in range(H)] for _ in range(V + 1)]
+            V_edges = [[show_grid for _ in range(H + 1)] for _ in range(V)]
     else:
+        assert not show_border_only, 'show_border_only is not supported when cell_flags is provided'
+        assert show_grid, 'if cell_flags is provided, show_grid must be True'
         H_edges = [[False for _ in range(H)] for _ in range(V + 1)]
         V_edges = [[False for _ in range(H + 1)] for _ in range(V)]
         for r in range(V):
