@@ -64,6 +64,7 @@ from puzzle_solver.puzzles.twiddle import twiddle as twiddle_solver
 from puzzle_solver.puzzles.undead import undead as undead_solver
 from puzzle_solver.puzzles.unequal import unequal as unequal_solver
 from puzzle_solver.puzzles.unruly import unruly as unruly_solver
+from puzzle_solver.puzzles.yajilin import yajilin as yajilin_solver
 from puzzle_solver.puzzles.yin_yang import yin_yang as yin_yang_solver
 
 from puzzle_solver.puzzles.inertia.parse_map.parse_map import main as inertia_image_parser
@@ -135,6 +136,7 @@ __all__ = [
     undead_solver,
     unequal_solver,
     unruly_solver,
+    yajilin_solver,
     yin_yang_solver,
     inertia_image_parser,
 ]
