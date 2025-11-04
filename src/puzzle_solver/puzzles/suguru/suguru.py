@@ -2,11 +2,10 @@ from collections import defaultdict
 
 import numpy as np
 from ortools.sat.python import cp_model
-from ortools.sat.python.cp_model import LinearExpr as lxp
 
 from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_neighbors8, get_pos
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution
-from puzzle_solver.core.utils_visualizer import combined_function
+from puzzle_solver.core.utils_visualizer import combined_function, id_board_to_wall_fn
 
 
 class Board:
@@ -52,5 +51,5 @@ class Board:
             return SingleSolution(assignment={pos: solver.Value(var) for pos, var in board.model_vars.items()})
         def callback(single_res: SingleSolution):
             print("Solution found")
-            print(combined_function(self.V, self.H, center_char=lambda r, c: str(single_res.assignment[get_pos(x=c, y=r)])))
+            print(combined_function(self.V, self.H, center_char=lambda r, c: str(single_res.assignment[get_pos(x=c, y=r)]), cell_flags=id_board_to_wall_fn(self.id_board)))
         return generic_solve_all(self, board_to_solution, callback=callback if verbose else None, verbose=verbose)
