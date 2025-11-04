@@ -6023,6 +6023,8 @@ Each row and column contains four unique Y shapes (four different orientations) 
 
 Code to utilize this package and solve the puzzle:
 
+Note: the 4 letters ("U", "L", "D", "R") represent the 4 shapes, each letter corresponds to the direction of the cardinal line, so the "Y" shape for example is "D" because the cardinal line is down.
+
 ```python
 import numpy as np
 from puzzle_solver import split_ends_solver as solver
