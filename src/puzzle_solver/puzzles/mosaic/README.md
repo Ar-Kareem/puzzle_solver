@@ -1,6 +1,7 @@
 # Mosaic (Puzzle Type #17)
 
-This is a dedicated solver for Mosaic
+This is a dedicated solver for Mosaic. Also known as ArtMosaico, Count and Darken, Cuenta Y Sombrea, Fill-a-Pix, Fill-In, Komsu Karala, Magipic, Majipiku, Mosaico, Mosaik, Mozaiek, Nampre Puzzle, Nurie-Puzzle, Oekaki-Pix, and Voisimage.
+
 
 Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
 
