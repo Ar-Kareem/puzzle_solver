@@ -246,3 +246,49 @@ def polyominoes_with_shape_id(N):
     result = {(frozenset(Pos(x, y) for x, y in s), _id) for s, _id in result}
     return result
 
+
+def shapes_between(A_pos: Pos, B_pos: Pos, N: int) -> set[Shape]:
+    """Return all shapes of size N where it is possible to draw a path from A to B covering all cells in the shape."""
+    def manhattan(p: tuple[int, int], q: tuple[int, int]) -> int:
+        return abs(p[0] - q[0]) + abs(p[1] - q[1])
+    def is_possible(p: tuple[int, int], q: tuple[int, int], steps_needed: int) -> bool:
+        """Returns whether it's possible to reach q from p in exactly steps_needed steps. Looks at manhattan distance and parity."""
+        dist = manhattan(p, q)
+        return dist <= steps_needed and (steps_needed - dist) % 2 == 0  # the %2 checks parity (i.e. when its false every possible path will overshoot or undershoot B by 1)
+
+    A, B = (A_pos.x, A_pos.y), (B_pos.x, B_pos.y)
+    ax, ay = A
+    bx, by = B
+    min_steps_needed = N - 1
+    # how far we're allowed to wander away from the A-B box
+    slack = (min_steps_needed - manhattan(A, B)) // 2
+    x_min = min(ax, bx) - slack
+    x_max = max(ax, bx) + slack
+    y_min = min(ay, by) - slack
+    y_max = max(ay, by) + slack
+    results: set[Shape] = set()
+    path: list[tuple[int, int]] = [A]
+    visited = {A}
+
+    def dfs(curr: tuple[int, int], cells_used: int):
+        moves_left = N - cells_used
+        if not is_possible(curr, B, moves_left):
+            return
+        if curr == B:
+            if cells_used == N:  # we've reached B and have exactly N cells, this is a wanted shape!
+                results.add(frozenset(get_pos(x=x, y=y) for x, y in path))
+            return
+        x, y = curr
+        for nx, ny in ((x+1, y), (x-1, y), (x, y+1), (x, y-1)):
+            if not (x_min <= nx <= x_max and y_min <= ny <= y_max):
+                continue
+            nxt = (nx, ny)
+            if nxt in visited:
+                continue
+            visited.add(nxt)
+            path.append(nxt)
+            dfs(nxt, cells_used + 1)
+            path.pop()
+            visited.remove(nxt)
+    dfs(A, 1)
+    return results
