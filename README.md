@@ -396,6 +396,13 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
 </tr>
+<tr>
+  <td align="center">
+    <a href="#trees-logic-puzzle-type-71"><b>Trees Logic</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/trees_logic_solved.png" alt="Trees Logic" width="140">
+    </a>
+  </td>
+</tr>
 </table>
 
 </div>
@@ -544,6 +551,7 @@ Time taken: 0.04 seconds
   - [Yajilin (Puzzle Type #68)](#yajilin-puzzle-type-68)
   - [NumberMaze (Puzzle Type #69)](#numbermaze-puzzle-type-69)
   - [Link-a-Pix (Puzzle Type #70)](#link-a-pix-puzzle-type-70)
+  - [Trees Logic (Puzzle Type #71)](#trees-logic-puzzle-type-71)
   - [Why SAT / CP-SAT?](#why-sat--cp-sat)
   - [Testing](#testing)
   - [Contributing](#contributing)
@@ -6871,6 +6879,78 @@ Time taken: 0.01 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/link_a_pix_solved.png" alt="Link-a-Pix solved" width="500">
+
+---
+
+## Trees Logic (Puzzle Type #71)
+
+* [**Play online**](https://www.sporcle.com/games/Katie_Wandering/trees-logic-puzzle)
+
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/trees_logic)
+
+<details>
+  <summary><strong>Rules</strong></summary>
+
+   - Each row, column, and colored shape each contains exactly one tree. Trees cannot touch, even diagonally.
+   - Mark each tree with a "T", and everywhere where there cannot be a tree with a "-" (hyphen). You must completely fill in the grid to complete the puzzle.
+   - This puzzle can be solved without guessing, and only has one possible solution.
+
+</details>
+
+**Unsolved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/trees_logic_unsolved.png" alt="Trees Logic unsolved" width="500">
+
+Code to utilize this package and solve the puzzle:
+
+```python
+import numpy as np
+from puzzle_solver import trees_logic_solver as solver
+board = np.array([
+    ['01', '01', '02', '02', '02', '03', '03', '03'],
+    ['04', '01', '01', '02', '08', '03', '08', '08'],
+    ['04', '01', '01', '02', '08', '08', '08', '08'],
+    ['04', '01', '01', '02', '02', '05', '05', '05'],
+    ['04', '01', '01', '01', '02', '02', '05', '05'],
+    ['04', '04', '01', '01', '02', '06', '06', '06'],
+    ['04', '04', '04', '04', '07', '07', '07', '06'],
+    ['04', '04', '07', '07', '07', '06', '06', '06'],
+])
+binst = solver.Board(board=board)
+solutions = binst.solve_and_print()
+```
+
+**Script Output**
+
+```python
+Solution found
+
+    0   1   2   3   4   5   6   7
+  ┌───────┬───────────┬───────────┐
+ 0│       │           │    ▒▒▒    │
+  ├───┐   └───┐   ┌───┤   ┌───────┤
+ 1│   │       │   │▒▒▒│   │       │
+  │   │       │   │   └───┘       │
+ 2│   │▒▒▒    │   │               │
+  │   │       │   └───┬───────────┤
+ 3│   │       │▒▒▒    │           │
+  │   │       └───┐   └───┐       │
+ 4│   │           │       │    ▒▒▒│
+  │   └───┐       │   ┌───┴───────┤
+ 5│       │       │   │▒▒▒        │
+  │       └───────┼───┴───────┐   │
+ 6│▒▒▒            │           │   │
+  │       ┌───────┘   ┌───────┘   │
+ 7│       │▒▒▒        │           │
+  └───────┴───────────┴───────────┘
+Solutions found: 1
+status: OPTIMAL
+Time taken: 0.01 seconds
+```
+
+**Solved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/trees_logic_solved.png" alt="Trees Logic solved" width="500">
 
 ---
 
