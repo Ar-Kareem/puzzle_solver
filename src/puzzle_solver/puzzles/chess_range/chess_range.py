@@ -200,6 +200,9 @@ class Board:
 
         self.create_vars()
         self.add_all_constraints()
+        # total_vars = len(self.piece_positions) + len(self.is_dead) + len(self.mover) + len(self.victim) + len(self.position_occupied)
+        # print(f'Total number of variables: {total_vars}')
+        # print(f'Total number of constraints: {len(self.model.proto.constraints)}')
 
     def can_move(self, p: int, t: int) -> bool:
         c = self.colors[p]
@@ -229,6 +232,8 @@ class Board:
         self.enforce_board_state_constraints()
         self.enforce_mover_victim_constraints()
         self.enforce_position_occupied_constraints()
+        if self.colors is not None:  # t=0 and even timesteps are white, odd timesteps are black
+            self.enforce_colors_constraints()
 
     def enforce_initial_state(self):
         # initial state
@@ -292,18 +297,6 @@ class Board:
                     continue
                 self.model.Add(self.is_dead[(p, self.T - 1)] == 1)
 
-        if self.colors is not None:
-            # t=0 and even timesteps are white, odd timesteps are black
-            for p in range(self.N):
-                for t in range(self.T - 1):
-                    if not self.can_move(p, t):
-                        self.model.Add(self.mover[(p, t)] == 0)
-            # t=0 and even timesteps only black victims, odd timesteps only white victims
-            for p in range(self.N):
-                for t in range(self.T - 1):
-                    if not self.can_be_victim(p, t):
-                        self.model.Add(self.victim[(p, t)] == 0)
-
     def enforce_mover_victim_constraints(self):
         for p in range(self.N):
             for t in range(self.T - 1):
@@ -350,6 +343,19 @@ class Board:
         for t in range(self.T):
             for pos in self.all_legal_positions:
                 self.model.Add(self.position_occupied[(t, pos)] == sum([self.piece_positions[(p, t, pos)] for p in range(self.N)]))
+
+    def enforce_colors_constraints(self):
+        # t=0 and even timesteps are white, odd timesteps are black
+        for p in range(self.N):
+            for t in range(self.T - 1):
+                if self.can_move(p, t):
+                    continue
+                self.model.Add(self.mover[(p, t)] == 0)
+        # t=0 and even timesteps only black victims, odd timesteps only white victims
+        for p in range(self.N):
+            for t in range(self.T - 1):
+                if not self.can_be_victim(p, t):
+                    self.model.Add(self.victim[(p, t)] == 0)
 
 
     def solve_and_print(self, verbose: bool = True, max_solutions: int = None):
