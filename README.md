@@ -575,7 +575,9 @@ Also known as Nonogrids, Numbergrids, Picross, Hanjie, Paint by Numbers, Griddle
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of squares, which must all be filled in either black or white. Beside each row of the grid are listed, in order, the lengths of the runs of black squares on that row; above each column are listed, in order, the lengths of the runs of black squares in that column. Your aim is to fill in the entire grid black or white. 
+
 </details>
 
 **Unsolved puzzle**
@@ -689,6 +691,7 @@ The code can:
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a square grid, which is divided into as many equally sized sub-blocks as the grid has rows. Each square must be filled in with a digit from 1 to the size of the grid, in such a way that
 
   - every row contains only one occurrence of each digit
@@ -696,6 +699,7 @@ You have a square grid, which is divided into as many equally sized sub-blocks a
   - every block contains only one occurrence of each digit.
 
 You are given some of the numbers as clues; your aim is to place the rest of the numbers correctly.
+
 </details>
 
 **Unsolved puzzle**
@@ -799,11 +803,13 @@ Below is an example of how to utilize the solver while in the middle of a puzzle
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of covered squares, some of which contain mines, but you don't know which. Your job is to uncover every square which does not contain a mine. If you uncover a square containing a mine, you lose. If you uncover a square which does not contain a mine, you are told how many mines are contained within the eight surrounding squares.
 
 This game needs no introduction; popularised by Windows, it is perhaps the single best known desktop puzzle game in existence.
 
 This version of it has an unusual property. By default, it will generate its mine positions in such a way as to ensure that you never need to guess where a mine is: you will always be able to deduce it somehow. So you will never, as can happen in other versions, get to the last four squares and discover that there are two mines left but you have no way of knowing for sure where they are. 
+
 </details>
 
 **Partially solved puzzle**
@@ -869,9 +875,11 @@ Time taken: 0.92 seconds
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 A normal set of dominoes – that is, one instance of every (unordered) pair of numbers from 0 to N – has been arranged irregularly into a rectangle; then the number in each square has been written down and the dominoes themselves removed. 
 
 Your task is to reconstruct the pattern by arranging the set of dominoes to match the provided array of numbers. 
+
 </details>
 
 **Unsolved puzzle**
@@ -934,6 +942,7 @@ Also known as Akari.
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of squares. Some are filled in black; some of the black squares are numbered. Your aim is to ‘light up’ all the empty squares by placing light bulbs in some of them.
 
 Each light bulb illuminates the square it is on, plus all squares in line with it horizontally or vertically unless a black square is blocking the way.
@@ -945,6 +954,7 @@ To win the game, you must satisfy the following conditions:
   - All numbered black squares have exactly that number of lights adjacent to them (in the four squares above, below, and to the side).
 
 Non-numbered black squares may have any number of lights adjacent to them. 
+
 </details>
 
 **Unsolved puzzle**
@@ -1007,12 +1017,14 @@ Which exactly matches the true solutions (Remember, the goal of the puzzle is to
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of squares, some of which contain trees. Your aim is to place tents in some of the remaining squares, in such a way that the following conditions are met:
 
   - There are exactly as many tents as trees.
   - The tents and trees can be matched up in such a way that each tent is directly adjacent (horizontally or vertically, but not diagonally) to its own tree. However, a tent may be adjacent to other trees as well as its own.
   - No two tents are adjacent horizontally, vertically or diagonally.
   - The number of tents in each row, and in each column, matches the numbers given round the sides of the grid.
+
 </details>
 
 **Unsolved puzzle**
@@ -1108,11 +1120,13 @@ Also known as Fillomino
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of squares, some of which contain digits, and the rest of which are empty. Your job is to fill in digits in the empty squares, in such a way that each connected region of squares all containing the same digit has an area equal to that digit.
 
 (‘Connected region’, for the purposes of this game, does not count diagonally separated squares as adjacent.)
 
 For example, it follows that no square can contain a zero, and that two adjacent squares can not both contain a one. No region has an area greater than 9 (because then its area would not be a single digit).
+
 </details>
 
 Note: It may take a few seconds for the model to be built.
@@ -1178,6 +1192,7 @@ Also known as KenKen, CalcuDoku, Mathdoku, Inkies, or Inky.
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a square grid; each square may contain a digit from 1 to the size of the grid. The grid is divided into blocks of varying shape and size, with arithmetic clues written in them. Your aim is to fully populate the grid with digits such that:
 
   - Each row contains only one occurrence of each digit
@@ -1189,6 +1204,7 @@ You have a square grid; each square may contain a digit from 1 to the size of th
       - A division clue (e.g. ‘3÷’), similarly, is always in a block of size two and means that one digit divided by the other is equal to the given amount.
 
   Note that a block may contain the same digit more than once (provided the identical ones are not in the same row and column).
+
 </details>
 
 **Unsolved puzzle**
@@ -1260,6 +1276,7 @@ Also known as Skyscrapers.
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a square grid. On each square of the grid you can build a tower, with its height ranging from 1 to the size of the grid. Around the edge of the grid are some numeric clues.
 
 Your task is to build a tower on every square, in such a way that:
@@ -1269,6 +1286,7 @@ Your task is to build a tower on every square, in such a way that:
   - Each numeric clue describes the number of towers that can be seen if you look into the square from that direction, assuming that shorter towers are hidden behind taller ones. For example, in a 5×5 grid, a clue marked ‘5’ indicates that the five tower heights must appear in increasing order (otherwise you would not be able to see all five towers), whereas a clue marked ‘1’ indicates that the tallest tower (the one marked 5) must come first.
 
 In harder or larger puzzles, some towers will be specified for you as well as the clues round the edge, and some edge clues may be missing. 
+
 </details>
 
 **Unsolved puzzle**
@@ -1328,11 +1346,13 @@ Also known as Hitori.
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of white squares, all of which contain numbers. Your task is to colour some of the squares black (removing the number) so as to satisfy all of the following conditions:
 
   - No number occurs more than once in any row or column.
   - No black square is horizontally or vertically adjacent to any other black square.
   - The remaining white squares must all form one contiguous region (connected by edges, not just touching at corners).
+
 </details>
 
 **Unsolved puzzle**
@@ -1413,9 +1433,11 @@ Time taken: 0.04 seconds
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 A rectangular grid has been filled with a mixture of magnets (that is, dominoes with one positive end and one negative end) and blank dominoes (that is, dominoes with two neutral poles). These dominoes are initially only seen in silhouette. Around the grid are placed a number of clues indicating the number of positive and negative poles contained in certain columns and rows.
 
 Your aim is to correctly place the magnets and blank dominoes such that all the clues are satisfied, with the additional constraint that no two similar magnetic poles may be orthogonally adjacent (since they repel). Neutral poles do not repel, and can be adjacent to any other pole. 
+
 </details>
 
 **Unsolved puzzle**
@@ -1479,9 +1501,11 @@ Time taken: 0.02 seconds
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of squares; each square (except the last one) contains an arrow, and some squares also contain numbers. Your job is to connect the squares to form a continuous list of numbers starting at 1 and linked in the direction of the arrows – so the arrow inside the square with the number 1 will point to the square containing the number 2, which will point to the square containing the number 3, etc. Each square can be any distance away from the previous one, as long as it is somewhere in the direction of the arrow.
 
 By convention the first and last numbers are shown; one or more interim numbers may also appear at the beginning. 
+
 </details>
 
 **Unsolved puzzle**
@@ -1551,6 +1575,7 @@ Also known as Kurodoko.
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of squares; some squares contain numbers. Your job is to colour some of the squares black, such that several criteria are satisfied:
 
   - no square with a number is coloured black.
@@ -1559,6 +1584,7 @@ You have a grid of squares; some squares contain numbers. Your job is to colour 
   - for each square with a number, that number denotes the total number of white squares reachable from that square going in a straight line in any horizontal or vertical direction until hitting a wall or a black square; the square with the number is included in the total (once).
 
 For instance, a square containing the number one must have four black squares as its neighbours by the last criterion; but then it's impossible for it to be connected to any outside white square, which violates the second to last criterion. So no square will contain the number one. 
+
 </details>
 
 **Unsolved puzzle**
@@ -1636,11 +1662,13 @@ Also known as Haunted or Haunted Mirror Maze.
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You are given a grid of squares, some of which contain diagonal mirrors. Every square which is not a mirror must be filled with one of three types of undead monster: a ghost, a vampire, or a zombie.
 
 Vampires can be seen directly, but are invisible when reflected in mirrors. Ghosts are the opposite way round: they can be seen in mirrors, but are invisible when looked at directly. Zombies are visible by any means.
 
 You are also told the total number of each type of monster in the grid. Also around the edge of the grid are written numbers, which indicate how many monsters can be seen if you look into the grid along a row or column starting from that position. (The diagonal mirrors are reflective on both sides. If your reflected line of sight crosses the same monster more than once, the number will count it each time it is visible, not just once.) 
+
 </details>
 
 **Unsolved puzzle**
@@ -1703,7 +1731,9 @@ Also known as "3-In-A-Row".
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You are given a grid of squares, which you must colour either black or white. Some squares are provided as clues; the rest are left for you to fill in. Each row and column must contain the same number of black and white squares, and no row or column may contain three consecutive squares of the same colour. 
+
 </details>
 
 **Unsolved puzzle**
@@ -1788,6 +1818,7 @@ Time taken: 0.02 seconds
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 Complete the track from A to B so that the rows and columns contain the same number of track segments as are indicated in the clues to the top and right of the grid. There are only straight and 90-degree curved rail sections, and the track may not cross itself. 
 
 </details>
@@ -1881,9 +1912,11 @@ Also known as ArtMosaico, Count and Darken, Cuenta Y Sombrea, Fill-a-Pix, Fill-I
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You are given a grid of squares, which you must colour either black or white.
 
 Some squares contain clue numbers. Each clue tells you the number of black squares in the 3×3 region surrounding the clue – including the clue square itself. 
+
 </details>
 
 **Unsolved puzzle**
@@ -1971,9 +2004,11 @@ Time taken: 0.02 seconds
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You are given a map consisting of a number of regions. Your task is to colour each region with one of four colours, in such a way that no two regions sharing a boundary have the same colour. You are provided with some regions already coloured, sufficient to make the remainder of the solution unique, and these cannot be changed.
 
 Only regions which share a length of border are required to be different colours. Two regions which meet at only one point (i.e. are diagonally separated) may be the same colour. 
+
 </details>
 
 **Unsolved puzzle**
@@ -2033,6 +2068,7 @@ Also known as Masyu
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a grid of squares. Your job is to draw lines between the centres of horizontally or vertically adjacent squares, so that the lines form a single closed loop. In the resulting grid, some of the squares that the loop passes through will contain corners, and some will be straight horizontal or vertical lines. (And some squares can be completely empty – the loop doesn't have to pass through every square.)
 
 Some of the squares contain black and white circles, which are clues that the loop must satisfy.
@@ -2042,6 +2078,7 @@ A black circle in a square indicates that that square is a corner, but neither o
 A white circle indicates that the square is a straight edge, but at least one of the squares adjacent to it in the loop is a corner.
 
 (In both cases, the clue only constrains the two squares adjacent in the loop, that is, the squares that the loop passes into after leaving the clue square. The squares that are only adjacent in the grid are not constrained.)
+
 </details>
 
 **Unsolved puzzle**
@@ -2110,6 +2147,7 @@ Also known as Hashiwokakero
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a set of islands distributed across the playing area. Each island contains a number. Your aim is to connect the islands together with bridges, in such a way that:
 
   - Bridges run horizontally or vertically.
@@ -2119,6 +2157,7 @@ You have a set of islands distributed across the playing area. Each island conta
   - All the islands are connected together.
 
 There are some configurable alternative modes, which involve changing the parallel-bridge limit to something other than 2
+
 </details>
 
 **Unsolved puzzle**
@@ -2218,11 +2257,13 @@ This achieves a final sequence of moves that is empirically always faster than t
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You are a small green ball sitting in a grid full of obstacles. Your aim is to collect all the gems without running into any mines.
 
 You can move the ball in any orthogonal or diagonal direction. Once the ball starts moving, it will continue until something stops it. A wall directly in its path will stop it (but if it is moving diagonally, it will move through a diagonal gap between two other walls without stopping). Also, some of the squares are ‘stops’; when the ball moves on to a stop, it will stop moving no matter what direction it was going in. Gems do not stop the ball; it picks them up and keeps on going.
 
 Running into a mine is fatal. Even if you picked up the last gem in the same move which then hit a mine, the game will count you as dead rather than victorious. 
+
 </details>
 
 **Unsolved puzzle**
@@ -2294,9 +2335,11 @@ This picture won't mean much as the game is about the sequence of moves not the 
 
 <details>
   <summary><strong>Rules</strong></summary>
+
 You have a set of coloured pegs, and have to reproduce a predetermined sequence of them (chosen by the computer) within a certain number of guesses.
 
 Each guess gets marked with the number of correctly-coloured pegs in the correct places (in black), and also the number of correctly-coloured pegs in the wrong places (in white). 
+
 </details>
 
 
@@ -3412,6 +3455,7 @@ Note that any layout with more than 4 balls may have a non-unique solution. The 
       - - - - - - - - 
 
 For this reason, when you have your guesses checked, the game will check that your solution produces the same results as the computer's, rather than that your solution is identical to the computer's. So in the above example, you could put the fifth ball at any of the locations marked with an x, and you would still win.
+
 </details>
 
 Note: This puzzle is one of the very rare puzzles where CP-SAT is not a good fit because for every placement of the balls the state of the beams is dynamically changes and thus required a lot of variables to construct and constraint. This is why the resulting model is large and slow.
@@ -5702,6 +5746,7 @@ Also known as Numberlink.
   <summary><strong>Rules</strong></summary>
 
 You are given a grid of empty cells and 2 filled cell per color. The goal is to connect the dots of the same color to form a single fully connected graph for each color.
+
 </details>
 
 **Unsolved puzzle**
