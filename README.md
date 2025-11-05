@@ -548,7 +548,7 @@ The puzzles that have solvers implemented are listed below. Each puzzle has a si
 
 ## Nonograms (Puzzle Type #1)
 
-Also known as Nonogrids, Numbergrids, or Picross.
+Also known as Nonogrids, Numbergrids, or Picross, Hanjie, Paint by Numbers, Griddlers, and Pic-a-Pix.
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/pattern.html)
 
@@ -5746,7 +5746,7 @@ Time taken: 0.07 seconds
 
 ## Nonograms Colored (Puzzle Type #57)
 
-Also known as Nonogrids, Numbergrids, or Picross.
+Also known as Nonogrids, Numbergrids, or Picross, Hanjie, Paint by Numbers, Griddlers, and Pic-a-Pix.
 
 * [**Play online**](https://www.nonograms.org/nonograms2)
 
