@@ -548,7 +548,7 @@ The puzzles that have solvers implemented are listed below. Each puzzle has a si
 
 ## Nonograms (Puzzle Type #1)
 
-Also known as Nonogrids, Numbergrids, or Picross, Hanjie, Paint by Numbers, Griddlers, and Pic-a-Pix.
+Also known as Nonogrids, Numbergrids, Picross, Hanjie, Paint by Numbers, Griddlers, or Pic-a-Pix.
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/pattern.html)
 
@@ -654,7 +654,7 @@ Time taken: 0.04 seconds
 
 ## Sudoku (Puzzle Type #2)
 
-Also known as Number Place and Solo. 
+Also known as Number Place or Solo. 
 
 The code can:
 
@@ -907,7 +907,7 @@ Time taken: 0.02 seconds
 
 ## Light Up (Puzzle Type #5)
 
-Also called Akari.
+Also known as Akari.
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/lightup.html)
 
@@ -1854,7 +1854,7 @@ Time taken: 1.01 seconds
 
 ## Mosaic (Puzzle Type #17)
 
-Also known as ArtMosaico, Count and Darken, Cuenta Y Sombrea, Fill-a-Pix, Fill-In, Komsu Karala, Magipic, Majipiku, Mosaico, Mosaik, Mozaiek, Nampre Puzzle, Nurie-Puzzle, Oekaki-Pix, and Voisimage.
+Also known as ArtMosaico, Count and Darken, Cuenta Y Sombrea, Fill-a-Pix, Fill-In, Komsu Karala, Magipic, Majipiku, Mosaico, Mosaik, Mozaiek, Nampre Puzzle, Nurie-Puzzle, Oekaki-Pix, or Voisimage.
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/mosaic.html)
 
@@ -3660,7 +3660,7 @@ Applying the solution to the puzzle visually:
 
 ## Unequal (Puzzle Type #37)
 
-Also called "Futoshiki", the "Adjacent" variant is also known as "Renzoku" or "Neighbours".
+Also known as Futoshiki, the Adjacent variant is also known as Renzoku or Neighbours.
 
 * [**Play online 1**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unequal.html)
 
@@ -3869,7 +3869,7 @@ Applying the solution to the puzzle visually:
 
 ## Slitherlink (Puzzle Type #39)
 
-Also known as Fences, Loop the Loop, and Loopy.
+Also known as Fences, Loop the Loop, or Loopy.
 
 * [**Play online 1**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/loopy.html)
 
@@ -4095,7 +4095,7 @@ Applying the solution to the puzzle visually:
 
 ## Binairo (Puzzle Type #41)
 
-Also known as Takuzu, Binero, Tohu-Wa-Vohu (Formless and Empty), Eins und Zwei (One and Two), Binary Puzzles, Binoxxo, Binox, Zernero, Tic-Tac-Logic, TicTacToe, and Sudoku Binary.
+Also known as Takuzu, Binero, Tohu-Wa-Vohu (Formless and Empty), Eins und Zwei (One and Two), Binary Puzzles, Binoxxo, Binox, Zernero, Tic-Tac-Logic, TicTacToe, or Sudoku Binary.
 
 * [**Play online**](https://www.puzzle-binairo.com)
 
@@ -5673,7 +5673,7 @@ Time taken: 5.65 seconds
 
 ## Connect the Dots (Puzzle Type #56)
 
-Also called Numberlink.
+Also known as Numberlink.
 
 * [**Mobile App (Android)**](https://play.google.com/store/apps/details?id=com.playvalve.connect.dots&hl=en_US)
 
@@ -5746,7 +5746,7 @@ Time taken: 0.07 seconds
 
 ## Nonograms Colored (Puzzle Type #57)
 
-Also known as Nonogrids, Numbergrids, or Picross, Hanjie, Paint by Numbers, Griddlers, and Pic-a-Pix.
+Also known as Nonogrids, Numbergrids, Picross, Hanjie, Paint by Numbers, Griddlers, or Pic-a-Pix.
 
 * [**Play online**](https://www.nonograms.org/nonograms2)
 
@@ -5938,7 +5938,7 @@ Time taken: 0.01 seconds
 
 ## Mathema Grids (Puzzle Type #59)
 
-Also called SetSquare grid.
+Also known as SetSquare grid.
 
 * [**Play online**](https://www.brainbashers.com/showmathemagrids.asp)
 

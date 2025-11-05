@@ -1,6 +1,6 @@
 # Mathema Grids (Puzzle Type #59)
 
-Also called SetSquare grid.
+Also known as SetSquare grid.
 
 * [**Play online**](https://www.brainbashers.com/showmathemagrids.asp)
 

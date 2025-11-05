@@ -1,6 +1,6 @@
 # Connect the Dots (Puzzle Type #56)
 
-Also called Numberlink.
+Also known as Numberlink.
 
 * [**Mobile App (Android)**](https://play.google.com/store/apps/details?id=com.playvalve.connect.dots&hl=en_US)
 

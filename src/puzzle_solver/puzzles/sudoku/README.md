@@ -1,6 +1,6 @@
 # Sudoku (Puzzle Type #2)
 
-This is a dedicated solver for Sudoku. Also known as Number Place and Solo. 
+This is a dedicated solver for Sudoku. Also known as Number Place or Solo. 
 
 The code can:
 
