@@ -38,6 +38,8 @@ A total of 33 puzzles were implemented, and 7 remaining puzzles we aren't target
 
 **https://www.puzzle-kurodoko.com/ (All puzzles are playable)**
 
+Equivalant to: **https://www.puzzles-mobile.com/**
+
 All pen and paper logic puzzles have been implemented.
 
 39 puzzles were implemented, and only 1 remaining puzzle we aren't targeting which is a word search puzzle. We are interested in logic games that depend on pure mathematical reasoning and not simply dependent on a specific language.
