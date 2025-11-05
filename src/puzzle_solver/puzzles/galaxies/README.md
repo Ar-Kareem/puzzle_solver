@@ -1,7 +1,7 @@
 
 # Galaxies (Puzzle Type #35)
 
-Also called Spiral Galaxy.
+Also known as Tentai Show, Tentaisho, Galaxies, Spiral Galaxies, or Sym-a-Pix.
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/galaxies.html)
 
