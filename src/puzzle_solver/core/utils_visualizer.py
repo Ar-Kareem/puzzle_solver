@@ -413,7 +413,7 @@ def render_bw_tiles_split(
     # ── Mode setup ─────────────────────────────────────────────────────────
     use_color = (mode == "ansi")
 
-    def sgr(bg: int | None = None, fg: int | None = None) -> str:
+    def sgr(bg: Optional[int] = None, fg: Optional[int] = None) -> str:
         if not use_color:
             return ""
         parts = []
