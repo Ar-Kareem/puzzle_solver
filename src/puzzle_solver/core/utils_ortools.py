@@ -23,16 +23,15 @@ class SingleSolution:
 
 
 def and_constraint(model: cp_model.CpModel, target: cp_model.IntVar, cs: list[cp_model.IntVar]):
-    for c in cs:
-        model.Add(target <= c)
-    model.Add(target >= sum(cs) - len(cs) + 1)
+    model.AddBoolAnd(cs).OnlyEnforceIf(target)  # target => (c1 ∧ ... ∧ cn)
+    model.AddBoolOr([target] + [c.Not() for c in cs])  # target ∨ ¬c1 ∨ ... ∨ ¬cn equivalent to (¬target => ¬(c1 ∧ ... ∧ cn))
+    # thus target <=> (c1 ∧ ... ∧ cn)
 
 
 def or_constraint(model: cp_model.CpModel, target: cp_model.IntVar, cs: list[cp_model.IntVar]):
-    for c in cs:
-        model.Add(target >= c)
-    model.Add(target <= sum(cs))
-
+    model.AddBoolOr(cs).OnlyEnforceIf(target)  # target => (c1 ∨ ... ∨ cn)
+    model.AddBoolAnd([c.Not() for c in cs]).OnlyEnforceIf(target.Not())  # ¬target => ¬c1 ∧ ... ∧ ¬cn equivalent to (¬target => ¬(c1 ∨ ... ∨ cn))
+    # thus target <=> (c1 ∨ ... ∨ cn)
 
 
 class AllSolutionsCollector(CpSolverSolutionCallback):
