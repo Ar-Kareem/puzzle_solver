@@ -407,6 +407,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/vectors_solved.png" alt="Vectors" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="#vermicelli-puzzle-type-72"><b>Vermicelli</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/vermicelli_solved.png" alt="Vermicelli" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
@@ -558,6 +563,7 @@ Time taken: 0.04 seconds
   - [Link-a-Pix (Puzzle Type #70)](#link-a-pix-puzzle-type-70)
   - [Trees Logic (Puzzle Type #71)](#trees-logic-puzzle-type-71)
   - [Vectors (Puzzle Type #72)](#vectors-puzzle-type-72)
+  - [Vermicelli (Puzzle Type #72)](#vermicelli-puzzle-type-72)
   - [Why SAT / CP-SAT?](#why-sat--cp-sat)
   - [Testing](#testing)
   - [Contributing](#contributing)
@@ -7207,6 +7213,76 @@ Time taken: 0.03 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/vectors_solved.png" alt="Vectors solved" width="500">
+
+---
+
+## Vermicelli (Puzzle Type #72)
+
+* [**Play online**](https://krazydad.com/play/vermicelli)
+
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/vermicelli)
+
+<details>
+  <summary><strong>Rules</strong></summary>
+
+Connect worms to make a loop that visits every square in the grid. The worm can’t fork nor cross itself, and it can't go through walls.
+
+</details>
+
+**Unsolved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/vermicelli_unsolved.png" alt="Vermicelli unsolved" width="500">
+
+Code to utilize this package and solve the puzzle:
+
+```python
+import numpy as np
+from puzzle_solver import vermicelli_solver as solver
+walls = np.array([
+    ['  ', '  ', '  ', 'D ', '  ', '  ', 'R ', '  ', '  ', '  '],
+    ['  ', 'D ', '  ', '  ', '  ', 'R ', 'D ', '  ', '  ', '  '],
+    ['R ', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['  ', '  ', 'D ', '  ', '  ', '  ', '  ', '  ', 'R ', '  '],
+    ['D ', '  ', 'R ', 'D ', '  ', 'DR', '  ', 'R ', 'D ', '  '],
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['  ', 'D ', 'R ', 'D ', '  ', '  ', '  ', '  ', '  ', '  '],
+    ['  ', '  ', '  ', '  ', '  ', 'R ', '  ', '  ', 'U ', '  '],
+])
+binst = solver.Board(walls=walls)
+solutions = binst.solve_and_print()
+```
+
+**Script Output**
+
+```python
+Solution found
+    0   0   0   0   0   0   0   0   0   0  
+    0   1   2   3   4   5   6   7   8   9
+                              │
+ 0  ┌───┐   ┌───────┐   ┌───┐ │ ┌───────┐
+    │   │   │ ───── │   │ │ │ │ │       │
+ 1  │   └───┘   ┌───┘   │ │ └───┘   ┌───┘
+    │ ┌────     │       │ └────     │
+ 2  │ │ ┌───────┘   ┌───┘   ┌───┐   └───┐
+    │ │ │           │       │   │     │ │
+ 3  │   └───────┐   └───┐   │   └───┐ │ │
+    │     ────┐ │       │ │ │     │ │ │ │
+ 4  └───────┐ │ └───────┘ │ └───┐ │ └───┘
+  ─────     │ └────   ────┘     │ └────
+ 5  ┌───┐   │   ┌───────────┐   │   ┌───┐
+    │   │   │ │ │           │   │   │   │
+ 6  │   └───┘ │ └───────┐   │   └───┘   │
+    │ ─────   └────     │ │ │     ───── │
+ 7  └───────────────────┘ │ └───────────┘
+                          │
+Solutions found: 1
+status: OPTIMAL
+Time taken: 0.04 seconds
+```
+
+**Solved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/vermicelli_solved.png" alt="Vermicelli solved" width="500">
 
 ---
 
