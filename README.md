@@ -6862,6 +6862,8 @@ Time taken: 0.07 seconds
 
 ## NumberMaze (Puzzle Type #69)
 
+Also known as Dot Stream.
+
 * [**Play online**](https://puzzlemadness.co.uk/numbermaze/hard)
 
 * [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/numbermaze)

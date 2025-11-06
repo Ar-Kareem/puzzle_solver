@@ -1,5 +1,7 @@
 # NumberMaze (Puzzle Type #69)
 
+Also known as Dot Stream.
+
 * [**Play online**](https://puzzlemadness.co.uk/numbermaze/hard)
 
 Your aim is to draw a single line starting from the number 1 through all of the numbers, covering all of the cells in the grid as you go.
