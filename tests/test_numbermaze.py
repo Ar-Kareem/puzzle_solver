@@ -109,8 +109,23 @@ def test_ground2():
         assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
 
+def test_ground3():
+    board = np.array([
+        ['7', ' ', '#', ' ', '2', ' '],
+        [' ', ' ', '#', ' ', ' ', ' '],
+        [' ', ' ', '1', ' ', '3', '9'],
+        [' ', ' ', ' ', ' ', '4', ' '],
+        [' ', '6', ' ', '5', ' ', ' '],
+        [' ', ' ', ' ', '8', ' ', ' '],
+    ])
+    binst = solver.Board(board=board)
+    solutions = binst.solve_and_print()
+    assert len(solutions) == 2, f'unique solutions != 1, == {len(solutions)}'
+
+
 if __name__ == '__main__':
     test_ground()
     test_toy2()
     test_toy3()
     test_ground2()
+    test_ground3()
