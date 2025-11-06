@@ -1,129 +1,67 @@
+from dataclasses import dataclass
 from collections import defaultdict
+from typing import Optional
 
 import numpy as np
 from ortools.sat.python import cp_model
 
-from puzzle_solver.core.utils import Pos, get_all_pos, get_char, set_char, Direction, get_next_pos, in_bounds
-from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution, or_constraint
+from puzzle_solver.core.utils import Pos, get_all_pos, get_char, Direction, get_next_pos, in_bounds, get_pos
+from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution
 from puzzle_solver.core.utils_visualizer import combined_function, id_board_to_wall_fn
 
 
-def get_bool_var(model: cp_model.CpModel, var: cp_model.IntVar, eq_val: int, name: str) -> cp_model.IntVar:
-    res = model.NewBoolVar(name)
-    model.Add(var == eq_val).OnlyEnforceIf(res)
-    model.Add(var != eq_val).OnlyEnforceIf(res.Not())
-    return res
+@dataclass(frozen=True)
+class ShapeOnBoard:
+    uid: str
+    is_active: cp_model.IntVar
 
 
 class Board:
-    def __init__(self, board: np.array):
+    def __init__(self, board: np.array, target_pairs: Optional[list[tuple[int, int]]] = None):
         assert board.ndim == 2, f'board must be 2d, got {board.ndim}'
         assert all(str(i.item()).isdecimal() for i in np.nditer(board)), 'board must contain only digits'
-        nums = [int(i.item()) for i in np.nditer(board)]
-        assert min(nums) == 0, 'expected board to start from 0'
         self.board = board
-        self.max_val = max(nums)
-
-        self.V = board.shape[0]
-        self.H = board.shape[1]
-
-        # for every pair, list where to find it on the board and which direction to go
-        # no need for left and up directions as the pairs are unordered (so right and down would have already captured both)
-        self.pair_to_pos_list: dict[tuple[int, int], list[tuple[Pos, Direction]]] = defaultdict(list)
-        for pos in get_all_pos(self.V, self.H):
-            right_pos = get_next_pos(pos, Direction.RIGHT)
-            if in_bounds(right_pos, self.V, self.H):
-                cur_pair = (int(get_char(self.board, pos)), int(get_char(self.board, right_pos)))
-                cur_pair = tuple(sorted(cur_pair))  # pairs are unordered
-                self.pair_to_pos_list[cur_pair].append((pos, Direction.RIGHT))
-            down_pos = get_next_pos(pos, Direction.DOWN)
-            if in_bounds(down_pos, self.V, self.H):
-                cur_pair = (int(get_char(self.board, pos)), int(get_char(self.board, down_pos)))
-                cur_pair = tuple(sorted(cur_pair))  # pairs are unordered
-                self.pair_to_pos_list[cur_pair].append((pos, Direction.DOWN))
+        self.V, self.H = board.shape
+        self.target_pairs = target_pairs
+        if target_pairs is None:
+            nums = [int(i.item()) for i in np.nditer(board)]
+            assert min(nums) == 0, 'expected board to start from 0'
+            self.target_pairs = [(i, j) for i in range(max(nums) + 1) for j in range(i, max(nums) + 1)]
 
         self.model = cp_model.CpModel()
-        self.model_vars: dict[Pos, cp_model.IntVar] = {}
-        self.pair_vars: dict[tuple[int, int], cp_model.BoolVar] = {}
-
+        self.pair_to_shapes: dict[tuple[int, int], set[ShapeOnBoard]] = defaultdict(set)
+        self.pos_to_shapes: dict[Pos, set[ShapeOnBoard]] = defaultdict(set)
         self.create_vars()
         self.add_all_constraints()
 
     def create_vars(self):
         for pos in get_all_pos(self.V, self.H):
-            self.model_vars[pos] = self.model.NewIntVar(1, 4, f'{pos}')  # directions
-        # for even pair, boolean variable to indicate if it appears
-        for i in range(self.max_val + 1):
-            for j in range(i, self.max_val + 1):
-                if (i, j) in self.pair_vars:
-                    print('already in pair_vars')
+            for direction in [Direction.RIGHT, Direction.DOWN]:
+                next_pos = get_next_pos(pos, direction)
+                if not in_bounds(next_pos, self.V, self.H):
                     continue
-                self.pair_vars[(i, j)] = self.model.NewBoolVar(f'{i}_{j}')
+                c1 = int(get_char(self.board, pos))
+                c2 = int(get_char(self.board, next_pos))
+                pair = tuple(sorted((c1, c2)))
+                uid = f'{pos.x}-{pos.y}-{direction.name[0]}'
+                s = ShapeOnBoard(uid=uid, is_active=self.model.NewBoolVar(uid))
+                self.pair_to_shapes[pair].add(s)
+                self.pos_to_shapes[pos].add(s)
+                self.pos_to_shapes[next_pos].add(s)
 
     def add_all_constraints(self):
-        # all pairs must be used
-        for pair in self.pair_vars:
-            self.model.Add(self.pair_vars[pair] == 1)
-        self.constrain_domino_shape()
-        self.constrain_pair_activation()
-
-    def constrain_domino_shape(self):
-        # if X is right then the cell to its right must be left
-        # if X is down then the cell to its down must be up
-        # if X is left then the cell to its left must be right
-        # if X is up then the cell to its up must be down
-        for pos in get_all_pos(self.V, self.H):
-            right_pos = get_next_pos(pos, Direction.RIGHT)
-            if in_bounds(right_pos, self.V, self.H):
-                aux = get_bool_var(self.model, self.model_vars[right_pos], Direction.LEFT.value, f'{pos}:right')
-                self.model.Add(self.model_vars[pos] == Direction.RIGHT.value).OnlyEnforceIf([aux])
-                self.model.Add(self.model_vars[pos] != Direction.RIGHT.value).OnlyEnforceIf([aux.Not()])
-            else:
-                self.model.Add(self.model_vars[pos] != Direction.RIGHT.value)
-            down_pos = get_next_pos(pos, Direction.DOWN)
-            if in_bounds(down_pos, self.V, self.H):
-                aux = get_bool_var(self.model, self.model_vars[down_pos], Direction.UP.value, f'{pos}:down')
-                self.model.Add(self.model_vars[pos] == Direction.DOWN.value).OnlyEnforceIf([aux])
-                self.model.Add(self.model_vars[pos] != Direction.DOWN.value).OnlyEnforceIf([aux.Not()])
-            else:
-                self.model.Add(self.model_vars[pos] != Direction.DOWN.value)
-            left_pos = get_next_pos(pos, Direction.LEFT)
-            if in_bounds(left_pos, self.V, self.H):
-                aux = get_bool_var(self.model, self.model_vars[left_pos], Direction.RIGHT.value, f'{pos}:left')
-                self.model.Add(self.model_vars[pos] == Direction.LEFT.value).OnlyEnforceIf([aux])
-                self.model.Add(self.model_vars[pos] != Direction.LEFT.value).OnlyEnforceIf([aux.Not()])
-            else:
-                self.model.Add(self.model_vars[pos] != Direction.LEFT.value)
-            top_pos = get_next_pos(pos, Direction.UP)
-            if in_bounds(top_pos, self.V, self.H):
-                aux = get_bool_var(self.model, self.model_vars[top_pos], Direction.DOWN.value, f'{pos}:top')
-                self.model.Add(self.model_vars[pos] == Direction.UP.value).OnlyEnforceIf([aux])
-                self.model.Add(self.model_vars[pos] != Direction.UP.value).OnlyEnforceIf([aux.Not()])
-            else:
-                self.model.Add(self.model_vars[pos] != Direction.UP.value)
-
-    def constrain_pair_activation(self):
-        for pair, pos_list in self.pair_to_pos_list.items():
-            aux_list = []
-            for pos, direction in pos_list:
-                aux_list.append(get_bool_var(self.model, self.model_vars[pos], direction.value, f'{pos}:{direction.name}'))
-            or_constraint(self.model, self.pair_vars[pair], aux_list)
+        for pair in self.target_pairs:  # exactly one shape active for each pair
+            self.model.AddExactlyOne(s.is_active for s in self.pair_to_shapes[pair])
+        for pos in get_all_pos(self.V, self.H):  # at most one shape active at each position
+            self.model.AddAtMostOne(s.is_active for s in self.pos_to_shapes[pos])
 
     def solve_and_print(self, verbose: bool = True):
         def board_to_solution(board: Board, solver: cp_model.CpSolverSolutionCallback) -> SingleSolution:
-            assignment: dict[Pos, int] = {}
-            for pos, var in board.model_vars.items():
-                assignment[pos] = solver.value(var)
-            return SingleSolution(assignment=assignment)
+            return SingleSolution(assignment={pos: s.uid for pos in get_all_pos(self.V, self.H) for s in self.pos_to_shapes[pos] if solver.Value(s.is_active) == 1})
         def callback(single_res: SingleSolution):
             print("Solution found")
-            res = np.full((self.V, self.H), ' ', dtype=object)
-            for pos in get_all_pos(self.V, self.H):
-                next_pos = get_next_pos(pos, Direction(single_res.assignment[pos]))
-                set_char(res, pos, f'{hash(pos)}')
-                set_char(res, next_pos, f'{hash(pos)}')
             print(combined_function(self.V, self.H,
-                cell_flags=id_board_to_wall_fn(res),
-                center_char=lambda r, c: self.board[r, c] if self.board[r, c] != ' ' else ' '
+                cell_flags=id_board_to_wall_fn(np.array([[single_res.assignment[get_pos(x=c, y=r)] for c in range(self.H)] for r in range(self.V)])),
+                center_char=lambda r, c: str(self.board[r, c])
             ))
         return generic_solve_all(self, board_to_solution, callback=callback if verbose else None, verbose=verbose)
