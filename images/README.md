@@ -16,7 +16,7 @@ Below are the websites from the screenshots:
 
 Most of the puzzles we target in this repo are pen and paper puzzles (i.e. not dynamic puzzles). The simplest and biggest difference is that if the puzzle can be played on a printed sheet of paper then it is not a dynamic puzzle. 
 
-The only two exceptions to the above rule are "Pipes" and "Flip", "Pipes" might not easilly work on a printed sheet of paper as the icons need to be rotated but I still consider it to be significantly on the pen and paper side of the spectrum, and "Keen" which is a mathematical puzzle that is more on the pen and paper side of the spectrum. While "Flip" is a dynamic puzzle as flipping a square changes the state of the board but it can be modeled as a static pen and paper puzzle with slight modifications of how the puzzle is represented that does not change the final solution.
+The only two exceptions to the above rule are "Pipes" and "Flip", "Pipes" might not easily work on a printed sheet of paper as the icons need to be rotated but I still consider it to be significantly on the pen and paper side of the spectrum, and "Keen" which is a mathematical puzzle that is more on the pen and paper side of the spectrum. While "Flip" is a dynamic puzzle as flipping a square changes the state of the board but it can be modeled as a static pen and paper puzzle with slight modifications of how the puzzle is represented that does not change the final solution.
 
 We rarely provide solvers for dynamic puzzles except for (at the time of writing) five puzzles which are Minesweeper, Guess, Inertia, Flood it, and Twiddle.
 
@@ -38,7 +38,7 @@ A total of 33 puzzles were implemented, and 7 remaining puzzles we aren't target
 
 **https://www.puzzle-kurodoko.com/ (All puzzles are playable)**
 
-Equivalant to: **https://www.puzzles-mobile.com/**
+Equivalent to: **https://www.puzzles-mobile.com/**
 
 All pen and paper logic puzzles have been implemented.
 
@@ -73,7 +73,7 @@ All pen and paper puzzles have been implemented.
 The website has exactly 86 puzzles in total:
 
 - 54 are Sudoku-like puzzles (?/54 implemented)
-- 22 Interactive and nonudoku puzzles (17/22 implemented; 5 remaining)
+- 22 Interactive non-Sudoku puzzles (18/22 implemented; 4 remaining)
 - 10 Printable only non-Sudoku puzzles (4/10 implemented; 6 remaining)
 
 Sudoku variants are so abundant so they are currently not prioritized.
@@ -91,3 +91,10 @@ The website has exactly 90 puzzles in total:
 - 4 other puzzles that we aren't targeting (word search, solitaire, 4-in-a-row, pairs)
 
 Sudoku variants are similarly abundant in this website, thus they are currently not prioritized.
+
+# Other
+
+Other websites to look into:
+
+- https://puzz.link/list.html (huge collection of playable puzzles)
+- https://puzz.link/db/ (random database of puzzles)
