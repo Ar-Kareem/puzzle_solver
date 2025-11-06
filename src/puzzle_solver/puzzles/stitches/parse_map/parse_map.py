@@ -263,5 +263,5 @@ if __name__ == '__main__':
     # main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-01 025846.png')
     # main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-01 035658.png')
     # main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-01 044110.png')
-    main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-03 020828.png')
-
+    # main(Path(__file__).parent / 'input_output' / 'Screenshot 2025-11-03 020828.png')
+    main(Path(__file__).parent / 'input_output' / 'ripple_effect_unsolved.png')
