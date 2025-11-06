@@ -30,7 +30,7 @@ class Board:
 
     def create_vars(self):
         for pos in get_all_pos(self.V, self.H):
-            if pos == self.end:  # end shouldnt point
+            if pos == self.end:  # end shouldn't point
                 continue
             target = self.numbers_to_next[int(get_char(self.board, pos))]
             for direction in Direction8:
@@ -46,13 +46,13 @@ class Board:
 
     def add_all_constraints(self):
         for pos in get_all_pos(self.V, self.H):
-            if pos == self.end:  # end shouldnt point
+            if pos == self.end:  # end shouldn't point
                 continue
             all_dirs = [self.from_to[(pos, direction)] for direction in Direction8 if (pos, direction) in self.from_to]
             assert len(all_dirs) > 0, f'no directions found for pos {pos}'
             self.model.Add(lxp.Sum(all_dirs) == 1)
         for pos in get_all_pos(self.V, self.H):
-            if pos == self.start:  # start shouldnt be pointed at
+            if pos == self.start:  # start shouldn't be pointed at
                 continue
             all_dirs = [self.to_from[(pos, direction)] for direction in Direction8 if (pos, direction) in self.to_from]
             assert len(all_dirs) > 0, f'no directions found for pos {pos}'

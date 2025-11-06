@@ -44,7 +44,7 @@ class Board:
 
     def apply_orientation_rule(self, pos: Pos, direction: Direction):
         # if cell is direction (for example L), then the cell to its left must not be R, and the cell to its up-right and down-right must also not be R
-        # and the cell to its up-right cant be U and the cell to its down-right cant be D. You have to see the triangles visually for it to make sense.
+        # and the cell to its up-right can't be U and the cell to its down-right can't be D. You have to see the triangles visually for it to make sense.
         assert direction in Direction, f'direction must be in Direction, got {direction}'
         if direction == Direction.LEFT:
             disallow_pairs = [

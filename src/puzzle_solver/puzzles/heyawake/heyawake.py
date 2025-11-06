@@ -11,7 +11,7 @@ def return_3_consecutives(int_list: list[int]) -> list[tuple[int, int]]:
     i.e. return a list of (begin_idx, end_idx) tuples where for each r=int_list[begin_idx:end_idx] we have r[0]!=r[1] and r[-2]!=r[-1] and len(r)>=3"""
     out = []
     change_indices = [i for i in range(len(int_list) - 1) if int_list[i] != int_list[i+1]]
-    # notice how for every subsequence r, the subsequence begining index is in change_indices and the ending index - 1 is in change_indices
+    # notice how for every subsequence r, the subsequence beginning index is in change_indices and the ending index - 1 is in change_indices
     for i in range(len(change_indices) - 1):
         begin_idx = change_indices[i]
         end_idx = change_indices[i+1] + 1  # we want to include the first number in the third sequence

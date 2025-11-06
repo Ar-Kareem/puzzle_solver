@@ -47,8 +47,8 @@ class Board:
         self.model.Add(lxp.sum([self.is_tent[pos] for pos in self.non_tree_positions]) == len(self.tree_positions))
         # - no two tents are adjacent horizontally, vertically or diagonally
         for pos in self.non_tree_positions:
-            for neighbour in get_neighbors8(pos, V=self.V, H=self.H, include_self=False):
-                self.model.Add(self.is_tent[neighbour] == 0).OnlyEnforceIf(self.is_tent[pos])
+            for neighbor in get_neighbors8(pos, V=self.V, H=self.H, include_self=False):
+                self.model.Add(self.is_tent[neighbor] == 0).OnlyEnforceIf(self.is_tent[pos])
         # - the number of tents in each row and column matches the numbers around the edge of the grid
         for row in range(self.V):
             if self.side[row] == -1:

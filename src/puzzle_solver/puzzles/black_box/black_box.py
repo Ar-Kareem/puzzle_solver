@@ -57,7 +57,7 @@ class Board:
             self.ball_states[pos] = self.model.NewBoolVar(f'ball_at:{pos}')
         for pos in self.get_all_pos_extended():  # NxN board + 4 edges
             if pos not in self.ball_states:  # pos is not in the board -> its on the edge
-                self.ball_states[pos] = None  # balls cant be on the edge
+                self.ball_states[pos] = None  # balls can't be on the edge
 
         for entry_pos in (self.top_cells | self.right_cells | self.bottom_cells | self.left_cells):
 

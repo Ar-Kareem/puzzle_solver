@@ -59,7 +59,7 @@ class Board:
 
     def add_corner_vars(self, cell_border: CellBorder, var: cp_model.IntVar):
         """
-        An edge always belongs to two corners. Note that the cell xi,yi has the 4 corners (xi,yi), (xi+1,yi), (xi,yi+1), (xi+1,yi+1). (memorize these 4 coordinates or the function wont make sense)
+        An edge always belongs to two corners. Note that the cell xi,yi has the 4 corners (xi,yi), (xi+1,yi), (xi,yi+1), (xi+1,yi+1). (memorize these 4 coordinates or the function won't make sense)
         Thus corner index is +1 of board coordinates.
         Never check for bounds here because an edge ALWAYS touches two corners AND because the +1 will make in_bounds return False when its still in bounds.
         """

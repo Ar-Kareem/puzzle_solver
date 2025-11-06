@@ -59,10 +59,10 @@ class Board:
         # number of lights touching a decimal is = decimal
         for pos in self.number_position:
             ground = int(get_char(self.board, pos))
-            neighbour_list = get_neighbors4(pos, self.N, self.N)
-            neighbour_list = [p for p in neighbour_list if p in self.star_positions]
-            neighbour_light_count = lxp.Sum([self.model_vars[(p, State.LIGHT)] for p in neighbour_list])
-            self.model.Add(neighbour_light_count == ground)
+            neighbor_list = get_neighbors4(pos, self.N, self.N)
+            neighbor_list = [p for p in neighbor_list if p in self.star_positions]
+            neighbor_light_count = lxp.Sum([self.model_vars[(p, State.LIGHT)] for p in neighbor_list])
+            self.model.Add(neighbor_light_count == ground)
         # if a square is a light then everything it touches shines
         for pos in self.star_positions:
             orthoginals = laser_out(self.board, pos)

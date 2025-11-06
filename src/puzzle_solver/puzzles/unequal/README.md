@@ -1,6 +1,6 @@
 # Unequal (Puzzle Type #37)
 
-Also known as Futoshiki, the Adjacent variant is also known as Renzoku or Neighbours.
+Also known as Futoshiki, the Adjacent variant is also known as Renzoku or neighbors.
 
 * [**Play online 1**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unequal.html)
 
@@ -18,9 +18,9 @@ Also known as Futoshiki, the Adjacent variant is also known as Renzoku or Neighb
 
 There are two modes for this game, 'Unequal' and 'Adjacent'.
 
-In 'Unequal' mode, the clue signs are greater-than symbols indicating one square's value is greater than its neighbour's. In this mode not all clues may be visible, particularly at higher difficulty levels.
+In 'Unequal' mode, the clue signs are greater-than symbols indicating one square's value is greater than its neighbor's. In this mode not all clues may be visible, particularly at higher difficulty levels.
 
-In 'Adjacent' mode, the clue signs are bars indicating one square's value is numerically adjacent (i.e. one higher or one lower) than its neighbour. In this mode all clues are always visible: absence of a bar thus means that a square's value is definitely not numerically adjacent to that neighbour's.
+In 'Adjacent' mode, the clue signs are bars indicating one square's value is numerically adjacent (i.e. one higher or one lower) than its neighbor. In this mode all clues are always visible: absence of a bar thus means that a square's value is definitely not numerically adjacent to that neighbor's.
 
 In 'Trivial' difficulty level (available via the 'Custom' game type selector), there are no greater-than signs in 'Unequal' mode; the puzzle is to solve the Latin square only. 
 
@@ -30,7 +30,7 @@ In 'Trivial' difficulty level (available via the 'Custom' game type selector), t
 
 Code to utilize this package and solve the puzzle:
 
-Note: For an NxM board you need an (2N-1)x(2M-1) array because the puzzle involves input in between the cells. Each numbered cell has neighbors horizontally to represent ">", "<", and "|" (where "|" represents adjacency) and vertically to represent "∧", "∨" and "-" (where "-" represents adjacency). The "X" in the input are unused corners that shouldnt contain anything (just a corner). The numbers should never appear orthogonal to an "X", only diagonally to it. vice-versa for the comparison operators.
+Note: For an NxM board you need an (2N-1)x(2M-1) array because the puzzle involves input in between the cells. Each numbered cell has neighbors horizontally to represent ">", "<", and "|" (where "|" represents adjacency) and vertically to represent "∧", "∨" and "-" (where "-" represents adjacency). The "X" in the input are unused corners that shouldn't contain anything (just a corner). The numbers should never appear orthogonal to an "X", only diagonally to it. vice-versa for the comparison operators.
 
 ```python
 import numpy as np

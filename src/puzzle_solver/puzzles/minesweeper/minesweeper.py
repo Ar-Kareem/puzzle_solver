@@ -34,13 +34,13 @@ class Board:
             c = get_char(self.board, pos)
             if c in ['F', ' ']:
                 continue
-            if c == 'S':  # safe position but neighbours are unknown
+            if c == 'S':  # safe position but neighbors are unknown
                 self.model.Add(self.model_vars[pos] == 0)
                 continue
-            if c == 'M':  # mine position but neighbours are unknown
+            if c == 'M':  # mine position but neighbors are unknown
                 self.model.Add(self.model_vars[pos] == 1)
                 continue
-            # clue indicates safe position AND neighbours are known
+            # clue indicates safe position AND neighbors are known
             c = int(c)
             self.model.Add(lxp.Sum([self.model_vars[n] for n in get_neighbors8(pos, self.V, self.H, include_self=False)]) == c)
             self.model.Add(self.model_vars[pos] == 0)
@@ -75,13 +75,13 @@ def give_next_guess(board: np.array, mine_count: Optional[int] = None, verbose: 
         raise ValueError("Board is not feasible")
     V = board.shape[0]
     H = board.shape[1]
-    check_positions = set()  # any position that is unknown and has a neighbour with a clue or flag
+    check_positions = set()  # any position that is unknown and has a neighbor with a clue or flag
     flag_positions = set()
     for pos in get_all_pos(V, H):
-        neighbours8 = get_neighbors8(pos, V, H, include_self=False)
+        neighbors8 = get_neighbors8(pos, V, H, include_self=False)
         if get_char(board, pos) not in [' ', 'F']:
             continue
-        if get_char(board, pos) == 'F' or any(get_char(board, n) != ' ' for n in neighbours8):
+        if get_char(board, pos) == 'F' or any(get_char(board, n) != ' ' for n in neighbors8):
             check_positions.add(pos)
         if get_char(board, pos) == 'F':
             flag_positions.add(pos)

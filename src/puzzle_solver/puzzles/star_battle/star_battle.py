@@ -46,7 +46,7 @@ class Board:
         else:  # shaped version = blocks
             for block_i in self.block_numbers:
                 self.model.Add(sum(self.model_vars[pos] for pos in self.blocks[block_i]) == self.star_count)
-        # stars cant be adjacent
+        # stars can't be adjacent
         for pos in get_all_pos(self.V, self.H):
             for neighbor in get_neighbors8(pos, V=self.V, H=self.H):
                 self.model.Add(self.model_vars[neighbor] == 0).OnlyEnforceIf(self.model_vars[pos])

@@ -48,7 +48,7 @@ Note that any layout with more than 4 balls may have a non-unique solution. The 
 
 For this reason, when you have your guesses checked, the game will check that your solution produces the same results as the computer's, rather than that your solution is identical to the computer's. So in the above example, you could put the fifth ball at any of the locations marked with an x, and you would still win.
 
-Note: This puzzle is one of the very rare puzzles where CP-SAT is not a good fit because for every placement of the balls the state of the beams is dynamically changes and thus required a lot of variables to construct and constraint. This is why the resulting model is large and slow.
+Note: This puzzle is one of the very rare puzzles where CP-SAT is not a good fit because for every placement of the balls the state of the beams is dynamically changes and thus requires a lot of variables to construct and constraint. This is why the resulting model is large and slow.
 
 **Unsolved puzzle**
 

@@ -32,7 +32,7 @@ class Board:
             self.model.AddExactlyOne([self.model_vars[(pos, color)] for color in self.unique_colors])
             if c != '':  # an endpoint, thus must be the color
                 self.model.Add(self.model_vars[(pos, c)] == 1)
-                self.model.Add(sum([self.model_vars[(n, c)] for n in get_neighbors4(pos, self.V, self.H)]) == 1)  # endpoits must have exactly 1 neighbor
+                self.model.Add(sum([self.model_vars[(n, c)] for n in get_neighbors4(pos, self.V, self.H)]) == 1)  # endpoints must have exactly 1 neighbor
             else:  # not an endpoint, thus must have exactly 2 neighbors
                 for color in self.unique_colors:
                     self.model.Add(sum([self.model_vars[(n, color)] for n in get_neighbors4(pos, self.V, self.H)]) == 2).OnlyEnforceIf(self.model_vars[(pos, color)])

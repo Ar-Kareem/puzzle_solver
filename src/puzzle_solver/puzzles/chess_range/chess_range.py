@@ -30,7 +30,7 @@ class SingleSolution:
         result = []
         for _, (_, from_pos, to_pos, _) in sorted(self.assignment.items()):
             result.append((from_pos.x, from_pos.y, to_pos.x, to_pos.y))
-        # order doesnt matter for uniqueness
+        # order doesn't matter for uniqueness
         result = sorted(result)
         return json.dumps(result)
 
@@ -239,7 +239,7 @@ class Board:
         # initial state
         for p, (_, initial_pos) in self.pieces.items():
             self.model.Add(self.piece_positions[(p, 0, initial_pos)] == 1)
-            # cant be initially dead
+            # can't be initially dead
             self.model.Add(self.is_dead[(p, 0)] == 0)
             # all others are blank
             for pos in self.all_legal_positions:
@@ -311,7 +311,7 @@ class Board:
                 self.model.Add(self.victim[(p, t)] == 0).OnlyEnforceIf(self.mover[(p, t)])
 
                 # if im dead next timestep and i was alive this timestep then im the victim
-                # cant rely on victim var here because the goal it to constrain it
+                # can't rely on victim var here because the goal it to constrain it
                 dies_this_timestep = self.model.NewBoolVar(f'dies_this_timestep[{p},{t}]')
                 and_constraint(self.model, dies_this_timestep, [self.is_dead[(p, t + 1)], self.is_dead[(p, t)].Not()])
                 self.model.Add(self.victim[(p, t)] == dies_this_timestep)

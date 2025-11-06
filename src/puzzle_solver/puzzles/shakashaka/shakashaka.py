@@ -64,7 +64,7 @@ def init_rectangles(V: int, H: int) -> list[Rectangle]:
     # now imagine rectangles rotated clockwise by 45 degrees
     for height in range(1, V+1):
         for width in range(1, H+1):
-            if width + height > V or width + height > H:  # this rotated rectangle wont fit
+            if width + height > V or width + height > H:  # this rotated rectangle won't fit
                 continue
             body = {}
             tl_body = {(i, height-1-i) for i in range(height)}  # top left edge

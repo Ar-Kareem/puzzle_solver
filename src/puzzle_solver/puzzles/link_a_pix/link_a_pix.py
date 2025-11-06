@@ -59,7 +59,7 @@ class Board:
     def populate_pair(self, pos1: Pos, pos2: Pos, N: int):
         for shape in shapes_between(pos1, pos2, N):
             number_cells_hit = {p for p in shape if p in self.pos_to_char}
-            assert number_cells_hit.issuperset({pos1, pos2}), f'Not possible! shape {shape} should always hit pos1 and pos2; this error means theres a bug in shapes_between'
+            assert number_cells_hit.issuperset({pos1, pos2}), f'Not possible! shape {shape} should always hit pos1 and pos2; this error means there\'s a bug in shapes_between'
             if number_cells_hit != {pos1, pos2}:  # shape hit some numbered cells other than pos1 and pos2
                 continue
             s = ShapeOnBoard(uid=len(self.all_shapes), is_active=self.model.NewBoolVar(f'{shape}'), size=N, shape=shape)
@@ -72,7 +72,7 @@ class Board:
             shapes_on_pos = [s.is_active for s in self.pos_to_shapes[pos]]
             assert len(shapes_on_pos) >= 1, f'pos {pos} has no shapes on it. No solution possible!!!'
             self.model.AddExactlyOne(shapes_on_pos)
-        for s1 in self.all_shapes:  # active shapes cant collide
+        for s1 in self.all_shapes:  # active shapes can't collide
             for s2 in self.all_shapes:
                 if s1.uid != s2.uid and s1.shape.intersection(s2.shape):
                     self.model.Add(s1.is_active + s2.is_active <= 1)

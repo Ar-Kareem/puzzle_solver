@@ -88,7 +88,7 @@ Let's say we start and made two guesses to end up with the following puzzle:
 
 Code to utilize this package and solve the puzzle:
 
-We encode the puzzle as a Board object then retreive the optimal next guess:
+We encode the puzzle as a Board object then retrieve the optimal next guess:
 ```python
 from puzzle_solver import guess_solver as solver
 binst = solver.Board()
@@ -113,7 +113,7 @@ So we make our next guess as (Purple, Yellow, Yellow, Green) and let's say we ge
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/guess_2.png" alt="Guess Post 1 Move" width="500">
 
-So we input that again to the solver to retreive the next optimal guess:
+So we input that again to the solver to retrieve the next optimal guess:
 
 ```python
 from puzzle_solver import guess_solver as solver
