@@ -73,7 +73,7 @@ All pen and paper puzzles have been implemented.
 The website has exactly 86 puzzles in total:
 
 - 54 are Sudoku-like puzzles (?/54 implemented)
-- 22 Interactive non-Sudoku puzzles (21/22 implemented; 1 remaining)
+- 22 Interactive non-Sudoku puzzles (21/22 implemented; 1 remaining) (the one remaining is Area 51 which is a hybrid of 3 already implemented puzzles)
 - 10 Printable only non-Sudoku puzzles (4/10 implemented; 6 remaining)
 
 Sudoku variants are so abundant so they are currently not prioritized.
