@@ -417,6 +417,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/cow_and_cactus_solved.png" alt="Cow and Cactus" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="#kropki-puzzle-type-75"><b>Kropki</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/kropki_solved.png" alt="Kropki" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
@@ -570,6 +575,7 @@ Time taken: 0.04 seconds
   - [Vectors (Puzzle Type #72)](#vectors-puzzle-type-72)
   - [Vermicelli (Puzzle Type #73)](#vermicelli-puzzle-type-73)
   - [Cow and Cactus (Puzzle Type #74)](#cow-and-cactus-puzzle-type-74)
+  - [Kropki (Puzzle Type #75)](#kropki-puzzle-type-75)
   - [Why SAT / CP-SAT?](#why-sat--cp-sat)
   - [Testing](#testing)
   - [Contributing](#contributing)
@@ -7365,6 +7371,89 @@ Time taken: 0.04 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/cow_and_cactus_solved.png" alt="Cow and Cactus solved" width="500">
+
+---
+
+## Kropki (Puzzle Type #75)
+
+* [**Play online**](https://krazydad.com/play/kropki)
+
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/kropki)
+
+<details>
+  <summary><strong>Rules</strong></summary>
+
+Each digit from 1-6 occurs once within each row and column. White circles separate consecutive digits. Black circles separate digits with a 2:1 ratio.
+
+All number pairs that *can* be clued will receive clues – numbers that do *not* have circle clues are neither consecutive nor in a 2:1 ratio.
+
+There is only one solution.
+
+</details>
+
+**Unsolved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/kropki_unsolved.png" alt="Kropki unsolved" width="500">
+
+Code to utilize this package and solve the puzzle:
+
+```python
+import numpy as np
+from puzzle_solver import kropki_solver as solver
+board = np.array([
+    [' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', '2', ' ', ' ', ' ', ' '],
+    [' ', ' ', ' ', ' ', '4', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' '],
+])
+horiz_board = np.array([
+    [' ', ' ', ' ', ' ', 'W'],
+    [' ', ' ', ' ', ' ', ' '],
+    ['B', ' ', 'B', ' ', ' '],
+    ['B', 'W', ' ', 'W', ' '],
+    ['B', 'W', ' ', ' ', 'W'],
+    [' ', 'W', ' ', 'W', 'W'],
+])
+vert_board = np.array([
+    [' ', ' ', ' ', ' ', ' ', 'W'],
+    ['W', ' ', ' ', 'W', ' ', ' '],
+    [' ', 'W', ' ', ' ', ' ', ' '],
+    [' ', 'W', 'W', ' ', 'W', ' '],
+    ['W', ' ', ' ', 'W', ' ', ' '],
+])
+binst = solver.Board(board=board, horiz_board=horiz_board, vert_board=vert_board)
+solutions = binst.solve_and_print()
+```
+
+**Script Output**
+
+```python
+Solution found
+
+    0   1   2   3   4   5
+  ┌───┬───┬───┬───┬───┬───┐
+ 0│ 5 │ 1 │ 4 │ 6 │ 2 │ 3 │
+  ├───┼───┼───┼───┼───┼───┤
+ 1│ 3 │ 5 │ 1 │ 4 │ 6 │ 2 │
+  ├───┼───┼───┼───┼───┼───┤
+ 2│ 4 │ 2 │ 6 │ 3 │ 1 │ 5 │
+  ├───┼───┼───┼───┼───┼───┤
+ 3│ 6 │ 3 │ 2 │ 5 │ 4 │ 1 │
+  ├───┼───┼───┼───┼───┼───┤
+ 4│ 2 │ 4 │ 3 │ 1 │ 5 │ 6 │
+  ├───┼───┼───┼───┼───┼───┤
+ 5│ 1 │ 6 │ 5 │ 2 │ 3 │ 4 │
+  └───┴───┴───┴───┴───┴───┘
+Solutions found: 1
+status: OPTIMAL
+Time taken: 0.01 seconds
+```
+
+**Solved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/kropki_solved.png" alt="Kropki solved" width="500">
 
 ---
 
