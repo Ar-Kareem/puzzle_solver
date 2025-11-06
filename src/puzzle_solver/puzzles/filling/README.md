@@ -36,7 +36,6 @@ board = np.array([
 ])
 binst = solver.Board(board=board)
 solutions = binst.solve_and_print()
-assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
 ```
 **Script Output**
 ```
