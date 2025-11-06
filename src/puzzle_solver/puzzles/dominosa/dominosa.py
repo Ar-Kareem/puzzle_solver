@@ -5,6 +5,7 @@ from ortools.sat.python import cp_model
 
 from puzzle_solver.core.utils import Pos, get_all_pos, get_char, set_char, Direction, get_next_pos, in_bounds
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution, or_constraint
+from puzzle_solver.core.utils_visualizer import combined_function, id_board_to_wall_fn
 
 
 def get_bool_var(model: cp_model.CpModel, var: cp_model.IntVar, eq_val: int, name: str) -> cp_model.IntVar:
@@ -17,10 +18,11 @@ def get_bool_var(model: cp_model.CpModel, var: cp_model.IntVar, eq_val: int, nam
 class Board:
     def __init__(self, board: np.array):
         assert board.ndim == 2, f'board must be 2d, got {board.ndim}'
-        assert all(0 <= int(i.item()) <= 9 for i in np.nditer(board)), 'board must contain only alphanumeric characters or space'
-        assert np.min(board) == 0, 'expected board to start from 0'
+        assert all(str(i.item()).isdecimal() for i in np.nditer(board)), 'board must contain only digits'
+        nums = [int(i.item()) for i in np.nditer(board)]
+        assert min(nums) == 0, 'expected board to start from 0'
         self.board = board
-        self.max_val = np.max(board)
+        self.max_val = max(nums)
 
         self.V = board.shape[0]
         self.H = board.shape[1]
@@ -60,22 +62,10 @@ class Board:
 
     def add_all_constraints(self):
         # all pairs must be used
-        self.all_pairs_used()
-        self.constrain_domino_shape()
-        self.constrain_pair_activation()
-
-
-        # for pos in get_all_pos(self.V, self.H):
-        #     # to the right
-        #     right_pos = get_next_pos(pos, Direction.RIGHT)
-        #     if not in_bounds(right_pos, self.V, self.H):
-        #         continue
-        #     v = self.model.NewBoolVar(f'{pos}:right')
-        #     and_constraint(self.model, v, [self.model_vars[pos] == Direction.RIGHT.value, self.model_vars[right_pos] == Direction.LEFT.value])
-
-    def all_pairs_used(self):
         for pair in self.pair_vars:
             self.model.Add(self.pair_vars[pair] == 1)
+        self.constrain_domino_shape()
+        self.constrain_pair_activation()
 
     def constrain_domino_shape(self):
         # if X is right then the cell to its right must be left
@@ -129,8 +119,11 @@ class Board:
             print("Solution found")
             res = np.full((self.V, self.H), ' ', dtype=object)
             for pos in get_all_pos(self.V, self.H):
-                c = get_char(self.board, pos)
-                c = Direction(single_res.assignment[pos]).name[:1]
-                set_char(res, pos, c)
-            print(res)
+                next_pos = get_next_pos(pos, Direction(single_res.assignment[pos]))
+                set_char(res, pos, f'{hash(pos)}')
+                set_char(res, next_pos, f'{hash(pos)}')
+            print(combined_function(self.V, self.H,
+                cell_flags=id_board_to_wall_fn(res),
+                center_char=lambda r, c: self.board[r, c] if self.board[r, c] != ' ' else ' '
+            ))
         return generic_solve_all(self, board_to_solution, callback=callback if verbose else None, verbose=verbose)
