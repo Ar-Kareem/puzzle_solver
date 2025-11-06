@@ -151,4 +151,4 @@ __all__ = [
     inertia_image_parser,
 ]
 
-__version__ = '1.0.12'
+__version__ = '1.0.13'
