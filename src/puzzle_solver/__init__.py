@@ -23,6 +23,7 @@ from puzzle_solver.puzzles.inertia import inertia as inertia_solver
 from puzzle_solver.puzzles.kakurasu import kakurasu as kakurasu_solver
 from puzzle_solver.puzzles.kakuro import kakuro as kakuro_solver
 from puzzle_solver.puzzles.keen import keen as keen_solver
+from puzzle_solver.puzzles.kropki import kropki as kropki_solver
 from puzzle_solver.puzzles.light_up import light_up as light_up_solver
 from puzzle_solver.puzzles.link_a_pix import link_a_pix as link_a_pix_solver
 from puzzle_solver.puzzles.magnets import magnets as magnets_solver
@@ -101,6 +102,7 @@ __all__ = [
     kakurasu_solver,
     kakuro_solver,
     keen_solver,
+    kropki_solver,
     light_up_solver,
     link_a_pix_solver,
     magnets_solver,
