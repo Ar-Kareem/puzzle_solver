@@ -408,7 +408,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-    <a href="#vermicelli-puzzle-type-72"><b>Vermicelli</b><br><br>
+    <a href="#vermicelli-puzzle-type-73"><b>Vermicelli</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/vermicelli_solved.png" alt="Vermicelli" width="140">
     </a>
   </td>
@@ -563,7 +563,7 @@ Time taken: 0.04 seconds
   - [Link-a-Pix (Puzzle Type #70)](#link-a-pix-puzzle-type-70)
   - [Trees Logic (Puzzle Type #71)](#trees-logic-puzzle-type-71)
   - [Vectors (Puzzle Type #72)](#vectors-puzzle-type-72)
-  - [Vermicelli (Puzzle Type #72)](#vermicelli-puzzle-type-72)
+  - [Vermicelli (Puzzle Type #73)](#vermicelli-puzzle-type-73)
   - [Why SAT / CP-SAT?](#why-sat--cp-sat)
   - [Testing](#testing)
   - [Contributing](#contributing)
@@ -7216,7 +7216,7 @@ Time taken: 0.03 seconds
 
 ---
 
-## Vermicelli (Puzzle Type #72)
+## Vermicelli (Puzzle Type #73)
 
 * [**Play online**](https://krazydad.com/play/vermicelli)
 

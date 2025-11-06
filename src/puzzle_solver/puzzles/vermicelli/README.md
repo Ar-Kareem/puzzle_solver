@@ -1,4 +1,4 @@
-# Vermicelli (Puzzle Type #72)
+# Vermicelli (Puzzle Type #73)
 
 * [**Play online**](https://krazydad.com/play/vermicelli)
 
