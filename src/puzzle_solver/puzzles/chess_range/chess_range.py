@@ -220,8 +220,8 @@ class Board:
                 self.is_dead[(p, t)] = self.model.NewBoolVar(f'is_dead[{p},{t}]')
         for p in range(self.N):
             for t in range(self.T - 1):  # final state does not have a mover or victim
-                self.mover[(p, t)] = self.model.NewIntVar(0, 1, f'mover[{p},{t}]')
-                self.victim[(p, t)] = self.model.NewIntVar(0, 1, f'victim[{p},{t}]')
+                self.mover[(p, t)] = self.model.NewBoolVar(f'mover[{p},{t}]')
+                self.victim[(p, t)] = self.model.NewBoolVar(f'victim[{p},{t}]')
 
         for t in range(self.T):
             for pos in self.all_legal_positions:
