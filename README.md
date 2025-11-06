@@ -1045,9 +1045,11 @@ Time taken: 0.25 seconds
 
 ## Light Up (Puzzle Type #5)
 
-Also known as Akari.
+Also known as Akari or Lasergrids.
 
-* [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/lightup.html)
+* [**Play online 1**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/lightup.html)
+
+* [**Play online 2**](https://www.puzzle-light-up.com/)
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/lightup.html#lightup)
 
