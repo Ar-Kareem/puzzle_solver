@@ -9,6 +9,7 @@ from puzzle_solver.puzzles.chess_range import chess_range as chess_range_solver
 from puzzle_solver.puzzles.chess_range import chess_solo as chess_solo_solver
 from puzzle_solver.puzzles.chess_range import chess_melee as chess_melee_solver
 from puzzle_solver.puzzles.connect_the_dots import connect_the_dots as connect_the_dots_solver
+from puzzle_solver.puzzles.cow_and_cactus import cow_and_cactus as cow_and_cactus_solver
 from puzzle_solver.puzzles.dominosa import dominosa as dominosa_solver
 from puzzle_solver.puzzles.troix import dumplings as dumplings_solver
 from puzzle_solver.puzzles.filling import filling as filling_solver
@@ -86,6 +87,7 @@ __all__ = [
     chess_solo_solver,
     chess_melee_solver,
     connect_the_dots_solver,
+    cow_and_cactus_solver,
     dominosa_solver,
     dumplings_solver,
     filling_solver,
