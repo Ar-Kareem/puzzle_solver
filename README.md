@@ -429,6 +429,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/ripple_effect_solved.png" alt="Ripple Effect" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="#area-51-puzzle-type-77"><b>Area 51</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/area_51_solved.png" alt="Area 51" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
