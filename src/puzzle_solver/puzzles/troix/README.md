@@ -1,4 +1,4 @@
-# Troix (Puzzle Type #63)
+# Troix (Puzzle Type #62)
 
 * [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/troix)
 

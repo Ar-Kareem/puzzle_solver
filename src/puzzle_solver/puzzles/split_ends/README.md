@@ -1,4 +1,4 @@
-# Split Ends (Puzzle Type #61)
+# Split Ends (Puzzle Type #60)
 
 * [**Play online**](https://krazydad.com/play/splitends/)
 

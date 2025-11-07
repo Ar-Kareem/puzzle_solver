@@ -1,4 +1,4 @@
- Signpost (Puzzle Type #12)
+# Signpost (Puzzle Type #12)
 
 This is a dedicated solver for Signpost
 

@@ -1,4 +1,4 @@
-# N-Queens (Puzzle Type #60)
+# N-Queens (Puzzle Type #61)
 
 Can also solve puzzles such as 7-Queens.
 

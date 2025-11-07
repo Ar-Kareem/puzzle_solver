@@ -143,12 +143,12 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_solo"><b>Chess Solo</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_range"><b>Chess Solo</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_solo_unsolved.png" alt="Chess solo" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_melee"><b>Chess Melee</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_range"><b>Chess Melee</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_melee_unsolved.png" alt="Chess melee" width="140">
     </a>
   </td>
@@ -187,7 +187,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/star_battle_shapeless"><b>Star Battle Shapeless</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/star_battle"><b>Star Battle Shapeless</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/star_battle_shapeless_solved.png" alt="Star Battle Shapeless" width="140">
     </a>
   </td>
@@ -278,7 +278,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/binairo_plus"><b>Binairo Plus</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/binairo"><b>Binairo Plus</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/binairo_plus_solved.png" alt="Binairo Plus" width="140">
     </a>
   </td>
@@ -295,12 +295,12 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku_jigsaw"><b>Sudoku Jigsaw</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku"><b>Sudoku Jigsaw</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/sudoku_jigsaw_solved.png" alt="Sudoku Jigsaw" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku_killer"><b>Sudoku Killer</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku"><b>Sudoku Killer</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/sudoku_killer_solved.png" alt="Sudoku Killer" width="140">
     </a>
   </td>
@@ -322,7 +322,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nonograms_colored"><b>Nonograms Colored</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nonograms"><b>Nonograms Colored</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/nonograms_colored_solved.png" alt="Nonograms Colored" width="140">
     </a>
   </td>
@@ -354,7 +354,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/dumplings"><b>Dumplings</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/troix"><b>Dumplings</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/dumplings_solved.png" alt="Dumplings" width="140">
     </a>
   </td>
