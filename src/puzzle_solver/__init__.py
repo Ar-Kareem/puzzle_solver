@@ -1,5 +1,6 @@
 from puzzle_solver.puzzles.abc_view import abc_view as abc_view_solver
 from puzzle_solver.puzzles.aquarium import aquarium as aquarium_solver
+from puzzle_solver.puzzles.area_51 import area_51 as area_51_solver
 from puzzle_solver.puzzles.battleships import battleships as battleships_solver
 from puzzle_solver.puzzles.binairo import binairo as binairo_solver
 from puzzle_solver.puzzles.binairo import binairo_plus as binairo_plus_solver
@@ -80,6 +81,7 @@ from puzzle_solver.puzzles.inertia.parse_map.parse_map import main as inertia_im
 __all__ = [
     abc_view_solver,
     aquarium_solver,
+    area_51_solver,
     battleships_solver,
     binairo_solver,
     binairo_plus_solver,
