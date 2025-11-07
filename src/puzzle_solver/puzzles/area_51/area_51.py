@@ -78,17 +78,7 @@ class Board:
                 self.add_white_dot_constraints(pos)
             elif color == 'B':
                 self.add_black_dot_constraints(pos)
-        # inside the fence, all cells must be connected
-        force_connected_component(self.model, self.w)
-        # outside the fence, all cells must be connected, + outside border is considered black
-        def is_outside_neighbor(p1: Pos, p2: Pos) -> bool:
-            if abs(p1.x - p2.x) + abs(p1.y - p2.y) == 1:  # manhattan distance is 1
-                return True
-            # both are on the border
-            p1_on_border = p1.x == 0 or p1.x == self.H - 1 or p1.y == 0 or p1.y == self.V - 1
-            p2_on_border = p2.x == 0 or p2.x == self.H - 1 or p2.y == 0 or p2.y == self.V - 1
-            return p1_on_border and p2_on_border
-        force_connected_component(self.model, self.b, is_neighbor=is_outside_neighbor)
+        self.fence_is_single_block()
 
     def range_clues(self, pos: Pos, k: int):
         self.model.Add(self.w[pos] == 1)  # Force it white
@@ -149,6 +139,22 @@ class Board:
         gate_3 = enforce_groups_opposite_when(self.model, [bl, bl_l, bl_d], [tl, tr, br, tl_l, br_d])  # V3: block bl is the one that is different from the other 3
         gate_4 = enforce_groups_opposite_when(self.model, [br, br_d, br_r], [tl, tr, bl, bl_d, tr_r])  # V4: block br is the one that is different from the other 3
         self.model.AddBoolOr([gate_1, gate_2, gate_3, gate_4])
+
+    def fence_is_single_block(self):
+        # inside the fence, all cells must be connected
+        force_connected_component(self.model, self.w)
+        # outside the fence, all cells must be connected, + outside border is considered black + outside the fence must touch the border otherwise 'outside the fence' is completely enclosed by the fence which is invalid
+        def is_outside_neighbor(p1: Pos, p2: Pos) -> bool:
+            if abs(p1.x - p2.x) + abs(p1.y - p2.y) == 1:  # manhattan distance is 1
+                return True
+            # both are on the border
+            p1_on_border = p1.x == 0 or p1.x == self.H - 1 or p1.y == 0 or p1.y == self.V - 1
+            p2_on_border = p2.x == 0 or p2.x == self.H - 1 or p2.y == 0 or p2.y == self.V - 1
+            return p1_on_border and p2_on_border
+        b_aug = self.b.copy()
+        # add a single fake cell on the outside
+        b_aug[get_pos(x=-1, y=0)] = self.model.NewConstant(1)
+        force_connected_component(self.model, b_aug, is_neighbor=is_outside_neighbor)
 
     def solve_and_print(self, verbose: bool = True):
         def board_to_solution(board: Board, solver: cp_model.CpSolverSolutionCallback) -> SingleSolution:

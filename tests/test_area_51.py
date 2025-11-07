@@ -46,5 +46,20 @@ def test_ground():
     for pos in solution.keys():
         assert str(solution[pos]) == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
+
+def test_black_completely_surrounded_isnt_valid():
+    # only one solution unless the black is completely surrounded by white (WHICH IS INVALID)
+    board = np.array([
+        ['2 ', '2 ', 'A '],
+        ['2 ', '  ', '2 '],
+        ['2 ', '2 ', '2 '],
+    ])
+    dots = {}
+    binst = solver.Board(board=board, dots=dots)
+    solutions = binst.solve_and_print()
+    assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
+
+
 if __name__ == "__main__":
     test_ground()
+    test_black_completely_surrounded_isnt_valid()
