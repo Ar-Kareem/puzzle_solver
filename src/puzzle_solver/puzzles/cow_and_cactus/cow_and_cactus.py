@@ -48,8 +48,8 @@ class Board:
             if abs(p1.x - p2.x) + abs(p1.y - p2.y) == 1:  # manhattan distance is 1
                 return True
             # both are on the border
-            p1_on_border = p1.x == 0 or p1.x == self.V - 1 or p1.y == 0 or p1.y == self.H - 1
-            p2_on_border = p2.x == 0 or p2.x == self.V - 1 or p2.y == 0 or p2.y == self.H - 1
+            p1_on_border = p1.x == 0 or p1.x == self.H- 1 or p1.y == 0 or p1.y == self.V - 1
+            p2_on_border = p2.x == 0 or p2.x == self.H- 1 or p2.y == 0 or p2.y == self.V - 1
             return p1_on_border and p2_on_border
         force_connected_component(self.model, self.outside_fence, is_neighbor=is_outside_neighbor)
 
