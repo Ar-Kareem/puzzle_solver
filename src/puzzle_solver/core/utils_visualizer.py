@@ -349,12 +349,13 @@ def combined_function(V: int,
 
     return ''.join(top_tens) + '\n' + ''.join(top_ones) + '\n' + '\n'.join(labeled)
 
-def id_board_to_wall_fn(id_board: np.array, border_is_wall = True) -> Callable[[int, int], str]:
+def id_board_to_wall_fn(id_board: np.array, border_is_wall = True, border_is = None) -> Callable[[int, int], str]:
     """In many instances, we have a 2d array where cell values are arbitrary ids
     and we want to convert it to a 2d array where cell values are walls "U", "D", "L", "R" to represent the edges that separate me from my neighbors that have different ids.
     Args:
         id_board: np.array of shape (N, N) with arbitrary ids.
         border_is_wall: if True, the edges of the board are considered to be walls.
+        border_is: if equal to a value, the edges of the board are considered to be walls of that value.
     Returns:
         Callable[[int, int], str] that returns the walls "U", "D", "L", "R" for the cell at (r, c).
     """
@@ -368,7 +369,7 @@ def id_board_to_wall_fn(id_board: np.array, border_is_wall = True) -> Callable[[
             if get_char(id_board, pos2) != get_char(id_board, pos):
                 append_char(pos, s)
         else:
-            if border_is_wall:
+            if border_is_wall or (border_is is not None and get_char(id_board, pos) == border_is):
                 append_char(pos, s)
     for pos in get_all_pos(V, H):
         handle_pos_direction(pos, Direction.LEFT, 'L')
