@@ -15,422 +15,422 @@ pip install multi-puzzle-solver
 
 ## 🕹️ Puzzle Gallery
 
-These are all the puzzles that are implemented in this repo. <br> Click on any of them to go to that section of the README.
+These are all the puzzles that are implemented in this repo. <br> Click on any of them to go to that Puzzle's README.
 
 <table>
 <tr>
   <td align="center">
-    <a href="#nonograms-puzzle-type-1"><b>Nonograms</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nonograms"><b>Nonograms</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/nonogram_solved.png" alt="Nonograms" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#sudoku-puzzle-type-2"><b>Sudoku</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku"><b>Sudoku</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/sudoku_solved.png" alt="Sudoku" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#minesweeper-puzzle-type-3"><b>Minesweeper</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/minesweeper"><b>Minesweeper</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/minesweeper_pre.png" alt="Minesweeper" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#dominosa-puzzle-type-4"><b>Dominosa</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/dominosa"><b>Dominosa</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/dominosa_solved.png" alt="Dominosa" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#light-up-puzzle-type-5"><b>Light Up</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/light_up"><b>Light Up</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/lightup_solved.png" alt="Light Up" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#tents-puzzle-type-6"><b>Tents</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tents"><b>Tents</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/tents_solved.png" alt="Tents" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#filling-puzzle-type-7"><b>Filling</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/filling"><b>Filling</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/filling_solved.png" alt="Filling" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#keen-puzzle-type-8"><b>Keen</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/keen"><b>Keen</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/keen_solved.png" alt="Keen" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#towers-puzzle-type-9"><b>Towers</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/towers"><b>Towers</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/towers_solved.png" alt="Towers" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#singles-puzzle-type-10"><b>Singles</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/singles"><b>Singles</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/singles_solved.png" alt="Singles" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#magnets-puzzle-type-11"><b>Magnets</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/magnets"><b>Magnets</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/magnets_solved.png" alt="Magnets" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#signpost-puzzle-type-12"><b>Signpost</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/signpost"><b>Signpost</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/signpost_solved.png" alt="Signpost" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#range-puzzle-type-13"><b>Range</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/range"><b>Range</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/range_solved.png" alt="Range" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#undead-puzzle-type-14"><b>Undead</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/undead"><b>Undead</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/undead_solved.png" alt="Undead" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#unruly-puzzle-type-15"><b>Unruly</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/unruly"><b>Unruly</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/unruly_solved.png" alt="Unruly" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#tracks-puzzle-type-16"><b>Tracks</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tracks"><b>Tracks</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/tracks_solved.png" alt="Tracks" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#mosaic-puzzle-type-17"><b>Mosaic</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/mosaic"><b>Mosaic</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/mosaic_solved.png" alt="Mosaic" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#map-puzzle-type-18"><b>Map</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/map"><b>Map</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/map_solved.png" alt="Map" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#pearl-puzzle-type-19"><b>Pearl</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/pearl"><b>Pearl</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/pearl_solved.png" alt="Pearl" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#bridges-puzzle-type-20"><b>Bridges</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/bridges"><b>Bridges</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/bridges_solved.png" alt="Bridges" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#inertia-puzzle-type-21"><b>Inertia</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/inertia"><b>Inertia</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/inertia_unsolved.png" alt="Inertia" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#guess-puzzle-type-22"><b>Guess</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/guess"><b>Guess</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/guess_3.png" alt="Guess" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#chess-range-puzzle-type-23"><b>Chess Range</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_range"><b>Chess Range</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_range_unsolved.png" alt="Chess range" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#chess-solo-puzzle-type-24"><b>Chess Solo</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_solo"><b>Chess Solo</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_solo_unsolved.png" alt="Chess solo" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#chess-melee-puzzle-type-25"><b>Chess Melee</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_melee"><b>Chess Melee</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_melee_unsolved.png" alt="Chess melee" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#thermometers-puzzle-type-26"><b>Thermometers</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/thermometers"><b>Thermometers</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/thermometers_solved.png" alt="Thermometers" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#aquarium-puzzle-type-27"><b>Aquarium</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/aquarium"><b>Aquarium</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/aquarium_solved.png" alt="Aquarium" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#stitches-puzzle-type-28"><b>Stitches</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/stitches"><b>Stitches</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/stitches_solved.png" alt="Stitches" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#battleships-puzzle-type-29"><b>Battleships</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/battleships"><b>Battleships</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/battleships_solved.png" alt="Battleships" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#kakurasu-puzzle-type-30"><b>Kakurasu</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/kakurasu"><b>Kakurasu</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/kakurasu_solved.png" alt="Kakurasu" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#star-battle-puzzle-type-31"><b>Star Battle</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/star_battle"><b>Star Battle</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/star_battle_solved.png" alt="Star Battle" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#star-battle-shapeless-puzzle-type-32"><b>Star Battle Shapeless</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/star_battle_shapeless"><b>Star Battle Shapeless</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/star_battle_shapeless_solved.png" alt="Star Battle Shapeless" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#lits-puzzle-type-33"><b>Lits</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/lits"><b>Lits</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/lits_solved.png" alt="Lits" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#black-box-puzzle-type-34"><b>Black Box</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/black_box"><b>Black Box</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/black_box_solved.png" alt="Black Box" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#galaxies-puzzle-type-35"><b>Galaxies</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/galaxies"><b>Galaxies</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/galaxies_solved.png" alt="Galaxies" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#slant-puzzle-type-36"><b>Slant</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/slant"><b>Slant</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/slant_solved.png" alt="Slant" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#unequal-puzzle-type-37"><b>Unequal</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/unequal"><b>Unequal</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/unequal_solved.png" alt="Unequal" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#norinori-puzzle-type-38"><b>Norinori</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/norinori"><b>Norinori</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/norinori_solved.png" alt="Norinori" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#slitherlink-puzzle-type-39"><b>Slitherlink</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/slitherlink"><b>Slitherlink</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/slitherlink_solved.png" alt="Slitherlink" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#yin-yang-puzzle-type-40"><b>Yin-Yang</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/yin_yang"><b>Yin-Yang</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/yin_yang_solved.png" alt="Yin-Yang" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#binairo-puzzle-type-41"><b>Binairo</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/binairo"><b>Binairo</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/binairo_solved.png" alt="Binairo" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#rectangles-puzzle-type-42"><b>Rectangles</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/rectangles"><b>Rectangles</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/rectangles_solved.png" alt="Rectangles" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#palisade-puzzle-type-43"><b>Palisade</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/palisade"><b>Palisade</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/palisade_solved.png" alt="Palisade" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#flip-puzzle-type-44"><b>Flip</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/flip"><b>Flip</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/flip_unsolved.png" alt="Flip" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#nurikabe-puzzle-type-45"><b>Nurikabe</b><br><br>
+        <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nurikabe"><b>Nurikabe</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/nurikabe_solved.png" alt="Nurikabe" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#heyawake-puzzle-type-46"><b>Heyawake</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/heyawake"><b>Heyawake</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/heyawake_solved.png" alt="Heyawake" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#shingoki-puzzle-type-47"><b>Shingoki</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/shingoki"><b>Shingoki</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/shingoki_solved.png" alt="Shingoki" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#tapa-puzzle-type-48"><b>Tapa</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tapa"><b>Tapa</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/tapa_solved.png" alt="Tapa" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#binairo-plus-puzzle-type-49"><b>Binairo Plus</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/binairo_plus"><b>Binairo Plus</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/binairo_plus_solved.png" alt="Binairo Plus" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#shakashaka-puzzle-type-50"><b>Shakashaka</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/shakashaka"><b>Shakashaka</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/shakashaka_solved.png" alt="Shakashaka" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#kakuro-puzzle-type-51"><b>Kakuro</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/kakuro"><b>Kakuro</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/kakuro_solved.png" alt="Kakuro" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#sudoku-jigsaw-puzzle-type-52"><b>Sudoku Jigsaw</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku_jigsaw"><b>Sudoku Jigsaw</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/sudoku_jigsaw_solved.png" alt="Sudoku Jigsaw" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#sudoku-killer-puzzle-type-53"><b>Sudoku Killer</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku_killer"><b>Sudoku Killer</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/sudoku_killer_solved.png" alt="Sudoku Killer" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#flood-it-puzzle-type-54"><b>Flood It</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/flood_it"><b>Flood It</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/flood_it_unsolved.png" alt="Flood It" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#pipes-puzzle-type-55"><b>Pipes</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/pipes"><b>Pipes</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/pipes_solved.png" alt="Pipes" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#connect-the-dots-puzzle-type-56"><b>Connect the Dots</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/connect_the_dots"><b>Connect the Dots</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/connect_the_dots_solved.png" alt="Connect the Dots" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#nonograms-colored-puzzle-type-57"><b>Nonograms Colored</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nonograms_colored"><b>Nonograms Colored</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/nonograms_colored_solved.png" alt="Nonograms Colored" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#abc-view-puzzle-type-58"><b>ABC View</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/abc_view"><b>ABC View</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/abc_view_solved.png" alt="ABC View" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#mathema-grids-puzzle-type-59"><b>Mathema Grids</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/mathema_grids"><b>Mathema Grids</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/mathema_grids_solved.png" alt="Mathema Grids" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#split-ends-puzzle-type-60"><b>Split Ends</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/split_ends"><b>Split Ends</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/split_ends_solved.png" alt="Split Ends" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#n-queens-puzzle-type-61"><b>N-Queens</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/n_queens"><b>N-Queens</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/7_queens_solved.png" alt="N-Queens" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#troix-puzzle-type-62"><b>Troix</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/troix"><b>Troix</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/troix_solved.png" alt="Troix" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#dumplings-puzzle-type-63"><b>Dumplings</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/dumplings"><b>Dumplings</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/dumplings_solved.png" alt="Dumplings" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#hidoku-puzzle-type-64"><b>Hidoku</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/hidoku"><b>Hidoku</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/hidoku_solved.png" alt="Hidoku" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#suko-puzzle-type-65"><b>Suko</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/suko"><b>Suko</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/suko_solved.png" alt="Suko" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#suguru-puzzle-type-66"><b>Suguru</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/suguru"><b>Suguru</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/suguru_solved.png" alt="Suguru" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#number-path-puzzle-type-67"><b>Number Path</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/number_path"><b>Number Path</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/number_path_solved.png" alt="Number Path" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#yajilin-puzzle-type-68"><b>Yajilin</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/yajilin"><b>Yajilin</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/yajilin_solved.png" alt="Yajilin" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#numbermaze-puzzle-type-69"><b>Number Maze</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/numbermaze"><b>Number Maze</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/numbermaze_solved.png" alt="Number Maze" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#link-a-pix-puzzle-type-70"><b>Link-a-Pix</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/link_a_pix"><b>Link-a-Pix</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/link_a_pix_solved.png" alt="Link-a-Pix" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#trees-logic-puzzle-type-71"><b>Trees Logic</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/trees_logic"><b>Trees Logic</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/trees_logic_solved.png" alt="Trees Logic" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#vectors-puzzle-type-72"><b>Vectors</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/vectors"><b>Vectors</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/vectors_solved.png" alt="Vectors" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#vermicelli-puzzle-type-73"><b>Vermicelli</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/vermicelli"><b>Vermicelli</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/vermicelli_solved.png" alt="Vermicelli" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#cow-and-cactus-puzzle-type-74"><b>Cow and Cactus</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/cow_and_cactus"><b>Cow and Cactus</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/cow_and_cactus_solved.png" alt="Cow and Cactus" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#kropki-puzzle-type-75"><b>Kropki</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/kropki"><b>Kropki</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/kropki_solved.png" alt="Kropki" width="140">
     </a>
   </td>
 </tr>
 <tr>
   <td align="center">
-    <a href="#ripple-effect-puzzle-type-76"><b>Ripple Effect</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/ripple_effect"><b>Ripple Effect</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/ripple_effect_solved.png" alt="Ripple Effect" width="140">
     </a>
   </td>
   <td align="center">
-    <a href="#area-51-puzzle-type-77"><b>Area 51</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/area_51"><b>Area 51</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/area_51_solved.png" alt="Area 51" width="140">
     </a>
   </td>
