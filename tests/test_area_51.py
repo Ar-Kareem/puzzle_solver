@@ -30,27 +30,21 @@ def test_ground():
     solutions = binst.solve_and_print()
     assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
     solution = solutions[0].assignment
-
-
-def test_toy():
-    board = np.array([
-        ['  ', '  ', '  ', '  '],
-        ['  ', '  ', '  ', '  '],
-        ['  ', '  ', '  ', '  '],
-        ['  ', '  ', '  ', '  '],
-        ['  ', '  ', '  ', '  '],
-    ])
-    dots = {
-        get_pos(x=2, y=2): 'B', 
-        get_pos(x=1, y=2): 'W', 
-        get_pos(x=0, y=2): 'W', 
-    }
-    binst = solver.Board(board=board, dots=dots)
-    solutions = binst.solve_and_print()
-    assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
-    solution = solutions[0].assignment
-
+    # print('ground = np.' + repr(np.array([[solution.get(get_pos(x=x, y=y), ' ') for x in range(board.shape[1])] for y in range(board.shape[0])]).astype(str)))
+    ground = np.array([['1', '1', '1', '1', '0', '1', '1', '1'],
+        ['1', '0', '0', '1', '0', '1', '1', '1'],
+        ['1', '0', '1', '1', '1', '1', '0', '0'],
+        ['0', '0', '0', '0', '0', '1', '1', '1'],
+        ['1', '0', '1', '1', '1', '1', '0', '0'],
+        ['1', '1', '1', '1', '0', '1', '1', '1'],
+        ['0', '0', '0', '0', '0', '1', '0', '0'],
+        ['1', '1', '0', '1', '1', '1', '1', '1'],
+        ['0', '1', '1', '1', '1', '0', '0', '0'],
+        ['1', '1', '1', '0', '1', '1', '1', '1']], dtype='<U11')
+    ground_assignment = {get_pos(x=x, y=y): ground[y][x] for x in range(ground.shape[1]) for y in range(ground.shape[0])}
+    assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
+    for pos in solution.keys():
+        assert str(solution[pos]) == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
 if __name__ == "__main__":
     test_ground()
-    # test_toy()
