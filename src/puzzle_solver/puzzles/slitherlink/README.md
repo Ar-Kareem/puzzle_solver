@@ -12,6 +12,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/loopy.html#loopy)
 
+**Rules**
+
 You have to draw lines between the dots to form a single loop without crossings or branches. The numbers indicate how many lines surround it.
 
 A line forming a single loop without crossings or branches means that every corner has either 2 or 0 lines touching it.

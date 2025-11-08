@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://krazydad.com/play/vermicelli)
 
+**Rules**
+
 Connect worms to make a loop that visits every square in the grid. The worm can’t fork nor cross itself, and it can't go through walls.
 
 **Unsolved puzzle**

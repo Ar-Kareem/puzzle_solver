@@ -10,6 +10,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/palisade.html#palisade)
 
+**Rules**
+
 You're given a grid of N squares and a region size M, some of which contain numbers. Your goal is to subdivide the grid into (N/M) contiguous regions, where every region is of size M, such that each square containing a number is adjacent to exactly that many edges (including those between the inside and the outside of the grid). 
 
 **Unsolved puzzle**

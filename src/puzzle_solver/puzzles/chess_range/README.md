@@ -9,6 +9,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-chess.com/chess-ranger-11/)
 
+**Rules**
+
 You are given a chess board with $N$ pieces distributed on it. Your aim is to make $N-1$ sequence of moves where each move is a legal chess move and captures another piece.
 
 - Pieces move as standard chess pieces.
@@ -57,6 +59,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 (The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-chess.com/solo-chess-11/)
+
+**Rules**
 
 You are given a chess board with $N$ pieces distributed on it. Your aim is to make $N-1$ sequence of moves where each move is a legal chess move and captures another piece and end up with the king as the only piece on the board. You are not allowed to move a piece more than twice.
 
@@ -107,6 +111,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 (The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-chess.com/chess-melee-13/)
+
+**Rules**
 
 You are given a chess board with $N$ pieces distributed on it (equal white and black pieces, one more black if $N$ is odd). Your aim is to make $N-1$ sequence of moves where each move is a legal chess move and captures another piece of the opposite color and end up with a single piece on the board. White starts and colors alternate as usual.
 

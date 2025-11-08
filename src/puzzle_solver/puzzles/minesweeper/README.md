@@ -16,6 +16,8 @@ Below is an example of how to utilize the solver while in the middle of a puzzle
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/mines.html#mines)
 
+**Rules**
+
 You have a grid of covered squares, some of which contain mines, but you don't know which. Your job is to uncover every square which does not contain a mine. If you uncover a square containing a mine, you lose. If you uncover a square which does not contain a mine, you are told how many mines are contained within the eight surrounding squares.
 
 This game needs no introduction; popularised by Windows, it is perhaps the single best known desktop puzzle game in existence.

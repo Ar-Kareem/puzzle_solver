@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-lits.com/)
 
+**Rules**
+
  You have to place one tetromino in each region in such a way that:
 - 2 tetrominoes of matching types cannot touch each other horizontally or vertically. Rotations and reflections count as matching.
 - The shaded cells should form a single connected area.

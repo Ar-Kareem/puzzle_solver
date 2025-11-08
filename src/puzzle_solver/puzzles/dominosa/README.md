@@ -12,6 +12,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/dominosa.html#dominosa)
 
+**Rules**
+
 A normal set of dominoes – that is, one instance of every (unordered) pair of numbers from 0 to N – has been arranged irregularly into a rectangle; then the number in each square has been written down and the dominoes themselves removed. 
 
 Your task is to reconstruct the pattern by arranging the set of dominoes to match the provided array of numbers. 

@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.brainbashers.com/showabcview.asp)
 
+**Rules**
+
 Fill every row and column with exactly one A, B, and C (and two blank squares).
 The clues tell you which letter appears first in that direction in each row or column.
 

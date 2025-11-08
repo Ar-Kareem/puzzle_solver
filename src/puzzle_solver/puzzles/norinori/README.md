@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-norinori.com)
 
+**Rules**
+
 You have to shade some of the cells in such a way that:
 - Exactly 2 cells are shaded in each region.
 - Each shaded cell should be a part of a domino*. Dominoes can cross the region borders.

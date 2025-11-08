@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-aquarium.com/)
 
+**Rules**
+
 The puzzle is played on a rectangular grid divided into blocks called "aquariums"
 
 You have to "fill" the aquariums with water up to a certain level or leave it empty.

@@ -10,6 +10,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.gmpuzzles.com/blog/tapa-rules-and-info/)
 
+**Rules**
+
 You are given a grid where some cells have numbers. Your goal is to shade some cells black to satisfy the following rules:
 
    - Cells with numbers cannot be shaded

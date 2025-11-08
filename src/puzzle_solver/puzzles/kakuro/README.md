@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-kakuro.com/)
 
+**Rules**
+
 Kakuro is played on a rectangular grid by placing numbers in the white cells such that:
    1. Each white cell should contain a number from 1 through 9
    2. The clues in the black cells tells the sum of the numbers in the consecutive white cells next to that clue. (on the right or down)

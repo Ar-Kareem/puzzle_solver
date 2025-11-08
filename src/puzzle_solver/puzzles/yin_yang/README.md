@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-yin-yang.com)
 
+**Rules**
+
 Yin-Yang is played on a rectangular grid with no standard size. Some cells start out filled with black or white. The rest of the cells are empty. The goal is to color all cells in such a way that:
 1. All black cells should be connected orthogonally in a single group.
 2. All white cells should be connected orthogonally in a single group.

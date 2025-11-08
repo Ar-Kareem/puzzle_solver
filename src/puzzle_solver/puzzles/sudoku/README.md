@@ -18,6 +18,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/solo.html#solo)
 
+**Rules**
+
 You have a square grid, which is divided into as many equally sized sub-blocks as the grid has rows. Each square must be filled in with a digit from 1 to the size of the grid, in such a way that
 
   - every row contains only one occurrence of each digit
@@ -123,6 +125,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-jigsaw-sudoku.com/)
 
+**Rules**
+
    1. The basic Sudoku rules apply.
    2. The difference is that instead of having 3x3 rectangular blocks these blocks have irregular shapes
 
@@ -207,6 +211,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 (The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-killer-sudoku.com/)
+
+**Rules**
 
    1. The basic Sudoku rules apply.
    2. The sum of all numbers in a cage must match the small number printed in its corner.

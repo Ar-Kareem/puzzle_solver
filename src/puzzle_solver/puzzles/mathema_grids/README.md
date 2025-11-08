@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.brainbashers.com/showmathemagrids.asp)
 
+**Rules**
+
 Complete the grid using all of the numbers from 1 to 9.
 When completed, all of the sums must be correct.
 The sums are solved strictly from left to right, and top to bottom.

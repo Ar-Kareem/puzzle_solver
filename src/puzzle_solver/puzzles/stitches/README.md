@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-stitches.com/)
 
+**Rules**
+
 - Connect each block with ALL its neighbor blocks with exactly 1 "stitch" each.
 - A "stitch" connects 2 orthogonally adjacent cells from different blocks.
 - 2 stitches cannot share a hole.

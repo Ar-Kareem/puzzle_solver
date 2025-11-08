@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-binairo.com)
 
+**Rules**
+
 Binairo is played on a rectangular grid with no standard size. Some cells start out filled with black or white circles. The rest of the cells are empty. The goal is to place circles in all cells in such a way that:
 
 1. Each row and each column must contain an equal number of white and black circles.
@@ -117,6 +119,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 (The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-binairo.com/binairo-plus-6x6-easy/)
+
+**Rules**
 
 Binairo+ is played on a rectangular grid with no standard size. Some cells start out filled with black or white circles. The rest of the cells are empty. The goal is to place circles in all cells in such a way that:
 1. Each row and each column must contain an equal number of white and black circles.

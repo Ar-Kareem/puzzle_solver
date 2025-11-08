@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-heyawake.com/)
 
+**Rules**
+
  You have to color the cells of the grid in black and white according to the rules:
 - Regions with a number should contain black cells matching the number.
 - 2 black cells cannot be adjacent horizontally or vertically.

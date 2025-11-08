@@ -10,6 +10,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online 2**](https://puzzlemadness.co.uk/suguru/large)
 
+**Rules**
+
 Heavy lines indicate areas, called cages, from 1 to 6 squares in size. Fill each n-sized cage with the numbers 1-n.
 
 So for example a 2-square cage contains the numbers 1 and 2; and a 5-square cage contains the numbers from 1 to 5. 

@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://krazydad.com/play/troix/)
 
+**Rules**
+
 The board should be filled with `O`s, `X`s, and `I`s. Horizontally and vertically.
 
 There should never be a continuous run of the same symbol longer than 2. 
@@ -82,6 +84,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 (The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://krazydad.com/play/dumplings/)
+
+**Rules**
 
 The finished puzzle should be filled with soup dumplings. There are an equal number of each flavor in each row and column. 
 

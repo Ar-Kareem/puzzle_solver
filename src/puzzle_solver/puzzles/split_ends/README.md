@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://krazydad.com/play/splitends/)
 
+**Rules**
+
 Each row and column contains four unique Y shapes (four different orientations) and two Os. Ys should not form straight lines by touching other Ys.
 
 **Unsolved puzzle**

@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://krazydad.com/play/ripple)
 
+**Rules**
+
 Heavy lines indicate areas, called cages, from 1 to 9 cells in size. 
 
 Fill each cage with unique digits, counting up from 1. So for example a 2-cell cage contains the numbers 1 and 2; and a 5-cell cage contains all the numbers from 1 to 5. 

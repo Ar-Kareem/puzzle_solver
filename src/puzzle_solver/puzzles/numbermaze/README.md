@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://puzzlemadness.co.uk/numbermaze/hard)
 
+**Rules**
+
 Your aim is to draw a single line starting from the number 1 through all of the numbers, covering all of the cells in the grid as you go.
 
 **Unsolved puzzle**

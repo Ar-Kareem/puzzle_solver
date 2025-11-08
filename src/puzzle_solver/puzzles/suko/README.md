@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://puzzlemadness.co.uk/suko/medium)
 
+**Rules**
+
 Your aim is to insert the numbers 1-9 in to the grid so that each number only appears once, and all the totals are satisfied.
 There are two types of totals you can see in this grid,
 

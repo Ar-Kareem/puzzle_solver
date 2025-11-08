@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-star-battle.com/)
 
+**Rules**
+
  You have to place stars on the grid according to the rules:
 - 2 stars cannot be adjacent horizontally, vertically or diagonally.
 - For 1★ puzzles, you have to place 1 star on each row, column and shape.
@@ -132,6 +134,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 (The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-star-battle.com/?size=14)
+
+**Rules**
 
  You have to place stars on the grid according to the rules:
 - 2 stars cannot be adjacent horizontally, vertically or diagonally.

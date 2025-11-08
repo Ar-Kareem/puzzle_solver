@@ -10,6 +10,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.logicgamesonline.com/nurikabe/)
 
+**Rules**
+
 Nurikabe is a binary determination puzzle. You must decide for each cell if it is white or black according to the following rules:
 
    - All of the black cells must be connected.

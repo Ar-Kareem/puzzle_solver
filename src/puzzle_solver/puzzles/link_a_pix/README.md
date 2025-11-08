@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://en.grandgames.net/filippinskie)
 
+**Rules**
+
 The rules of Link-a-Pix are to link pairs of identical numbers (or color-number) on a grid with a single, continuous path of the length of the number.
 
 **Unsolved puzzle**

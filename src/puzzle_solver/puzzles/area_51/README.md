@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://krazydad.com/play/area51)
 
+**Rules**
+
 You are building a labyrinthian fence enclosing Area 51. The fence must separate the aliens, kept inside, from the cacti, which are outside. The finished fence must make an enclosed circuit without touching or crossing itself.
 
 A cell containing an uncircled digit must be surrounded by that many pieces of fence.

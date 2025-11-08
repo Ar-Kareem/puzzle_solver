@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://krazydad.com/play/queens/)
 
+**Rules**
+
 7-Queens Variant: Within each of the seven realms lives a lone queen. To maintain the peace, queens must not threaten each other: no row, column, diagonal, nor region may have more than one queen!
 
 **Unsolved puzzle**

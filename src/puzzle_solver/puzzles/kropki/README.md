@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://krazydad.com/play/kropki)
 
+**Rules**
+
 Each digit from 1-6 occurs once within each row and column. White circles separate consecutive digits. Black circles separate digits with a 2:1 ratio.
 
 All number pairs that *can* be clued will receive clues – numbers that do *not* have circle clues are neither consecutive nor in a 2:1 ratio.

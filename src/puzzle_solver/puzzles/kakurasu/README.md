@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-kakurasu.com/)
 
+**Rules**
+
 The goal is to make some of the cells black in such a way that:
 
 1. The black cells on each row sum up to the number on the right.

@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-shakashaka.com/)
 
+**Rules**
+
 Shakashaka is played on a rectangular grid. The grid has both black cells and white cells in it.
 The objective is to place black triangles in the white cell in such a way so that they form white rectangular (or square) areas.
 - The triangles are right angled and occupy half of the white square divided diagonally.

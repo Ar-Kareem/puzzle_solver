@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://puzzlemadness.co.uk/numberpath/large)
 
+**Rules**
+
 The aim is to draw a single unbroken line from the start cell (green) to the end cell (red).
 
 The numbers along the path must follow the pattern 1, 2, 3, 4, 1, 2, 3, 4, 1 etc.

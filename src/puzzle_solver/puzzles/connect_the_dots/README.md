@@ -10,6 +10,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Mobile App (iOS)**](https://apps.apple.com/us/app/dot-link-connect-the-dots/id6444312485)
 
+**Rules**
+
 You are given a grid of empty cells and 2 filled cell per color. The goal is to connect the dots of the same color to form a single fully connected graph for each color.
 
 **Unsolved puzzle**

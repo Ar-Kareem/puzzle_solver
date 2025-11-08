@@ -10,6 +10,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.nikoli.co.jp/en/puzzles/yajilin/)
 
+**Rules**
+
 The aim of a Yajilin puzzle is to draw a single closed loop passing through every non-filled and non-clue cell.
 
    - The clues tell you exactly how many filled cells are in the given direction.

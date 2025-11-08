@@ -12,6 +12,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/net.html#net)
 
+**Rules**
+
 You are given a grid of cells where each cell has 1, 2, 3, or 4 connections to its neighbors. Each cell can be freely rotated in multiple of 90 degrees, thus your can rotate the cells to be one of four possible states.
 
 The goal is to create a single fully connected graph where each cell's connection must be towards another cell's connection. No loose ends or loops are allowed.

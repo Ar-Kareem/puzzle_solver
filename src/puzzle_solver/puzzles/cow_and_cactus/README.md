@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://krazydad.com/play/corral)
 
+**Rules**
+
 You are building a fence for your ranch. The fence must separate the cows inside, from the cacti outside.
 
 The finished fence must make an enclosed circuit without touching or crossing itself.

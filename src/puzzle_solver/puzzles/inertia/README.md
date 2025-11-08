@@ -19,6 +19,8 @@ This achieves a final sequence of moves that is empirically always faster than t
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/inertia.html#inertia)
 
+**Rules**
+
 You are a small green ball sitting in a grid full of obstacles. Your aim is to collect all the gems without running into any mines.
 
 You can move the ball in any orthogonal or diagonal direction. Once the ball starts moving, it will continue until something stops it. A wall directly in its path will stop it (but if it is moving diagonally, it will move through a diagonal gap between two other walls without stopping). Also, some of the squares are ‘stops’; when the ball moves on to a stop, it will stop moving no matter what direction it was going in. Gems do not stop the ball; it picks them up and keeps on going.

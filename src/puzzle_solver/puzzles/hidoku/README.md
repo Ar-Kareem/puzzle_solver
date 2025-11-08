@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://puzzlemadness.co.uk/hidoku/medium)
 
+**Rules**
+
 The puzzle starts with a partially filled grid of numbers, and your aim is to fill the grid with unique integers such that you can draw a single continuous line from the number 1 to the number maximum number.
 
 You can move one cell in any direction, including diagonally. 

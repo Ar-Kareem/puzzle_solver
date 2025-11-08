@@ -10,6 +10,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/flood.html#flood)
 
+**Rules**
+
 The game is a combinatorial puzzle played on a colored N by N grid where the goal is to make the entire grid a single color using the minimum number of moves.
 
 A move consists of picking a new color, which then floods the connected component of the player's current area that has that chosen color.

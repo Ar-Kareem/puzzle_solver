@@ -10,6 +10,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/pattern.html#pattern)
 
+**Rules**
+
 You have a grid of squares, which must all be filled in either black or white. Beside each row of the grid are listed, in order, the lengths of the runs of black squares on that row; above each column are listed, in order, the lengths of the runs of black squares in that column. Your aim is to fill in the entire grid black or white. 
 
 **Unsolved puzzle**
@@ -111,6 +113,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 (The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.nonograms.org/nonograms2)
+
+**Rules**
 
 You have a grid of squares, which must all be filled in either white or one of the specified colors. Beside each row of the grid are listed, in order, the lengths of the runs of the specified colors on that row; above each column are listed, in order, the lengths of the runs of the specified colors in that column. Your aim is to fill in the entire grid white or one of the specified colors. 
 

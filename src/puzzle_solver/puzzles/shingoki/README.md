@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-shingoki.com/)
 
+**Rules**
+
 You have to draw lines between the dots to form a single loop without crossings or branches. The loop should pass through all black and white circles in such a way that:
 - White circles must be passed through in a straight line
 - Black circles must be turned upon

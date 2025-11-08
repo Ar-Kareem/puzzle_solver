@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Play online**](https://www.puzzle-battleships.com/)
 
+**Rules**
+
 - You have to find the location of the battleships hidden in the grid. Some battleships may be partially revealed.
 - A battleship is a straight line of consecutive black cells.
 - The number of the battleships from each size is shown in the legend.
