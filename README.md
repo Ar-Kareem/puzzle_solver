@@ -456,7 +456,13 @@ The simple use-case of this repo is if you want to solve a puzzle given the stat
 3. **Esoteric puzzles:** Most packages you can find online are only designed for popular puzzles. This package partially solves this issue by providing solvers for many puzzles. I'm open to suggestions for implementing solvers for more puzzles.
 4. **All possible solutions:** The available solvers often lack uniqueness checks and simply stop at the first possible solution without verifying uniqueness or completeness. This package supports checking whether puzzles are uniquely solvable, ambiguous, or unsolvable for all the puzzles.
 
-Play the original puzzles online: https://www.chiark.greenend.org.uk/~sgtatham/puzzles
+Play most of the puzzles online in these websites:
+- https://www.chiark.greenend.org.uk/~sgtatham/puzzles
+- https://www.puzzle-kurodoko.com/
+- https://www.brainbashers.com/puzzles.asp
+- https://krazydad.com
+- https://puzzlemadness.co.uk/
+
 
 Almost all the solvers in this repo use the CP-SAT solver from Google OR-Tools.
 
@@ -562,7 +568,9 @@ Time taken: 0.04 seconds
 
 # Puzzles
 
-The puzzles that have solvers implemented are listed below. Each puzzle has a simple example input board followed by the code to utilize this package and solve the puzzle, followed by the scripts output, and finally the solved puzzle.
+Each puzzle in this repo have a simple example input board followed by the code to utilize this package and solve the puzzle, followed by the scripts output, and finally the solved puzzle.
+
+Some of the puzzles implemented are shown below. 
 
 ## Sudoku (Puzzle Type #2)
 
