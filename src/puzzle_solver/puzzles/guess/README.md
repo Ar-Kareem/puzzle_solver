@@ -13,6 +13,8 @@ This is a dedicated solver for Guess.
 >
 > Each guess gets marked with the number of correctly-coloured pegs in the correct places (in black), and also the number of correctly-coloured pegs in the wrong places (in white). 
 
+**Algorithm**
+
 Unlike most other puzzles in this repo, 'Guess' is very different. Similar to minesweeper, Guess is a limited information dynamic puzzle where the next best move depends on information revealed by previous moves (The similarities to minesweeper stop here).
 
 The solver is designed to take the state of the board at any timestep and always gives the next optimal guess. This might seem like an impossible task at first but it's actually not too bad. The optimal guess is defined to be the one that maximizes the Shannon entropy (i.e. maximizes the expected information gain).
