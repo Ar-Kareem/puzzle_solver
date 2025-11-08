@@ -1,5 +1,11 @@
 # Suko (Puzzle Type #65)
 
+This is a dedicated solver for Suko.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://puzzlemadness.co.uk/suko/medium)
 
 Your aim is to insert the numbers 1-9 in to the grid so that each number only appears once, and all the totals are satisfied.

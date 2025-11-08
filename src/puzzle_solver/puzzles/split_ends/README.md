@@ -1,5 +1,11 @@
 # Split Ends (Puzzle Type #60)
 
+This is a dedicated solver for Split Ends.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://krazydad.com/play/splitends/)
 
 Each row and column contains four unique Y shapes (four different orientations) and two Os. Ys should not form straight lines by touching other Ys.

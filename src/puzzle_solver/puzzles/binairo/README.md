@@ -1,6 +1,10 @@
 # Binairo (Puzzle Type #41)
 
-Also known as Takuzu, Binero, Tohu-Wa-Vohu (Formless and Empty), Eins und Zwei (One and Two), Binary Puzzles, Binoxxo, Binox, Zernero, Tic-Tac-Logic, TicTacToe, or Sudoku Binary.
+This is a dedicated solver for Binairo. Also known as Takuzu, Binero, Tohu-Wa-Vohu (Formless and Empty), Eins und Zwei (One and Two), Binary Puzzles, Binoxxo, Binox, Zernero, Tic-Tac-Logic, TicTacToe, or Sudoku Binary.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-binairo.com)
 
@@ -105,6 +109,12 @@ Applying the solution to the puzzle visually:
 
 
 # Binairo Plus (Puzzle Type #49)
+
+This is a dedicated solver for Binairo Plus.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-binairo.com/binairo-plus-6x6-easy/)
 

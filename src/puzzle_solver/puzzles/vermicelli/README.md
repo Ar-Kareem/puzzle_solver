@@ -1,5 +1,11 @@
 # Vermicelli (Puzzle Type #73)
 
+This is a dedicated solver for Vermicelli.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://krazydad.com/play/vermicelli)
 
 Connect worms to make a loop that visits every square in the grid. The worm can’t fork nor cross itself, and it can't go through walls.

@@ -1,5 +1,11 @@
 # Vectors (Puzzle Type #72)
 
+This is a dedicated solver for Vectors.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://vectors.puzzlebaron.com/init.php)
 
 The puzzle grid consists of a series of numbered black squares. Your task is to draw arrows starting from each of these black squares in such a way so that the total number of white squares covered by arrows emanating from any black square equals exactly the number displayed. Arrows can go up, down, left or right, but can never cross another arrow. You must also fill every empty square on the grid with one arrow segment. Each puzzle has only one unique solution, and each can be solved using pure logical deduction.

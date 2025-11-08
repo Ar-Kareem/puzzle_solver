@@ -1,6 +1,6 @@
 # Guess (Puzzle Type #22)
 
-This is a dedicated solver for Guess
+This is a dedicated solver for Guess.
 
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/guess.html)

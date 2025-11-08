@@ -1,5 +1,11 @@
 # Trees Logic (Puzzle Type #71)
 
+This is a dedicated solver for Trees Logic.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://www.sporcle.com/games/Katie_Wandering/trees-logic-puzzle)
 
    - Each row, column, and colored shape each contains exactly one tree. Trees cannot touch, even diagonally.

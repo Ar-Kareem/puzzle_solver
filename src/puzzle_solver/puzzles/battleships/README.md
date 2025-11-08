@@ -1,5 +1,11 @@
 # Battleships (Puzzle Type #29)
 
+This is a dedicated solver for Battleships.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://www.puzzle-battleships.com/)
 
 - You have to find the location of the battleships hidden in the grid. Some battleships may be partially revealed.

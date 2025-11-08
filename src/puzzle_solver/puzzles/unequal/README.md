@@ -1,6 +1,10 @@
 # Unequal (Puzzle Type #37)
 
-Also known as Futoshiki, the Adjacent variant is also known as Renzoku or Neighbors.
+This is a dedicated solver for Unequal. Also known as Futoshiki, the Adjacent variant is also known as Renzoku or Neighbours.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online 1**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unequal.html)
 

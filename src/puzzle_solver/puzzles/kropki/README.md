@@ -1,5 +1,11 @@
 # Kropki (Puzzle Type #75)
 
+This is a dedicated solver for Kropki.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://krazydad.com/play/kropki)
 
 Each digit from 1-6 occurs once within each row and column. White circles separate consecutive digits. Black circles separate digits with a 2:1 ratio.

@@ -1,6 +1,10 @@
 # N-Queens (Puzzle Type #61)
 
-Can also solve puzzles such as 7-Queens.
+This is a dedicated solver for N-Queens. Can also solve puzzles such as 7-Queens.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://krazydad.com/play/queens/)
 

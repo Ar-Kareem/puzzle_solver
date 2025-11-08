@@ -104,7 +104,11 @@ Time taken: 0.04 seconds
 
 # Nonograms Colored (Puzzle Type #57)
 
-Also known as Nonogrids, Numbergrids, Picross, Hanjie, Paint by Numbers, Griddlers, or Pic-a-Pix.
+This is a dedicated solver for Nonograms Colored. Also known as Nonogrids, Numbergrids, Picross, Hanjie, Paint by Numbers, Griddlers, or Pic-a-Pix.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.nonograms.org/nonograms2)
 

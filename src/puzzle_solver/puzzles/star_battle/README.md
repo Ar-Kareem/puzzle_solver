@@ -1,5 +1,11 @@
 # Star Battle (Puzzle Type #31)
 
+This is a dedicated solver for Star Battle.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://www.puzzle-star-battle.com/)
 
  You have to place stars on the grid according to the rules:
@@ -116,9 +122,14 @@ Time taken: 0.39 seconds
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/star_battle_solved.png" alt="Star Battle solved" width="500">
 
----
 
 # Star Battle Shapeless (Puzzle Type #32)
+
+This is a dedicated solver for Star Battle Shapeless.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-star-battle.com/?size=14)
 

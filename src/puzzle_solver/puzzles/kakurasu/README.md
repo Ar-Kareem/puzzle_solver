@@ -1,5 +1,11 @@
 # Kakurasu (Puzzle Type #30)
 
+This is a dedicated solver for Kakurasu.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://www.puzzle-kakurasu.com/)
 
 The goal is to make some of the cells black in such a way that:

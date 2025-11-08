@@ -115,6 +115,12 @@ Time taken: 0.04 seconds
 
 # Sudoku Jigsaw (Puzzle Type #52)
 
+This is a dedicated solver for Sudoku Jigsaw.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://www.puzzle-jigsaw-sudoku.com/)
 
    1. The basic Sudoku rules apply.
@@ -193,6 +199,12 @@ Time taken: 0.01 seconds
 
 
 # Sudoku Killer (Puzzle Type #53)
+
+This is a dedicated solver for Sudoku Killer.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-killer-sudoku.com/)
 

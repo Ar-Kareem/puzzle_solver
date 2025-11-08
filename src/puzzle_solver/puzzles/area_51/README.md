@@ -1,5 +1,11 @@
 # Area 51 (Puzzle Type #77)
 
+This is a dedicated solver for Area 51.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://krazydad.com/play/area51)
 
 You are building a labyrinthian fence enclosing Area 51. The fence must separate the aliens, kept inside, from the cacti, which are outside. The finished fence must make an enclosed circuit without touching or crossing itself.

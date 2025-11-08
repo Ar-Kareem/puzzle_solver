@@ -50,6 +50,12 @@ Time taken: 1.16 seconds
 
 # Chess Solo (Puzzle Type #24)
 
+These are three dedicated solvers for different types of chess puzzles (all use the same solver under the hood)
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
 * [**Play online**](https://www.puzzle-chess.com/solo-chess-11/)
 
 You are given a chess board with $N$ pieces distributed on it. Your aim is to make $N-1$ sequence of moves where each move is a legal chess move and captures another piece and end up with the king as the only piece on the board. You are not allowed to move a piece more than twice.
@@ -93,6 +99,12 @@ Time taken: 0.47 seconds
 
 
 # Chess Melee (Puzzle Type #25)
+
+These are three dedicated solvers for different types of chess puzzles (all use the same solver under the hood)
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
 * [**Play online**](https://www.puzzle-chess.com/chess-melee-13/)
 

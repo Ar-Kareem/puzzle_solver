@@ -6,7 +6,6 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 (The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
 
-
 * [**Play online 1**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/singles.html)
 
 * [**Play online 2**](https://www.puzzle-hitori.com/)
