@@ -46,7 +46,7 @@ binst = solver.Board(board=board1, values=board2)
 solutions = binst.solve_and_print()
 ```
 **Script Output**
-```
+```python
 Solution found
 [[1 42 23 7 43 44 24]
  [30 32 36 5 37 4 31]
@@ -63,3 +63,4 @@ Time taken: 0.03 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/signpost_solved.png" alt="Signpost solved" width="500">
+

@@ -67,6 +67,9 @@ binst = solver.Board(top=top, left=left, bottom=bottom, right=right, ball_count=
 solutions = binst.solve_and_print()
 ```
 **Script Output**
+
+As the instructions say, the solution to this puzzle is not garunteed to be unique.
+
 ```python
 Solution found
 

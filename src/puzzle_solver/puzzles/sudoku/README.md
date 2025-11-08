@@ -66,7 +66,7 @@ binst = solver.Board(board=board)
 solutions = binst.solve_and_print()
 ```
 **Script Output**
-```
+```python
 Solution found
     0   0   0   0   0   0   0   0   0   0   1   1   1   1   1   1  
     0   1   2   3   4   5   6   7   8   9   0   1   2   3   4   5
@@ -112,12 +112,13 @@ Time taken: 0.04 seconds
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/sudoku_solved.png" alt="Sudoku solved" width="500">
 
+
 # Sudoku Jigsaw (Puzzle Type #52)
 
 * [**Play online**](https://www.puzzle-jigsaw-sudoku.com/)
 
-1. The basic Sudoku rules apply.
-2. The difference is that instead of having 3x3 rectangular blocks these blocks have irregular shapes
+   1. The basic Sudoku rules apply.
+   2. The difference is that instead of having 3x3 rectangular blocks these blocks have irregular shapes
 
 **Unsolved puzzle**
 
@@ -190,13 +191,14 @@ Time taken: 0.01 seconds
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/sudoku_jigsaw_solved.png" alt="Sudoku Jigsaw solved" width="500">
 
+
 # Sudoku Killer (Puzzle Type #53)
 
 * [**Play online**](https://www.puzzle-killer-sudoku.com/)
 
-1. The basic Sudoku rules apply.
-2. The sum of all numbers in a cage must match the small number printed in its corner.
-3. No number appears more than once in a cage.
+   1. The basic Sudoku rules apply.
+   2. The sum of all numbers in a cage must match the small number printed in its corner.
+   3. No number appears more than once in a cage.
 
 **Unsolved puzzle**
 

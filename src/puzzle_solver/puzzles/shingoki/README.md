@@ -9,7 +9,6 @@ You have to draw lines between the dots to form a single loop without crossings 
 - Black circles must be turned upon
 - The numbers in the circles show the sum of the lengths of the 2 straight lines going out of that circle. 
 
-
 **Unsolved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/shingoki_unsolved.png" alt="Shingoki unsolved" width="500">

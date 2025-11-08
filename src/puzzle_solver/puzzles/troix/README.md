@@ -1,6 +1,6 @@
 # Troix (Puzzle Type #62)
 
-* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/troix)
+* [**Play online**](https://krazydad.com/play/troix/)
 
 The board should be filled with `O`s, `X`s, and `I`s. Horizontally and vertically.
 
@@ -66,9 +66,10 @@ Time taken: 0.02 seconds
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/troix_solved.png" alt="Troix solved" width="500">
 
+
 # Dumplings (Puzzle Type #63)
 
-* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/dumplings)
+* [**Play online**](https://krazydad.com/play/dumplings/)
 
 The finished puzzle should be filled with soup dumplings. There are an equal number of each flavor in each row and column. 
 

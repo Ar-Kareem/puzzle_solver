@@ -1,4 +1,3 @@
-
 # Galaxies (Puzzle Type #35)
 
 Also known as Tentai Show, Tentaisho, Galaxies, Spiral Galaxies, or Sym-a-Pix.

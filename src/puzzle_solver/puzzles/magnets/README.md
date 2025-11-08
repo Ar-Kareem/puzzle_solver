@@ -42,7 +42,7 @@ binst = solver.Board(board=board, sides={'pos_v': pos_v, 'neg_v': neg_v, 'pos_h'
 solutions = binst.solve_and_print()
 ```
 **Script Output**
-```
+```python
 Solution found
 [['-' '+' '-' '+' ' ' '+' '-' '+' '-' '+']
  [' ' ' ' '+' '-' ' ' '-' '+' '-' '+' '-']
@@ -61,3 +61,4 @@ Time taken: 0.02 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/magnets_solved.png" alt="Magnets solved" width="500">
+

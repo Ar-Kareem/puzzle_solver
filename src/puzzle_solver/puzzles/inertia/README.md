@@ -9,13 +9,11 @@ Thus the solver was developed with the additional much harder goal of collecting
 It does so using the following high level steps:
 
 1. Model the board as a directed graph where the cells are nodes and legal moves as directed edges with unit cost. Each gem has to a group of edges where traversing any one of them collects that gem.
-2. Model step (1) as a [Generalized Traveling Salesman Problem (GTSP)](https://en.wikipedia.org/wiki/Set_TSP_problem), where each gem’s edge group forms a cluster.
-3. Apply the [Noon–Bean transformation](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/6834/ban3102.0001.001.pdf?sequence=5) **(Noon & Bean, 1991)** to convert the GTSP from step (2) into an equivalent Asymmetric TSP (ATSP) that can be solved with OR-Tools’ routing solver. (Noon-Bean transformation is mentioned but not described in the [TSP wikipedia page](https://en.wikipedia.org/wiki/Travelling_salesman_problem).)
+2. Model step (1) as a [Generalized Traveling Salesman Problem (GTSP)](https://en.wikipedia.org/wiki/Set_TSP_problem), where each gem's edge group forms a cluster.
+3. Apply the [Noon–Bean transformation](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/6834/ban3102.0001.001.pdf?sequence=5) **(Noon & Bean, 1991)** to convert the GTSP from step (2) into an equivalent Asymmetric TSP (ATSP) that can be solved with OR-Tools' routing solver. (Noon-Bean transformation is mentioned but not described in the [TSP wikipedia page](https://en.wikipedia.org/wiki/Travelling_salesman_problem).)
 4. Use a [Vehicle Routing Problem (VRP)](https://en.wikipedia.org/wiki/Vehicle_routing_problem) solver using the [OR-Tools VRP solver](https://developers.google.com/optimization/routing/routing_tasks) to solve the ATSP.
 
 This achieves a final sequence of moves that is empirically always faster than the website's solution.
-
-Below are the details of how to utilize the solver.
 
 * [**Play online**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/inertia.html)
 
@@ -62,7 +60,7 @@ moves = solver.get_moves_from_walk(optimal_walk, edges_to_direction, verbose=Tru
 **Script Output**
 
 Note that the output is the sequence of moves to collect all the gems. This particular solution is 106 moves, which is 15 moves better than the website's solution.
-```
+```python
 number of moves 106
 ↗ ↖ ↖ ↙ ↙ ↖ ↖ ↙ → ↘ 
 ↙ → ↖ → ↙ ↓ → ↘ ↗ ↓

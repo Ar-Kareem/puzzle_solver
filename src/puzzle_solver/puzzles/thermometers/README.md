@@ -9,6 +9,7 @@ Below are the details of how to utilize the solver. In addition, the solver give
 * [**Play online**](https://www.puzzle-thermometers.com/)
 
 You have to fill some thermometers with mercury starting from the bulb and going toward the end without gaps.
+
 The numbers outside the grid show the number of filled cells horizontally and vertically. 
 
 **Unsolved puzzle**

@@ -49,7 +49,7 @@ binst = solver.Board(board=board)
 solutions = binst.solve_and_print()
 ```
 **Script Output**
-```
+```python
 Solution found
 [[' ' '0' ' ' ' ' ' ' 'L' 'W' ' ' ' ' 'L']
  ['L' ' ' ' ' '0' ' ' ' ' 'L' ' ' ' ' '1']

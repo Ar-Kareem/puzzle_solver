@@ -1,6 +1,6 @@
 # Unequal (Puzzle Type #37)
 
-Also known as Futoshiki, the Adjacent variant is also known as Renzoku or neighbors.
+Also known as Futoshiki, the Adjacent variant is also known as Renzoku or Neighbors.
 
 * [**Play online 1**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unequal.html)
 

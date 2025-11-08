@@ -1,6 +1,6 @@
 # Suguru (Puzzle Type #66)
 
-* [**Play online 2**](https://krazydad.com/play/suguru/?kind=15x10n6)
+* [**Play online 1**](https://krazydad.com/play/suguru/?kind=15x10n6)
 
 * [**Play online 2**](https://puzzlemadness.co.uk/suguru/large)
 

@@ -2,9 +2,9 @@
 
 * [**Play online**](https://www.sporcle.com/games/Katie_Wandering/trees-logic-puzzle)
 
-- Each row, column, and colored shape each contains exactly one tree. Trees cannot touch, even diagonally.
-- Mark each tree with a "T", and everywhere where there cannot be a tree with a "-" (hyphen). You must completely fill in the grid to complete the puzzle.
-- This puzzle can be solved without guessing, and only has one possible solution.
+   - Each row, column, and colored shape each contains exactly one tree. Trees cannot touch, even diagonally.
+   - Mark each tree with a "T", and everywhere where there cannot be a tree with a "-" (hyphen). You must completely fill in the grid to complete the puzzle.
+   - This puzzle can be solved without guessing, and only has one possible solution.
 
 **Unsolved puzzle**
 

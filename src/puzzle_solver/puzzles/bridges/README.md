@@ -51,7 +51,7 @@ solutions = binst.solve_and_print()
 **Script Output**
 
 Note that the four numbers indicate how many bridges in the 4 directions (right, left, down, up) respectively.
-```
+```python
 Solution found
 |    |    |    |    |    |1000|    |    |    |    |    |    |    |    |0120|
 

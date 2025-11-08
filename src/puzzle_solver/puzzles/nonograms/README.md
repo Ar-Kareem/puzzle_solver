@@ -57,7 +57,7 @@ binst = solver.Board(top=top_numbers, side=side_numbers)
 solutions = binst.solve_and_print()
 ```
 **Script Output**
-```
+```python
 Solution found
     0   0   0   0   0   0   0   0   0   0   1   1   1   1   1  
     0   1   2   3   4   5   6   7   8   9   0   1   2   3   4
@@ -107,7 +107,6 @@ Time taken: 0.04 seconds
 Also known as Nonogrids, Numbergrids, Picross, Hanjie, Paint by Numbers, Griddlers, or Pic-a-Pix.
 
 * [**Play online**](https://www.nonograms.org/nonograms2)
-
 
 You have a grid of squares, which must all be filled in either white or one of the specified colors. Beside each row of the grid are listed, in order, the lengths of the runs of the specified colors on that row; above each column are listed, in order, the lengths of the runs of the specified colors in that column. Your aim is to fill in the entire grid white or one of the specified colors. 
 

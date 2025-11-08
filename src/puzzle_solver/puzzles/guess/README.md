@@ -104,7 +104,7 @@ Note: by default, the board will have 4 circles and 6 possible colors (R: Red, Y
 **Script Output 1/2**
 
 Note that the output is next optimal guess that has the maximum Shannon entropy.
-```
+```python
 out of 1296 possible ground truths, only 57 are still possible.
 max entropy guess is: ['P', 'Y', 'Y', 'G'] with entropy 3.4511
 ```
@@ -126,7 +126,7 @@ binst.best_next_guess()
 
 **Script Output 2/2**
 
-```
+```python
 out of 1296 possible ground truths, only 3 are still possible.
 max entropy guess is: ['G', 'Y', 'Y', 'O'] with entropy 1.5850
 ```

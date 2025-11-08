@@ -44,7 +44,7 @@ binst = solver.Board(board=board, sides={'top': t, 'bottom': b, 'right': r, 'lef
 solutions = binst.solve_and_print()
 ```
 **Script Output**
-```
+```python
 Solution found
 [['VA' '//' 'GH' 'GH' 'ZO' 'GH' '\\']
  ['VA' 'VA' 'VA' '//' 'ZO' 'ZO' 'ZO']

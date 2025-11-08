@@ -57,7 +57,7 @@ binst = solver.Board(board=board, block_results=block_results)
 solutions = binst.solve_and_print()
 ```
 **Script Output**
-```
+```python
 Solution found
 [[5 4 7 9 3 6 8 1 2]
  [9 8 6 1 5 3 2 4 7]

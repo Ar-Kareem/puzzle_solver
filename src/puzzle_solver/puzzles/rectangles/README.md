@@ -11,6 +11,7 @@ You have a grid of squares, with numbers written in some (but not all) of the sq
 - (a) every rectangle contains exactly one numbered square
 - (b) the area of each rectangle is equal to the number written in its numbered square. 
 
+
 **Unsolved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/rectangles_unsolved.png" alt="Rectangles unsolved" width="500">

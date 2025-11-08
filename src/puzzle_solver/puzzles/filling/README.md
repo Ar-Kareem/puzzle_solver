@@ -38,7 +38,7 @@ binst = solver.Board(board=board)
 solutions = binst.solve_and_print()
 ```
 **Script Output**
-```
+```python
 Solution found
 
     0   1   2   3   4   5   6
