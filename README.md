@@ -886,14 +886,14 @@ Notice how not only did it output all garunteed new safe and mine positions, it 
 ```python
 Found 8 new guaranteed safe positions
 {Pos(x=9, y=0), Pos(x=15, y=8), Pos(x=15, y=7), Pos(x=9, y=2), Pos(x=15, y=6), Pos(x=7, y=2), Pos(x=9, y=1), Pos(x=12, y=8)}
-----------
+##########
 Found 4 new guaranteed mine positions
 {Pos(x=8, y=2), Pos(x=7, y=5), Pos(x=10, y=0), Pos(x=9, y=8)}
-----------
+##########
 WARNING | WARNING | WARNING | WARNING | WARNING
 Found 1 wrong flag positions
 {Pos(x=15, y=3)}
-----------
+##########
 Time taken: 0.92 seconds
 ```
 

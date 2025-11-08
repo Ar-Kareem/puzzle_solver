@@ -94,19 +94,19 @@ def give_next_guess(board: np.array, mine_count: Optional[int] = None, verbose: 
         if len(safe_positions) > 0:
             print(f"Found {len(safe_positions)} new guaranteed safe positions")
             print(safe_positions)
-            print('-'*10)
+            print('#'*10)
         if len(mine_positions) == 0:
             print("No guaranteed mine positions")
-            print('-'*10)
+            print('#'*10)
         if len(new_garuneed_mine_positions) > 0:
             print(f"Found {len(new_garuneed_mine_positions)} new guaranteed mine positions")
             print(new_garuneed_mine_positions)
-            print('-'*10)
+            print('#'*10)
         if len(wrong_flag_positions) > 0:
             print("WARNING | "*4 + "WARNING")
             print(f"Found {len(wrong_flag_positions)} wrong flag positions")
             print(wrong_flag_positions)
-            print('-'*10)
+            print('#'*10)
         toc = time.time()
         print(f"Time taken: {toc - tic:.2f} seconds")
     return safe_positions, new_garuneed_mine_positions, wrong_flag_positions
