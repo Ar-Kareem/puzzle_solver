@@ -4140,8 +4140,8 @@ Issues and PRs welcome!
 1. First make sure all the tests pass (see [Testing](#testing))
 2. Update the version in `src/puzzle_solver/__init__.py`
 3. Build and push:
-   1. Bash: `rm dist/* && python -m build --sdist --wheel && python -m twine upload --repository pypi dist/*`
-   2. Powershell: `rm dist/*; if ($?) { python -m build --sdist --wheel; if ($?) { python -m twine upload --repository pypi dist/* } }`
+   1. Bash: `./scripts/build.sh`
+   2. Powershell: `./scripts/build.ps1`
 
 
 [2]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku "puzzle_solver/src/puzzle_solver/puzzles/sudoku at master · Ar-Kareem/puzzle_solver · GitHub"

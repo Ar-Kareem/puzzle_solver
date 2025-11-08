@@ -1,0 +1,1 @@
+rm dist/* && python -m build --sdist --wheel && python -m twine upload --repository pypi dist/*
