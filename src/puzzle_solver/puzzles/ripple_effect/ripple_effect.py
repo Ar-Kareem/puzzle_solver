@@ -3,9 +3,9 @@ from collections import defaultdict
 import numpy as np
 from ortools.sat.python import cp_model
 
-from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_neighbors8, get_pos, Direction, get_next_pos, in_bounds
+from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_pos, Direction, get_next_pos, in_bounds
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution
-from puzzle_solver.core.utils_visualizer import combined_function
+from puzzle_solver.core.utils_visualizer import combined_function, id_board_to_wall_fn
 
 
 def get_orthogonals_with_dist(pos: Pos, V: int, H: int) -> list[tuple[Pos, int]]:
@@ -77,5 +77,7 @@ class Board:
             return SingleSolution(assignment={pos: n for (pos, n), var in board.model_vars.items() if solver.Value(var) == 1})
         def callback(single_res: SingleSolution):
             print("Solution found")
-            print(combined_function(self.V, self.H, center_char=lambda r, c: str(single_res.assignment[get_pos(x=c, y=r)])))
+            print(combined_function(self.V, self.H,
+                cell_flags=lambda r, c: id_board_to_wall_fn(self.id_board)(r, c),
+                center_char=lambda r, c: str(single_res.assignment[get_pos(x=c, y=r)])))
         return generic_solve_all(self, board_to_solution, callback=callback if verbose else None, verbose=verbose)
