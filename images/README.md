@@ -64,7 +64,7 @@ All pen and paper puzzles have been implemented.
 
 21 puzzles were implemented, and only 1 remaining puzzle we aren't targeting which is a dynamic puzzle (Net Slide also on website 1).
 
-## Website 5 (In Progress)
+## Website 5
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_5.png" alt="Website 5" width="500">
 
@@ -72,11 +72,15 @@ All pen and paper puzzles have been implemented.
 
 The website has exactly 86 puzzles in total:
 
+### Sudoku puzzles (In Progress)
+
 - 56 are Sudoku-like puzzles (?/56 implemented)
-- 23 Interactive non-Sudoku puzzles (22/22 implemented; 1 not intended to be implemented, "variety slitherlink")
-- 7 Printable only non-Sudoku puzzles (3/4 implemented; 3 not intended to be implemented, "Mazes" & "Cross Figures" & "TripleCross". 1 to be implemented, "Krypto Kakuro")
 
 Sudoku variants are so abundant so they are currently not prioritized.
+
+### Non-Sudoku puzzles ✅
+- All 22 Interactive non-Sudoku puzzles were implemented (23 total; 1 not intended to be implemented, "variety slitherlink")
+- All 4 Printable only non-Sudoku puzzles were implemented (7 total; 3 not intended to be implemented, "Mazes" & "Cross Figures" & "TripleCross")
 
 ## Website 6 (In Progress)
 
