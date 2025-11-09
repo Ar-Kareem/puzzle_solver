@@ -9,3 +9,4 @@ build/
 TODO.txt
 htmlcov/
 .coverage
+src/*/utils/etc/
