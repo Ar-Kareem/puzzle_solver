@@ -102,9 +102,9 @@ Sudoku variants are similarly abundant in this website, thus they are currently 
 
 **https://play.google.com/store/apps/details?id=com.andreasabbatini.logicgamestk (All puzzles are playable)**
 
-Puzzle Set 1: (?/7 implemented)
+Puzzle Set 1: (6/7 implemented)
 
-Puzzle Set 2: (?/7 implemented)
+Puzzle Set 2: (4/7 implemented)
 
 Puzzle Set 3: (?/7 implemented)
 
