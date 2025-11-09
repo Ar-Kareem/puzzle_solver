@@ -434,6 +434,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/area_51_solved.png" alt="Area 51" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/circle_9"><b>Circle 9</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/circle_9_solved.png" alt="Circle 9" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
