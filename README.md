@@ -1,6 +1,6 @@
 # Python Puzzle Solver
 
-Solve countless (75+) classical logic puzzles automatically in Python. 
+Solve countless (80+) classical logic puzzles automatically in Python. 
 
 Can also tell you if a partial puzzle has a single unique solution or not (and retrieves all possible solutions).
 
@@ -447,6 +447,13 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
   <td align="center">
     <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/snail"><b>Snail</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/snail_solved.png" alt="Snail" width="140">
+    </a>
+  </td>
+</tr>
+<tr>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/hidden_stars"><b>Hidden Stars</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/hidden_stars_solved.png" alt="Hidden Stars" width="140">
     </a>
   </td>
 </tr>
