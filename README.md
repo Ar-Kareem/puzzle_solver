@@ -444,6 +444,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/krypto_kakuro_solved.png" alt="Krypto Kakuro" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/snail"><b>Snail</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/snail_solved.png" alt="Snail" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
