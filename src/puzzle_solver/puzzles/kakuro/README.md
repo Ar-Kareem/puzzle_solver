@@ -77,3 +77,69 @@ Time taken: 0.00 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/kakuro_solved.png" alt="Kakuro solved" width="500">
+
+# Krypto Kakuro (Puzzle Type #79)
+
+
+This is a dedicated solver for Krypto Kakuro.
+
+Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
+
+(The solver under the hood mainly utilizes the CP-SAT solver from Google OR-Tools)
+
+* [**Play online**](https://krazydad.com/krypto/)
+
+**Rules**
+
+Kakuro is played on a rectangular grid by placing numbers in the white cells such that:
+   1. Each white cell should contain a number from 1 through 9
+   2. The clues in the black cells tells the sum of the numbers in the consecutive white cells next to that clue (on the right or down) but the clues are encrypted where the numeric clues have been replaced by letters.
+   3. The numbers in consecutive white cells must be unique.
+
+**Unsolved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/krypto_kakuro_unsolved.png" alt="Krypto Kakuro unsolved" width="500">
+
+Code to utilize this package and solve the puzzle:
+
+```python
+import numpy as np
+from puzzle_solver import krypto_kakuro_solver as solver
+board = np.array([
+    ['#', ' ', ' ', '#', '#'],
+    ['#', ' ', ' ', 'C', ' '],
+    [' ', ' ', '#', ' ', ' '],
+    ['E', ' ', ' ', 'G', '#'],
+    ['#', '#', 'A', ' ', '#'],
+])
+characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+row_sums = [['DJ'], ['EI'], ['DJ', 'G'], ['DB'], ['C']]
+col_sums = [['DB'], ['EG'], ['DA', 'DB'], ['DF'], ['DD']]
+binst = solver.Board(board=board, row_sums=row_sums, col_sums=col_sums, characters=characters)
+solutions = binst.solve_and_print()
+```
+
+**Script Output**
+
+```python
+Solution found
+    0   1   2   3   4
+  ┌───┬───┬───┬───┬───┐
+ 0│▒▒▒│ 8 │ 9 │▒▒▒│▒▒▒│
+  ├───┼───┼───┼───┼───┤
+ 1│▒▒▒│ 5 │ 7 │ 8 │ 9 │
+  ├───┼───┼───┼───┼───┤
+ 2│ 8 │ 9 │▒▒▒│ 1 │ 2 │
+  ├───┼───┼───┼───┼───┤
+ 3│ 2 │ 1 │ 4 │ 3 │▒▒▒│
+  ├───┼───┼───┼───┼───┤
+ 4│▒▒▒│▒▒▒│ 6 │ 2 │▒▒▒│
+  └───┴───┴───┴───┴───┘
+Solutions found: 1
+status: OPTIMAL
+Time taken: 0.00 seconds
+```
+
+**Solved puzzle**
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/krypto_kakuro_solved.png" alt="Krypto Kakuro solved" width="500">
