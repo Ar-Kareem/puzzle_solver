@@ -96,6 +96,47 @@ The website has exactly 90 puzzles in total:
 
 Sudoku variants are similarly abundant in this website, thus they are currently not prioritized.
 
+## Website 7 (In Progress)
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_7.png" alt="Website 7" width="500">
+
+**https://play.google.com/store/apps/details?id=com.andreasabbatini.logicgamestk (All puzzles are playable)**
+
+Puzzle Set 1: (?/7 implemented)
+
+Puzzle Set 2: (?/7 implemented)
+
+Puzzle Set 3: (?/7 implemented)
+
+Puzzle Set 4: (?/7 implemented)
+
+Puzzle Set 5: (?/7 implemented)
+
+Puzzle Set 6: (?/7 implemented)
+
+Puzzle Set 7: (?/7 implemented)
+
+Puzzle Set 8: (?/7 implemented)
+
+Puzzle Set 9: (?/7 implemented)
+
+Puzzle Set 10: (?/7 implemented)
+
+Puzzle Set 11: (?/7 implemented)
+
+Puzzle Set 12: (?/7 implemented)
+
+Puzzle Set 13: (?/7 implemented)
+
+Puzzle Set 14: (?/7 implemented)
+
+Puzzle Set 15: (?/7 implemented)
+
+Puzzle Set 16: (?/7 implemented)
+
+Puzzle Set 17: (?/4 implemented)
+
+
 # Other
 
 Other websites to look into:
