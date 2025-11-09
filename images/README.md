@@ -74,7 +74,7 @@ The website has exactly 86 puzzles in total:
 
 - 56 are Sudoku-like puzzles (?/56 implemented)
 - 23 Interactive non-Sudoku puzzles (22/22 implemented; 1 not intended to be implemented, "variety slitherlink")
-- 7 Printable only non-Sudoku puzzles (2/5 implemented; 2 not intended to be implemented, "Mazes" and "Cross Figures". 3 to be implemented, "TripleCross" & "Circle Nine" & "Krypto Kakuro")
+- 7 Printable only non-Sudoku puzzles (3/4 implemented; 3 not intended to be implemented, "Mazes" & "Cross Figures" & "TripleCross". 1 to be implemented, "Krypto Kakuro")
 
 Sudoku variants are so abundant so they are currently not prioritized.
 
