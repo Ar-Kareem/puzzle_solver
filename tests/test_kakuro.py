@@ -1,6 +1,7 @@
 import numpy as np
 
 from puzzle_solver import kakuro_solver as solver
+from puzzle_solver import krypto_kakuro_solver as krypto_kakuro_solver
 from puzzle_solver.core.utils import get_pos
 
 
@@ -88,7 +89,62 @@ def test_ground():
         assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
 
+def test_krypto_kakuro():
+    board = np.array([
+        ['#', ' ', ' ', ' ', '#'],
+        ['#', ' ', ' ', ' ', ' '],
+        [' ', ' ', '#', ' ', ' '],
+        [' ', ' ', 'U', 'R', '#'],
+        ['#', 'G', 'P', 'B', '#'],
+    ])
+    characters = ['B', 'C', 'D', 'G', 'J', 'N', 'P', 'R', 'U', 'W']
+    row_sums = [['GN'], ['JR'], ['N', 'C'], ['GG'], ['GR']]
+    col_sums = [['W'], ['JP'], ['U', 'N'], ['UR'], ['N']]
+    binst = krypto_kakuro_solver.Board(board=board, row_sums=row_sums, col_sums=col_sums, characters=characters)
+    solutions = binst.solve_and_print()
+    assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
+    solution = solutions[0].assignment
+    # print('ground = np.' + repr(np.array([[solution.get(get_pos(x=x, y=y), '') for x in range(board.shape[1])] for y in range(board.shape[0])]).astype(str)))
+    ground = np.array([['', '8', '2', '9', ''],
+        ['', '9', '1', '7', '8'],
+        ['3', '6', '', '6', '1'],
+        ['1', '2', '3', '5', ''],
+        ['', '1', '6', '8', '']], dtype='<U11')
+    ground_assignment = {get_pos(x=x, y=y): int(ground[y][x]) for x in range(ground.shape[1]) for y in range(ground.shape[0]) if ground[y][x] != ''}
+    assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
+    for pos in solution.keys():
+        assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
+
+
+def test_krypto_kakuro_2():
+    board = np.array([
+        ['#', ' ', ' ', '#', '#'],
+        ['#', ' ', ' ', 'C', ' '],
+        [' ', ' ', '#', ' ', ' '],
+        ['E', ' ', ' ', 'G', '#'],
+        ['#', '#', 'A', ' ', '#'],
+    ])
+    characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+    row_sums = [['DJ'], ['EI'], ['DJ', 'G'], ['DB'], ['C']]
+    col_sums = [['DB'], ['EG'], ['DA', 'DB'], ['DF'], ['DD']]
+    binst = krypto_kakuro_solver.Board(board=board, row_sums=row_sums, col_sums=col_sums, characters=characters)
+    solutions = binst.solve_and_print()
+    assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
+    solution = solutions[0].assignment
+    # print('ground = np.' + repr(np.array([[solution.get(get_pos(x=x, y=y), '') for x in range(board.shape[1])] for y in range(board.shape[0])]).astype(str)))
+    ground = np.array([['', '8', '9', '', ''],
+        ['', '5', '7', '8', '9'],
+        ['8', '9', '', '1', '2'],
+        ['2', '1', '4', '3', ''],
+        ['', '', '6', '2', '']], dtype='<U11')
+    ground_assignment = {get_pos(x=x, y=y): int(ground[y][x]) for x in range(ground.shape[1]) for y in range(ground.shape[0]) if ground[y][x] != ''}
+    assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
+    for pos in solution.keys():
+        assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
+
+
 if __name__ == '__main__':
     test_easy()
     test_ground()
-
+    test_krypto_kakuro()
+    test_krypto_kakuro_2()
