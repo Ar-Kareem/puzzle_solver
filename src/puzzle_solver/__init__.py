@@ -55,6 +55,7 @@ from puzzle_solver.puzzles.signpost import signpost as signpost_solver
 from puzzle_solver.puzzles.singles import singles as singles_solver
 from puzzle_solver.puzzles.slant import slant as slant_solver
 from puzzle_solver.puzzles.slitherlink import slitherlink as slitherlink_solver
+from puzzle_solver.puzzles.snail import snail as snail_solver
 from puzzle_solver.puzzles.split_ends import split_ends as split_ends_solver
 from puzzle_solver.puzzles.star_battle import star_battle as star_battle_solver
 from puzzle_solver.puzzles.star_battle import star_battle_shapeless as star_battle_shapeless_solver
@@ -138,6 +139,7 @@ __all__ = [
     singles_solver,
     slant_solver,
     slitherlink_solver,
+    snail_solver,
     split_ends_solver,
     star_battle_solver,
     star_battle_shapeless_solver,
