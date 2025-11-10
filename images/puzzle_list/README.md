@@ -108,7 +108,7 @@ Puzzle Set 1: (7/7 implemented)
 
 Puzzle Set 2: (7/7 implemented)
 
-Puzzle Set 3: (6/7 implemented)
+Puzzle Set 3: (7/7 implemented)
 
 Puzzle Set 4: (5/7 implemented)
 
