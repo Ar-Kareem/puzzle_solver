@@ -1,4 +1,4 @@
-# Linesweeper (Puzzle Type #83)
+# Linesweeper (Puzzle Type #84)
 
 This is a dedicated solver for Linesweeper.
 

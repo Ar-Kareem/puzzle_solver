@@ -1,4 +1,4 @@
-# Clouds (Puzzle Type #84)
+# Clouds (Puzzle Type #85)
 
 This is a dedicated solver for Clouds. Also known as Rain Clouds or Radar.
 
