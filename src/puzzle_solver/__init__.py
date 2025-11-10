@@ -5,6 +5,7 @@ from puzzle_solver.puzzles.battleships import battleships as battleships_solver
 from puzzle_solver.puzzles.binairo import binairo as binairo_solver
 from puzzle_solver.puzzles.binairo import binairo_plus as binairo_plus_solver
 from puzzle_solver.puzzles.black_box import black_box as black_box_solver
+from puzzle_solver.puzzles.branches import branches as branches_solver
 from puzzle_solver.puzzles.bridges import bridges as bridges_solver
 from puzzle_solver.puzzles.chess_range import chess_range as chess_range_solver
 from puzzle_solver.puzzles.chess_range import chess_solo as chess_solo_solver
@@ -90,6 +91,7 @@ __all__ = [
     binairo_solver,
     binairo_plus_solver,
     black_box_solver,
+    branches_solver,
     bridges_solver,
     chess_range_solver,
     chess_solo_solver,

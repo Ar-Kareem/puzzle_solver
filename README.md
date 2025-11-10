@@ -456,6 +456,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/hidden_stars_solved.png" alt="Hidden Stars" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/branches"><b>Branches</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/branches_solved.png" alt="Branches" width="140">
+    </a>
+  </td>
 </tr>
 </table>
 
