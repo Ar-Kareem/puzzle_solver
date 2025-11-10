@@ -16,7 +16,7 @@ class SingleSolution:
 
 def all_pairs(lst: list[int]) -> list[tuple[int, int]]:
     for i, ni in enumerate(lst):
-        for j, nj in enumerate(lst[i:]):
+        for _j, nj in enumerate(lst[i:]):
             yield ni, nj
 
 

@@ -2,8 +2,8 @@ import numpy as np
 from ortools.sat.python import cp_model
 from ortools.sat.python.cp_model import LinearExpr as lxp
 
-from puzzle_solver.core.utils import Direction8, Pos, get_all_pos, get_char, get_pos, in_bounds, Direction, get_next_pos, get_neighbors4
-from puzzle_solver.core.utils_ortools import and_constraint, force_connected_component, generic_solve_all, SingleSolution, or_constraint
+from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_pos, in_bounds, Direction, get_next_pos, get_neighbors4
+from puzzle_solver.core.utils_ortools import and_constraint, force_connected_component, generic_solve_all, SingleSolution
 from puzzle_solver.core.utils_visualizer import combined_function, id_board_to_wall_fn
 
 

@@ -53,7 +53,7 @@ class Board:
         for (_, N), plist in num_to_pos.items():  # all cells with a number >= 2
             assert len(plist) % 2 == 0, f'{s} has {len(plist)} positions, must be even'
             for i, pi in enumerate(plist):
-                for j, pj in enumerate(plist[i+1:]):  # don't double count
+                for _j, pj in enumerate(plist[i+1:]):  # don't double count
                     self.populate_pair(pi, pj, N)
 
     def populate_pair(self, pos1: Pos, pos2: Pos, N: int):

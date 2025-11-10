@@ -9,7 +9,7 @@ def test_toy():
     cnt, solutions = solver.SchurNumbers(colors=colors, n=n-1).count_num_ways()
     print(f'num ways to color {n-1} numbers with {n_colors} colors = {cnt}')
     solutions_str = []
-    for i, solution in enumerate(solutions):
+    for solution in solutions:
         colors = sorted(solution.assignment.items(), key=lambda x: x[0])
         colors = [color[1] for color in colors]
         solutions_str.append(' '.join(colors))

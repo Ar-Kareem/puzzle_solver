@@ -49,7 +49,7 @@ def test_ground():
         assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
 
-def test_ground():
+def test_ground2():
     walls = np.array([
         ['  ', '  ', '  ', 'D ', '  ', '  ', 'R ', '  ', '  ', '  '],
         ['  ', 'D ', '  ', '  ', '  ', 'R ', 'D ', '  ', '  ', '  '],
@@ -83,3 +83,4 @@ def test_ground():
 if __name__ == '__main__':
     test_toy()
     test_ground()
+    test_ground2()
