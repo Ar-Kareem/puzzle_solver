@@ -12,6 +12,8 @@ Below are the websites from the screenshots:
 4. https://www.brainbashers.com/puzzles.asp (All puzzles are playable; Website up since 1997, relic of an old past. Used to love this website when I was a kid)
 5. https://krazydad.com (Some puzzles are playable, some are only printable)
 6. https://puzzlemadness.co.uk/ (All puzzles are playable)
+7. https://play.google.com/store/apps/details?id=com.andreasabbatini.logicgamestk (All puzzles are playable)
+
 
 
 Most of the puzzles we target in this repo are pen and paper puzzles (i.e. not dynamic puzzles). The simplest and biggest difference is that if the puzzle can be played on a printed sheet of paper then it is not a dynamic puzzle. 
@@ -24,7 +26,7 @@ Below we list the puzzles that are yet to be implemented in the websites listed 
 
 ## Website 1 ✅
 
-<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_1.png" alt="Website 1" width="500">
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list/puzzle_list_1.png" alt="Website 1" width="500">
 
 **https://www.chiark.greenend.org.uk/~sgtatham/puzzles (All puzzles are playable)**
 
@@ -34,7 +36,7 @@ A total of 33 puzzles were implemented, and 7 remaining puzzles we aren't target
 
 ## Website 2 ✅
 
-<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_2.png" alt="Website 2" width="500">
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list/puzzle_list_2.png" alt="Website 2" width="500">
 
 **https://www.puzzle-kurodoko.com/ (All puzzles are playable)**
 
@@ -46,7 +48,7 @@ All pen and paper logic puzzles have been implemented.
 
 ## Website 3 (In Progress)
 
-<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_3_full.png" alt="Website 3" width="500">
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list/puzzle_list_3_full.png" alt="Website 3" width="500">
 
 **https://www.nikoli.co.jp/en/puzzles/ (Does not have playable puzzles, only instructions)**
 
@@ -56,7 +58,7 @@ There are still several puzzles in here that we plan on implementing in the futu
 
 ## Website 4 ✅
 
-<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_4.png" alt="Website 4" width="500">
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list/puzzle_list_4.png" alt="Website 4" width="500">
 
 **https://www.brainbashers.com/puzzles.asp (All puzzles are playable; Website up since 1997)**
 
@@ -66,7 +68,7 @@ All pen and paper puzzles have been implemented.
 
 ## Website 5
 
-<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_5.png" alt="Website 5" width="500">
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list/puzzle_list_5.png" alt="Website 5" width="500">
 
 **https://krazydad.com (Some puzzles are playable, some are only printable)**
 
@@ -84,7 +86,7 @@ Sudoku variants are so abundant so they are currently not prioritized.
 
 ## Website 6 (In Progress)
 
-<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_6.png" alt="Website 6" width="500">
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list/puzzle_list_6.png" alt="Website 6" width="500">
 
 **https://puzzlemadness.co.uk/ (All puzzles are playable)**
 
@@ -98,7 +100,7 @@ Sudoku variants are similarly abundant in this website, thus they are currently 
 
 ## Website 7 (In Progress)
 
-<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list_7.png" alt="Website 7" width="500">
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list/puzzle_list_7.png" alt="Website 7" width="500">
 
 **https://play.google.com/store/apps/details?id=com.andreasabbatini.logicgamestk (All puzzles are playable)**
 
