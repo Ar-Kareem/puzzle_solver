@@ -106,7 +106,7 @@ Sudoku variants are similarly abundant in this website, thus they are currently 
 
 Puzzle Set 1: (7/7 implemented)
 
-Puzzle Set 2: (6/7 implemented)
+Puzzle Set 2: (7/7 implemented)
 
 Puzzle Set 3: (?/7 implemented)
 
