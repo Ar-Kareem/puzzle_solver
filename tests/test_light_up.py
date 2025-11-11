@@ -21,24 +21,24 @@ def test_ground():
   binst = solver.Board(board=board)
   solutions = binst.solve_and_print()
   ground = np.array([
-    ['S', '0', 'S', 'S', 'S', 'L', 'W', 'S', 'S', 'L'],
-    ['L', 'S', 'S', '0', 'S', 'S', 'L', 'S', 'S', '1'],
-    ['W', 'L', 'W', 'S', 'L', 'W', 'S', 'S', '0', 'S'],
-    ['0', 'S', 'S', 'L', '3', 'L', 'W', 'S', '0', 'S'],
-    ['S', 'S', 'L', 'S', 'W', 'S', '2', 'L', 'W', 'L'],
-    ['L', '1', 'S', 'W', 'L', '2', 'L', 'S', 'S', 'S'],
-    ['S', '0', 'S', 'W', 'S', 'W', 'S', 'S', 'S', 'W'],
-    ['S', '0', 'S', 'S', '1', 'L', 'S', '2', 'L', 'W'],
-    ['0', 'S', 'S', 'L', 'S', 'S', '1', 'L', 'S', 'S'],
-    ['S', 'L', 'S', '2', 'L', 'S', 'S', 'S', 'W', 'L'],
+    ['0', '0', '0', '0', '0', '1', '0', '0', '0', '1'],
+    ['1', '0', '0', '0', '0', '0', '1', '0', '0', '0'],
+    ['0', '1', '0', '0', '1', '0', '0', '0', '0', '0'],
+    ['0', '0', '0', '1', '0', '1', '0', '0', '0', '0'],
+    ['0', '0', '1', '0', '0', '0', '0', '1', '0', '1'],
+    ['1', '0', '0', '0', '1', '0', '1', '0', '0', '0'],
+    ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+    ['0', '0', '0', '0', '0', '1', '0', '0', '1', '0'],
+    ['0', '0', '0', '1', '0', '0', '0', '1', '0', '0'],
+    ['0', '1', '0', '0', '1', '0', '0', '0', '0', '1'],
   ])
   print(ground, ground.shape)
   assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
   solution = solutions[0].assignment
-  ground_assignment = {get_pos(x=x, y=y): ground[y][x] for x in range(ground.shape[1]) for y in range(ground.shape[0]) if ground[y][x] in ['S', 'L']}
+  ground_assignment = {get_pos(x=x, y=y): ground[y][x] for x in range(ground.shape[1]) for y in range(ground.shape[0])}
   assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
   for pos in solution.keys():
-    assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
+    assert str(solution[pos]) == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
 def test_ground_2():
   # example on https://www.nikoli.co.jp/en/puzzles/akari/
@@ -54,20 +54,20 @@ def test_ground_2():
   binst = solver.Board(board=board)
   solutions = binst.solve_and_print()
   ground = np.array([
-    [' ', 'L', 'W', ' ', ' ', 'L', 'W'],
-    ['L', '4', 'L', ' ', '1', ' ', 'W'],
-    [' ', 'L', ' ', '2', 'L', ' ', ' '],
-    [' ', 'W', ' ', 'L', ' ', 'W', ' '],
-    [' ', ' ', ' ', 'W', ' ', ' ', 'L'],
-    ['W', ' ', 'W', 'L', ' ', '1', ' '],
-    ['1', 'L', ' ', ' ', '1', 'L', ' '],
+    ['0', '1', '0', '0', '0', '1', '0'],
+    ['1', '0', '1', '0', '0', '0', '0'],
+    ['0', '1', '0', '0', '1', '0', '0'],
+    ['0', '0', '0', '1', '0', '0', '0'],
+    ['0', '0', '0', '0', '0', '0', '1'],
+    ['0', '0', '0', '1', '0', '0', '0'],
+    ['0', '1', '0', '0', '0', '1', '0'],
   ])
   assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
   solution = solutions[0].assignment
-  ground_assignment = {get_pos(x=x, y=y): ground[y][x] if ground[y][x] != ' ' else 'S' for x in range(ground.shape[1]) for y in range(ground.shape[0]) if ground[y][x] in [' ', 'L']}
+  ground_assignment = {get_pos(x=x, y=y): ground[y][x] if ground[y][x] != ' ' else 'S' for x in range(ground.shape[1]) for y in range(ground.shape[0])}
   assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
   for pos in solution.keys():
-    assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
+    assert str(solution[pos]) == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
 
 if __name__ == '__main__':
