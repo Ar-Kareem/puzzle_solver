@@ -18,7 +18,7 @@ def test_ground():
   side_b = np.array([2, 4, -1, 4, -1, -1])
   side_r = np.array([3, -1, 2, -1, -1, -1])
   side_l = np.array([-1, -1, -1, 2, -1, 4])
-  binst = solver.Board(board=board, sides={'top': side_t, 'bottom': side_b, 'right': side_r, 'left': side_l})
+  binst = solver.Board(board=board, top=side_t, bottom=side_b, right=side_r, left=side_l)
   solutions = binst.solve_and_print()
   ground = np.array([
     [5, 6, 4, 1, 2, 3],
