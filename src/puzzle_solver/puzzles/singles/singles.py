@@ -1,4 +1,5 @@
 import numpy as np
+
 from ortools.sat.python import cp_model
 
 from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_neighbors4, get_all_pos_to_idx_dict, get_row_pos, get_col_pos, get_pos
@@ -9,16 +10,15 @@ from puzzle_solver.core.utils_visualizer import combined_function
 class Board:
     def __init__(self, board: np.array):
         assert board.ndim == 2, f'board must be 2d, got {board.ndim}'
-        assert board.shape[0] == board.shape[1], 'board must be square'
         self.board = board
-        self.V = board.shape[0]
-        self.H = board.shape[1]
+        self.V, self.H = board.shape
         self.N = self.V * self.H
         self.idx_of: dict[Pos, int] = get_all_pos_to_idx_dict(self.V, self.H)
+
         self.model = cp_model.CpModel()
-        self.B = {}
-        self.W = {}
-        self.Num = {} # value of squares (Num = N + idx if black, else board[pos])
+        self.B: dict[Pos, cp_model.IntVar] = {}
+        self.W: dict[Pos, cp_model.IntVar] = {}
+        self.Num: dict[Pos, cp_model.IntVar] = {} # value of squares (Num = N + idx if black, else board[pos])
         self.create_vars()
         self.add_all_constraints()
 
@@ -42,11 +42,11 @@ class Board:
 
     def solve_and_print(self, verbose: bool = True):
         def board_to_solution(board: Board, solver: cp_model.CpSolverSolutionCallback) -> SingleSolution:
-            return SingleSolution(assignment={pos: 1 if solver.Value(val) == 1 else 0 for pos, val in board.B.items()})
+            return SingleSolution(assignment={pos: solver.Value(var) for pos, var in board.B.items()})
         def callback(single_res: SingleSolution):
             print("Solution found")
             print(combined_function(self.V, self.H,
-                is_shaded=lambda r, c: single_res.assignment[get_pos(x=c, y=r)] == 1,
+                is_shaded=lambda r, c: single_res.assignment[get_pos(x=c, y=r)],
                 center_char=lambda r, c: self.board[r, c],
                 text_on_shaded_cells=False
             ))

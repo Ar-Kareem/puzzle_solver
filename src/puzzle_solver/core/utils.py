@@ -63,9 +63,7 @@ def get_neighbors4(pos: Pos, V: int, H: int, include_self: bool = False) -> Iter
             yield p2
 
 
-def get_neighbors8(pos: Pos, V: int, H: int = None, include_self: bool = False) -> Iterable[Pos]:
-    if H is None:
-        H = V
+def get_neighbors8(pos: Pos, V: int, H: int, include_self: bool = False) -> Iterable[Pos]:
     for dx in [-1, 0, 1]:
         for dy in [-1, 0, 1]:
             if not include_self and (dx, dy) == (0, 0):
@@ -85,17 +83,13 @@ def get_col_pos(col_idx: int, V: int) -> Iterable[Pos]:
         yield get_pos(x=col_idx, y=y)
 
 
-def get_all_pos(V, H=None):
-    if H is None:
-        H = V
+def get_all_pos(V: int, H: int) -> Iterable[Pos]:
     for y in range(V):
         for x in range(H):
             yield get_pos(x=x, y=y)
 
 
-def get_all_pos_to_idx_dict(V, H=None) -> dict[Pos, int]:
-    if H is None:
-        H = V
+def get_all_pos_to_idx_dict(V: int, H: int) -> dict[Pos, int]:
     return {get_pos(x=x, y=y): y*H+x for y in range(V) for x in range(H)}
 
 
@@ -107,9 +101,7 @@ def set_char(board: np.array, pos: Pos, char: str):
     board[pos.y][pos.x] = char
 
 
-def in_bounds(pos: Pos, V: int, H: int = None) -> bool:
-    if H is None:
-        H = V
+def in_bounds(pos: Pos, V: int, H: int) -> bool:
     return 0 <= pos.y < V and 0 <= pos.x < H
 
 

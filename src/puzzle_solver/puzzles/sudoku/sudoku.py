@@ -56,7 +56,6 @@ class Board:
             Each numbers in a killer block must be unique and sum to the clue.
         """
         assert board.ndim == 2, f'board must be 2d, got {board.ndim}'
-        assert board.shape[0] == board.shape[1], 'board must be square'
         assert all(isinstance(i.item(), str) and len(i.item()) == 1 and (i.item().isalnum() or i.item() == ' ') for i in np.nditer(board)), 'board must contain only alphanumeric characters or space'
         self.board = board
         self.V, self.H = board.shape

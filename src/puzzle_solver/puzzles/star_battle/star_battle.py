@@ -9,11 +9,9 @@ from puzzle_solver.core.utils_visualizer import combined_function, id_board_to_w
 class Board:
     def __init__(self, board: np.array, star_count: int = 1, shapeless: bool = False):
         assert board.ndim == 2, f'board must be 2d, got {board.ndim}'
-        assert board.shape[0] == board.shape[1], 'board must be square'
         assert star_count >= 1 and isinstance(star_count, int), 'star_count must be an integer greater than or equal to 1'
         self.board = board
-        self.V = board.shape[0]
-        self.H = board.shape[1]
+        self.V, self.H = board.shape
         self.N = self.V * self.H
         self.star_count = star_count
         self.shapeless = shapeless
