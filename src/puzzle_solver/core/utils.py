@@ -42,6 +42,18 @@ def get_next_pos(cur_pos: Pos, direction: Union[Direction, Direction8]) -> Pos:
     return get_pos(cur_pos.x+delta_x, cur_pos.y+delta_y)
 
 
+def get_ray(pos: Pos, direction: Union[Direction, Direction8], V: int, H: int, include_self: bool = False) -> list[Pos]:
+    out = []
+    if include_self:
+        out.append(pos)
+    while True:
+        pos = get_next_pos(pos, direction)
+        if not in_bounds(pos, V, H):
+            break
+        out.append(pos)
+    return out
+
+
 def get_neighbors4(pos: Pos, V: int, H: int, include_self: bool = False) -> Iterable[Pos]:
     if include_self:
         yield pos

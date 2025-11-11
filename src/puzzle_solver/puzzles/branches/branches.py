@@ -2,19 +2,9 @@ import numpy as np
 from ortools.sat.python import cp_model
 from ortools.sat.python.cp_model import LinearExpr as lxp
 
-from puzzle_solver.core.utils import Pos, get_all_pos, get_char, Direction, get_next_pos, in_bounds, get_opposite_direction, set_char
+from puzzle_solver.core.utils import Pos, get_all_pos, get_char, Direction, get_next_pos, get_opposite_direction, set_char, get_ray
 from puzzle_solver.core.utils_ortools import and_constraint, generic_solve_all, SingleSolution
 from puzzle_solver.core.utils_visualizer import combined_function
-
-
-def get_ray(pos: Pos, V: int, H: int, direction: Direction) -> list[Pos]:
-    out = []
-    while True:
-        pos = get_next_pos(pos, direction)
-        if not in_bounds(pos, V, H):
-            break
-        out.append(pos)
-    return out
 
 
 class Board:
@@ -47,7 +37,7 @@ class Board:
         vis_vars: list[cp_model.IntVar] = []
         for direction in Direction:  # Build visibility chains in four direction
             branch_direction = get_opposite_direction(direction)
-            ray = get_ray(pos, self.V, self.H, direction)  # cells outward
+            ray = get_ray(pos, direction, self.V, self.H)  # cells outward
             for idx in range(len(ray)):
                 v = self.model.NewBoolVar(f"vis[{pos}]->({direction.name})[{idx}]")
                 and_constraint(self.model, target=v, cs=[self.model_vars[(p, branch_direction)] for p in ray[:idx+1]])

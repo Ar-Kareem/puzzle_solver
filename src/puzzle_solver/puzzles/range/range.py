@@ -1,19 +1,9 @@
 import numpy as np
 from ortools.sat.python import cp_model
 
-from puzzle_solver.core.utils import Pos, get_all_pos, get_pos, get_neighbors4, in_bounds, Direction, get_next_pos, get_char
+from puzzle_solver.core.utils import Pos, get_all_pos, get_pos, get_neighbors4, Direction, get_char, get_ray
 from puzzle_solver.core.utils_ortools import and_constraint, generic_solve_all, SingleSolution, force_connected_component
 from puzzle_solver.core.utils_visualizer import combined_function
-
-
-def get_ray(pos: Pos, V: int, H: int, direction: Direction) -> list[Pos]:
-    out = []
-    while True:
-        pos = get_next_pos(pos, direction)
-        if not in_bounds(pos, V, H):
-            break
-        out.append(pos)
-    return out
 
 
 class Board:
@@ -53,7 +43,7 @@ class Board:
             self.model.Add(self.w[pos] == 1)  # Force it white
             vis_vars: list[cp_model.IntVar] = []
             for direction in Direction:  # Build visibility chains in four direction
-                ray = get_ray(pos, self.V, self.H, direction)  # cells outward
+                ray = get_ray(pos, direction, self.V, self.H)  # cells outward
                 for idx in range(len(ray)):
                     v = self.model.NewBoolVar(f"vis[{pos}]->({direction.name})[{idx}]")
                     and_constraint(self.model, target=v, cs=[self.w[p] for p in ray[:idx+1]])

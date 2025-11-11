@@ -5,19 +5,9 @@ import numpy as np
 from ortools.sat.python import cp_model
 from ortools.sat.python.cp_model import LinearExpr as lxp
 
-from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_pos, get_row_pos, get_col_pos, Direction8, in_bounds, get_next_pos
+from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_pos, get_row_pos, get_col_pos, Direction8, get_ray
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution
 from puzzle_solver.core.utils_visualizer import combined_function
-
-
-def get_ray(pos: Pos, direction: Direction8, V: int, H: int) -> list[Pos]:
-    out = []
-    while True:
-        out.append(pos)
-        pos = get_next_pos(pos, direction)
-        if not in_bounds(pos, V, H):
-            break
-    return out
 
 
 class Board:
@@ -57,16 +47,16 @@ class Board:
             self.model.Add(lxp.Sum([self.model_vars[pos] for pos in get_col_pos(col, self.V)]) <= 1)
         # every diagonal has at most one queen
         for pos in get_col_pos(0, self.V):  # down-right diagonal on left border
-            ray = get_ray(pos, Direction8.DOWN_RIGHT, self.V, self.H)
+            ray = get_ray(pos, Direction8.DOWN_RIGHT, self.V, self.H, include_self=True)
             self.model.Add(lxp.Sum([self.model_vars[pos] for pos in ray]) <= 1)
         for pos in get_row_pos(0, self.H):  # down-right diagonal on top border
-            ray = get_ray(pos, Direction8.DOWN_RIGHT, self.V, self.H)
+            ray = get_ray(pos, Direction8.DOWN_RIGHT, self.V, self.H, include_self=True)
             self.model.Add(lxp.Sum([self.model_vars[pos] for pos in ray]) <= 1)
         for pos in get_row_pos(0, self.H):  # down-left diagonal on top
-            ray = get_ray(pos, Direction8.DOWN_LEFT, self.V, self.H)
+            ray = get_ray(pos, Direction8.DOWN_LEFT, self.V, self.H, include_self=True)
             self.model.Add(lxp.Sum([self.model_vars[pos] for pos in ray]) <= 1)
         for pos in get_col_pos(self.H - 1, self.V):  # down-left diagonal on right border
-            ray = get_ray(pos, Direction8.DOWN_LEFT, self.V, self.H)
+            ray = get_ray(pos, Direction8.DOWN_LEFT, self.V, self.H, include_self=True)
             self.model.Add(lxp.Sum([self.model_vars[pos] for pos in ray]) <= 1)
         # every id has at most count queens
         for id_ in self.location_ids:

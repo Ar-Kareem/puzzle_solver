@@ -4,19 +4,9 @@ import numpy as np
 from ortools.sat.python import cp_model
 from ortools.sat.python.cp_model import LinearExpr as lxp
 
-from puzzle_solver.core.utils import Pos, get_all_pos, get_char, Direction, in_bounds, get_next_pos, get_opposite_direction, get_pos, get_neighbors4
+from puzzle_solver.core.utils import Pos, get_all_pos, get_char, Direction, in_bounds, get_next_pos, get_opposite_direction, get_pos, get_neighbors4, get_ray
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution, force_connected_component
 from puzzle_solver.core.utils_visualizer import combined_function
-
-
-def get_ray(pos: Pos, direction: Direction, V: int, H: int) -> list[Pos]:
-    out = []
-    while True:
-        pos = get_next_pos(pos, direction)
-        if not in_bounds(pos, V, H):
-            break
-        out.append(pos)
-    return out
 
 
 class Board:

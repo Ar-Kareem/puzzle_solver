@@ -2,19 +2,10 @@ import numpy as np
 from ortools.sat.python import cp_model
 from ortools.sat.python.cp_model import LinearExpr as lxp
 
-from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_pos, in_bounds, Direction, get_next_pos, get_neighbors4
+from puzzle_solver.core.utils import Pos, get_all_pos, get_char, get_pos, in_bounds, Direction, get_next_pos, get_neighbors4, get_ray
 from puzzle_solver.core.utils_ortools import and_constraint, force_connected_component, generic_solve_all, SingleSolution
 from puzzle_solver.core.utils_visualizer import combined_function, id_board_to_wall_fn
 
-
-def get_ray(pos: Pos, V: int, H: int, direction: Direction) -> list[Pos]:
-    out = []
-    while True:
-        pos = get_next_pos(pos, direction)
-        if not in_bounds(pos, V, H):
-            break
-        out.append(pos)
-    return out
 
 def get_neq_var(model: cp_model.CpModel, a: cp_model.IntVar, b: cp_model.IntVar) -> cp_model.IntVar:
     eq_var = model.NewBoolVar(f'{a}:{b}:eq')
@@ -84,7 +75,7 @@ class Board:
         self.model.Add(self.w[pos] == 1)  # Force it white
         vis_vars: list[cp_model.IntVar] = []
         for direction in Direction:  # Build visibility chains in four direction
-            ray = get_ray(pos, self.V, self.H, direction)  # cells outward
+            ray = get_ray(pos, direction, self.V, self.H)  # cells outward
             for idx in range(len(ray)):
                 v = self.model.NewBoolVar(f"vis[{pos}]->({direction.name})[{idx}]")
                 and_constraint(self.model, target=v, cs=[self.w[p] for p in ray[:idx+1]])
