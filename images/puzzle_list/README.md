@@ -13,6 +13,7 @@ Below are the websites from the screenshots:
 5. https://krazydad.com (Some puzzles are playable, some are only printable)
 6. https://puzzlemadness.co.uk/ (All puzzles are playable)
 7. https://play.google.com/store/apps/details?id=com.andreasabbatini.logicgamestk (All puzzles are playable)
+8. https://www.cross-plus-a.com/help.htm (Does not have playable puzzles, only instructions)
 
 
 
