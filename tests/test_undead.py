@@ -23,17 +23,17 @@ def test_ground():
   binst = solver.Board(board=board, sides={'top': side_t, 'bottom': side_b, 'right': side_r, 'left': side_l}, monster_count=counts)
   solutions = binst.solve_and_print()
   ground = np.array([
-    ['VA', '//', 'GH', 'GH', 'ZO', 'GH', '\\'],
-    ['VA', 'VA', 'VA', '//', 'ZO', 'ZO', 'ZO'],
-    ['VA', '//', '//', 'ZO', 'ZO', '\\', '//'],
-    ['//', '\\', '//', 'VA', '//', '\\', 'VA'],
-    ['//', 'VA', '//', '\\', 'ZO', '//', '//'],
-    ['ZO', '\\', '\\', '\\', 'ZO', 'VA', 'GH'],
-    ['ZO', '//', 'VA', 'VA', 'ZO', 'VA', 'GH'],
+    ['V', '//', 'G', 'G', 'Z', 'G', '\\'],
+    ['V', 'V', 'V', '//', 'Z', 'Z', 'Z'],
+    ['V', '//', '//', 'Z', 'Z', '\\', '//'],
+    ['//', '\\', '//', 'V', '//', '\\', 'V'],
+    ['//', 'V', '//', '\\', 'Z', '//', '//'],
+    ['Z', '\\', '\\', '\\', 'Z', 'V', 'G'],
+    ['Z', '//', 'V', 'V', 'Z', 'V', 'G'],
   ])
   assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
   solution = solutions[0].assignment
-  ground_assignment = {get_pos(x=x, y=y): ground[y][x] for x in range(ground.shape[1]) for y in range(ground.shape[0]) if ground[y][x] in ['VA', 'GH', 'ZO']}
+  ground_assignment = {get_pos(x=x, y=y): ground[y][x] for x in range(ground.shape[1]) for y in range(ground.shape[0]) if ground[y][x] in ['V', 'G', 'Z']}
   assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
   for pos in solution.keys():
     assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
