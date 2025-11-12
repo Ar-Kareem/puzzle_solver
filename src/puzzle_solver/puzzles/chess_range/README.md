@@ -1,4 +1,3 @@
-
 # Chess Range (Puzzle Type #23)
 
 These are three dedicated solvers for different types of chess puzzles (all use the same solver under the hood)
