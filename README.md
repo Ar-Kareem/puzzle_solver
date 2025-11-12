@@ -4154,7 +4154,7 @@ Here is a list of all the puzzles along with some of their aliases:
 10. [Singles](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/singles) (Also known as Hitori)
 11. [Magnets](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/magnets) 
 12. [Signpost](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/signpost) 
-13. [Range](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/range) (Also known as Kurodoko)
+13. [Range](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/range) (Also known as Kurodoko, Kuromasu, or "Where is Black Cells?")
 14. [UnDead](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/undead) (Also known as Haunted or Haunted Mirror Maze)
 15. [Unruly](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/unruly) (Also known as "3-In-A-Row")
 16. [Tracks](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tracks) 
