@@ -140,6 +140,18 @@ Puzzle Set 16: (?/7 implemented)
 Puzzle Set 17: (?/4 implemented)
 
 
+## Website 8 (In Progress)
+
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzle_list/puzzle_list_8.png" alt="Website 8" width="500">
+
+**https://www.cross-plus-a.com/help.htm (Does not have playable puzzles, only instructions)**
+
+The website has exactly 264 puzzles in total:
+
+- 23 are Sudoku-like puzzles (?/23 implemented)
+- 238 logic puzzles (>36/238 implemented; >31 remaining)
+- 3 other puzzles that we aren't targeting (Word Finder, Spider Web, and Maze).
+
 # Other
 
 Other websites to look into:
