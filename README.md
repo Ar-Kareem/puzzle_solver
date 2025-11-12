@@ -4199,7 +4199,7 @@ Here is a list of all the puzzles along with some of their aliases:
 55. [Pipes](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/pipes) (Also known as Net or Network)
 56. [Connect the Dots](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/connect_the_dots) (Also known as Numberlink)
 57. [Nonograms Colored](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nonograms) (Also known as Nonogrids, Numbergrids, Picross, Hanjie, Paint by Numbers, Griddlers, or Pic-a-Pix)
-58. [ABC View](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/abc_view) 
+58. [ABC View](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/abc_view) (Also known as "Easy as ABC", "ABC End View", or "Last Man Standing")
 59. [Mathema Grids](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/mathema_grids) (Also known as SetSquare grid)
 60. [Split Ends](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/split_ends) 
 61. [N-Queens](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/n_queens) 
