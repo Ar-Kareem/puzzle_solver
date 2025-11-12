@@ -4213,7 +4213,7 @@ Here is a list of all the puzzles along with some of their aliases:
 69. [NumberMaze](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/numbermaze) (Also known as Dot Stream)
 70. [Link-a-Pix](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/link_a_pix) 
 71. [Trees Logic](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/trees_logic) 
-72. [Vectors](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/vectors) 
+72. [Vectors](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/vectors) (Also known as "Four Winds" or "Line Game")
 73. [Vermicelli](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/vermicelli) 
 74. [Cow and Cactus](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/cow_and_cactus) 
 75. [Kropki](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/kropki) 
@@ -4224,7 +4224,7 @@ Here is a list of all the puzzles along with some of their aliases:
 80. [Snail](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/snail) 
 81. [Hidden Stars](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/hidden_stars) 
 82. [Branches](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/branches) 
-83. [Tatami](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tatami) 
+83. [Tatami](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tatami) (Also known as Patchwork)
 84. [Linesweeper](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/linesweeper) (Also known as "Loop")
 85. [Clouds](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/clouds) (Also known as Rain Clouds or Radar)
 
