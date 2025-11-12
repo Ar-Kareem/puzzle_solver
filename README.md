@@ -4217,7 +4217,7 @@ Here is a list of all the puzzles along with some of their aliases:
 73. [Vermicelli](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/vermicelli) 
 74. [Cow and Cactus](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/cow_and_cactus) 
 75. [Kropki](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/kropki) 
-76. [Ripple Effect](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/ripple_effect) 
+76. [Ripple Effect](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/ripple_effect) (Also known as Hakyuu)
 77. [Area 51](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/area_51) 
 78. [Circle 9](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/circle_9) 
 79. [Krypto Kakuro](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/kakuro) 
