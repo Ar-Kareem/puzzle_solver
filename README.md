@@ -4256,7 +4256,7 @@ To run the tests, simply run the following (to create a fresh conda environment 
 conda create -p ./env python=3.11
 conda activate ./env
 pip install -r requirements.txt
-pip install -r requirements-dev.txt
+pip install -r ./tests/requirements-dev.txt
 pytest
 ```
 

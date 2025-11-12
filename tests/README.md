@@ -5,7 +5,7 @@ First, make sure the environment is created, activated, and the dependencies are
 ```bash
 conda create -p ./env python=3.11
 conda activate ./env
-pip install -r requirements.txt -r requirements-dev.txt
+pip install -r requirements.txt -r ./tests/requirements-dev.txt
 ```
 
 You can run almost all of the tests by running:
