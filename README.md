@@ -18,6 +18,8 @@ pip install multi-puzzle-solver
 These are all the puzzles that are implemented in this repo. <br> Click on any of them to go to that Puzzle's README.
 
 <table>
+<!-- AUTO-GENERATED GALLERY START -->
+
 <tr>
   <td align="center">
     <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nonograms"><b>Nonograms</b><br><br>
@@ -139,17 +141,17 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
   </td>
   <td align="center">
     <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_range"><b>Chess Range</b><br><br>
-      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_range_unsolved.png" alt="Chess range" width="140">
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_range_unsolved.png" alt="Chess Range" width="140">
     </a>
   </td>
   <td align="center">
     <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_range"><b>Chess Solo</b><br><br>
-      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_solo_unsolved.png" alt="Chess solo" width="140">
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_solo_unsolved.png" alt="Chess Solo" width="140">
     </a>
   </td>
   <td align="center">
     <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_range"><b>Chess Melee</b><br><br>
-      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_melee_unsolved.png" alt="Chess melee" width="140">
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/chess_melee_unsolved.png" alt="Chess Melee" width="140">
     </a>
   </td>
 </tr>
@@ -256,7 +258,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
   <td align="center">
-        <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nurikabe"><b>Nurikabe</b><br><br>
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nurikabe"><b>Nurikabe</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/nurikabe_solved.png" alt="Nurikabe" width="140">
     </a>
   </td>
@@ -477,6 +479,8 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
 </tr>
+
+<!-- AUTO-GENERATED GALLERY END -->
 </table>
 
 </div>

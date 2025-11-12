@@ -2,6 +2,27 @@
 from pathlib import Path
 import re
 
+gallery_name_map = {
+    'UnDead': 'Undead',
+    'NumberMaze': 'Number Maze',
+}
+
+gallery_image_map = {
+    'nonograms': 'nonogram_solved.png',
+    'light_up': 'lightup_solved.png',
+    'number_maze': 'numbermaze_solved.png',
+
+    'minesweeper': 'minesweeper_pre.png',
+    'inertia': 'inertia_unsolved.png',
+    'guess': 'guess_3.png',
+    'chess_range': 'chess_range_unsolved.png',
+    'chess_solo': 'chess_solo_unsolved.png',
+    'chess_melee': 'chess_melee_unsolved.png',
+    'flip': 'flip_unsolved.png',
+    'flood_it': 'flood_it_unsolved.png',
+    'n_queens': '7_queens_solved.png',
+}
+
 def get_puzzle_names():
     d = Path('./src/puzzle_solver/puzzles')
     assert d.exists(), f'{d} does not exist'
@@ -41,6 +62,29 @@ def get_puzzle_names():
             known_as_name = ' '
         out_txt += f'{i:02d}. [{name}]({puzzle_links[str(i)]}){known_as_name}\n'
     replace_in_readme(out_txt, 'ALIASES')
+
+    base_image_url = 'https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/'
+    gallery_txt = '<tr>\n'
+    count = 0
+    for i in nums:
+        name = puzzle_names[str(i)]
+        name = gallery_name_map.get(name, name)
+        name_norm = name.replace(' ', '_').replace('-', '_').lower()
+        link = puzzle_links[str(i)]
+        if name_norm in gallery_image_map:
+            image = base_image_url + gallery_image_map[name_norm]
+        else:
+            image = base_image_url + f'{name_norm}_solved.png'
+        if count%5 == 0 and count > 0:
+            gallery_txt += f'</tr>\n<tr>\n'
+        gallery_txt += f'  <td align="center">\n'
+        gallery_txt += f'    <a href="{link}"><b>{name}</b><br><br>\n'
+        gallery_txt += f'      <img src="{image}" alt="{name}" width="140">\n'
+        gallery_txt += f'    </a>\n'
+        gallery_txt += f'  </td>\n'
+        count += 1
+    gallery_txt += f'</tr>\n'
+    replace_in_readme(gallery_txt, 'GALLERY')
 
 def replace_in_readme(text, section_name):
     readme_path = Path('./README.md')
