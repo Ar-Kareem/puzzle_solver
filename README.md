@@ -629,7 +629,7 @@ The code can:
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/solo.html#solo)
 
-* [**Solver Code**][2]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -735,7 +735,7 @@ Also known as Fillomino
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/filling.html#filling)
 
-* [**Solver Code**][7]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/filling)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -808,7 +808,7 @@ Also known as Hitori.
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/singles.html#singles)
 
-* [**Solver Code**][10]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/singles)
   <summary><strong>Rules</strong></summary>
 
 You have a grid of white squares, all of which contain numbers. Your task is to colour some of the squares black (removing the number) so as to satisfy all of the following conditions:
@@ -897,7 +897,7 @@ Also known as Kurodoko.
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/range.html#range)
 
-* [**Solver Code**][13]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/range)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -982,7 +982,7 @@ Time taken: 0.07 seconds
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/tracks.html#tracks)
 
-* [**Solver Code**][16]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tracks)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1076,7 +1076,7 @@ Also known as Masyu
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/pearl.html#pearl)
 
-* [**Solver Code**][19]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/pearl)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1166,7 +1166,7 @@ This achieves a final sequence of moves that is empirically always faster than t
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/inertia.html#inertia)
 
-* [**Solver Code**][21]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/inertia)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1244,7 +1244,7 @@ This picture won't mean much as the game is about the sequence of moves not the 
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/guess.html#guess)
 
-* [**Solver Code**][22]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/guess)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1390,7 +1390,7 @@ In the case when there's only one possible choice left, the solver will inform y
 
 * [**Play online**](https://www.puzzle-chess.com/chess-melee-13/)
 
-* [**Solver Code**][25]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_range#chess-melee-puzzle-type-25)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1442,7 +1442,7 @@ Time taken: 6.24 seconds
 
 * [**Play online**](https://www.puzzle-aquarium.com/)
 
-* [**Solver Code**][27]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/aquarium)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1540,7 +1540,7 @@ Time taken: 0.02 seconds
 
 * [**Play online**](https://www.puzzle-stitches.com/)
 
-* [**Solver Code**][28]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/stitches)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1639,7 +1639,7 @@ Time taken: 0.01 seconds
 
 * [**Play online**](https://www.puzzle-battleships.com/)
 
-* [**Solver Code**][29]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/battleships)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1739,7 +1739,7 @@ Solution found
 
 * [**Play online**](https://www.puzzle-star-battle.com/?size=14)
 
-* [**Solver Code**][32]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/star_battle)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1822,7 +1822,7 @@ Time taken: 0.02 seconds
 
 * [**Play online**](https://www.puzzle-lits.com/)
 
-* [**Solver Code**][33]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/lits)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -1939,7 +1939,7 @@ Also known as Tentai Show, Tentaisho, Galaxies, Spiral Galaxies, or Sym-a-Pix.
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/galaxies.html#galaxies)
 
-* [**Solver Code**][35]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/galaxies)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2043,7 +2043,7 @@ Also known as Fences, Loop the Loop, or Loopy.
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/loopy.html#loopy)
 
-* [**Solver Code**][39]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/slitherlink)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2156,7 +2156,7 @@ Also known as Shikaku or CellBlocks.
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/rect.html#rect)
 
-* [**Solver Code**][42]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/rectangles)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2267,7 +2267,7 @@ Applying the solution to the puzzle visually:
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/palisade.html#palisade)
 
-* [**Solver Code**][43]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/palisade)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2353,7 +2353,7 @@ Applying the solution to the puzzle visually:
 
 * [**Play online**](https://www.puzzle-heyawake.com/)
 
-* [**Solver Code**][46]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/heyawake)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2471,7 +2471,7 @@ Also known as Semaphores.
 
 * [**Play online**](https://www.puzzle-shingoki.com/)
 
-* [**Solver Code**][47]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/shingoki)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2587,7 +2587,7 @@ Also known as Proof of Quilt.
 
 * [**Play online**](https://www.puzzle-shakashaka.com/)
 
-* [**Solver Code**][50]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/shakashaka)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2763,7 +2763,7 @@ Time taken: 0.36 seconds
 
 * [**Play online**](https://www.puzzle-killer-sudoku.com/)
 
-* [**Solver Code**][53]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2849,7 +2849,7 @@ Time taken: 0.02 seconds
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/flood.html#flood)
 
-* [**Solver Code**][54]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/flood_it)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -2932,7 +2932,7 @@ Also known as Net or Network.
 
 * [**Instructions**](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/doc/net.html#net)
 
-* [**Solver Code**][55]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/pipes)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -3016,7 +3016,7 @@ Also known as Numberlink.
 
 * [**Mobile App (iOS)**](https://apps.apple.com/us/app/dot-link-connect-the-dots/id6444312485)
 
-* [**Solver Code**][56]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/connect_the_dots)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -3088,7 +3088,7 @@ Also known as Nonogrids, Numbergrids, Picross, Hanjie, Paint by Numbers, Griddle
 
 * [**Play online**](https://www.nonograms.org/nonograms2)
 
-* [**Solver Code**][57]
+* [**Solver Code**](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nonograms)
 
 <details>
   <summary><strong>Rules</strong></summary>
@@ -4184,32 +4184,3 @@ Issues and PRs welcome!
 3. Build and push:
    1. Bash: `./scripts/build.sh`
    2. Powershell: `./scripts/build.ps1`
-
-
-[2]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku "puzzle_solver/src/puzzle_solver/puzzles/sudoku at master · Ar-Kareem/puzzle_solver · GitHub"
-[7]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/filling "puzzle_solver/src/puzzle_solver/puzzles/filling at master · Ar-Kareem/puzzle_solver · GitHub"
-[8]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/keen "puzzle_solver/src/puzzle_solver/puzzles/keen at master · Ar-Kareem/puzzle_solver · GitHub"
-[9]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/towers "puzzle_solver/src/puzzle_solver/puzzles/towers at master · Ar-Kareem/puzzle_solver · GitHub"
-[10]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/singles "puzzle_solver/src/puzzle_solver/puzzles/singles at master · Ar-Kareem/puzzle_solver · GitHub"
-[16]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tracks "puzzle_solver/src/puzzle_solver/puzzles/tracks at master · Ar-Kareem/puzzle_solver · GitHub"
-[19]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/pearl "puzzle_solver/src/puzzle_solver/puzzles/pearl at master · Ar-Kareem/puzzle_solver · GitHub"
-[21]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/inertia "puzzle_solver/src/puzzle_solver/puzzles/inertia at master · Ar-Kareem/puzzle_solver · GitHub"
-[22]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/guess "puzzle_solver/src/puzzle_solver/puzzles/guess at master · Ar-Kareem/puzzle_solver · GitHub"
-[25]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/chess_range#chess-melee-puzzle-type-25 "puzzle_solver/src/puzzle_solver/puzzles/chess_range at master · Ar-Kareem/puzzle_solver · GitHub"
-[27]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/aquarium "puzzle_solver/src/puzzle_solver/puzzles/aquarium at master · Ar-Kareem/puzzle_solver · GitHub"
-[28]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/stitches "puzzle_solver/src/puzzle_solver/puzzles/stitches at master · Ar-Kareem/puzzle_solver · GitHub"
-[29]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/battleships "puzzle_solver/src/puzzle_solver/puzzles/battleships at master · Ar-Kareem/puzzle_solver · GitHub"
-[32]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/star_battle "puzzle_solver/src/puzzle_solver/puzzles/star_battle_shapeless at master · Ar-Kareem/puzzle_solver · GitHub"
-[33]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/lits "puzzle_solver/src/puzzle_solver/puzzles/lits at master · Ar-Kareem/puzzle_solver · GitHub"
-[35]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/galaxies "puzzle_solver/src/puzzle_solver/puzzles/galaxies at master · Ar-Kareem/puzzle_solver · GitHub"
-[39]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/slitherlink "puzzle_solver/src/puzzle_solver/puzzles/slitherlink at master · Ar-Kareem/puzzle_solver · GitHub"
-[42]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/rectangles "puzzle_solver/src/puzzle_solver/puzzles/rectangles at master · Ar-Kareem/puzzle_solver · GitHub"
-[43]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/palisade "puzzle_solver/src/puzzle_solver/puzzles/palisade at master · Ar-Kareem/puzzle_solver · GitHub"
-[46]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/heyawake "puzzle_solver/src/puzzle_solver/puzzles/heyawake at master · Ar-Kareem/puzzle_solver · GitHub"
-[47]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/shingoki "puzzle_solver/src/puzzle_solver/puzzles/shingoki at master · Ar-Kareem/puzzle_solver · GitHub"
-[50]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/shakashaka "puzzle_solver/src/puzzle_solver/puzzles/shakashaka at master · Ar-Kareem/puzzle_solver · GitHub"
-[53]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sudoku "puzzle_solver/src/puzzle_solver/puzzles/sudoku at master · Ar-Kareem/puzzle_solver · GitHub"
-[54]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/flood_it "puzzle_solver/src/puzzle_solver/puzzles/flood_it at master · Ar-Kareem/puzzle_solver · GitHub"
-[55]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/pipes "puzzle_solver/src/puzzle_solver/puzzles/pipes at master · Ar-Kareem/puzzle_solver · GitHub"
-[56]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/connect_the_dots "puzzle_solver/src/puzzle_solver/puzzles/connect_the_dots at master · Ar-Kareem/puzzle_solver · GitHub"
-[57]: https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/nonograms "puzzle_solver/src/puzzle_solver/puzzles/nonograms at master · Ar-Kareem/puzzle_solver · GitHub"
