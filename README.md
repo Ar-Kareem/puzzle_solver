@@ -1,6 +1,6 @@
 # Python Puzzle Solver
 
-Solve countless (80+) classical logic puzzles automatically in Python. 
+Solve countless (85+) classical logic puzzles automatically in Python. 
 
 Can also tell you if a partial puzzle has a single unique solution or not (and retrieves all possible solutions).
 
@@ -476,6 +476,13 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
   <td align="center">
     <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/clouds"><b>Clouds</b><br><br>
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/clouds_solved.png" alt="Clouds" width="140">
+    </a>
+  </td>
+</tr>
+<tr>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/walls"><b>Walls</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/walls_solved.png" alt="Walls" width="140">
     </a>
   </td>
 </tr>
@@ -4227,6 +4234,7 @@ Here is a list of all the puzzles along with some of their aliases:
 83. [Tatami](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tatami) (Also known as Patchwork)
 84. [Linesweeper](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/linesweeper) (Also known as "Loop")
 85. [Clouds](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/clouds) (Also known as Rain Clouds or Radar)
+86. [Walls](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/walls) 
 
 <!-- AUTO-GENERATED ALIASES END -->
 

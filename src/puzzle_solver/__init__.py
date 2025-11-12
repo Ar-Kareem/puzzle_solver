@@ -81,6 +81,7 @@ from puzzle_solver.puzzles.unequal import unequal as unequal_solver
 from puzzle_solver.puzzles.unruly import unruly as unruly_solver
 from puzzle_solver.puzzles.vectors import vectors as vectors_solver
 from puzzle_solver.puzzles.vermicelli import vermicelli as vermicelli_solver
+from puzzle_solver.puzzles.walls import walls as walls_solver
 from puzzle_solver.puzzles.yajilin import yajilin as yajilin_solver
 from puzzle_solver.puzzles.yin_yang import yin_yang as yin_yang_solver
 
@@ -170,9 +171,10 @@ __all__ = [
     unruly_solver,
     vectors_solver,
     vermicelli_solver,
+    walls_solver,
     yajilin_solver,
     yin_yang_solver,
     inertia_image_parser,
 ]
 
-__version__ = '1.1.5'
+__version__ = '1.1.6'
