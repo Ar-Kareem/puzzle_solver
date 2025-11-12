@@ -1,6 +1,6 @@
 # Linesweeper (Puzzle Type #84)
 
-This is a dedicated solver for Linesweeper.
+This is a dedicated solver for Linesweeper. Also known as "Loop".
 
 Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
 
@@ -12,7 +12,7 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 **Rules**
 
-Linesweeper (also known as "Loop") is a logic puzzle played on a rectangular grid. The goal is to draw a single, continuous, non-intersecting loop that connects the centers of the grid cells.
+Linesweeper is a logic puzzle played on a rectangular grid. The goal is to draw a single, continuous, non-intersecting loop that connects the centers of the grid cells.
 
 Certain cells contain numbers that impose additional constraints on the loop's path.
 
