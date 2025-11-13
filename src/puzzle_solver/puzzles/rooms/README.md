@@ -81,4 +81,3 @@ Time taken: 1.67 seconds
 **Solved puzzle**
 
 <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/rooms_solved.png" alt="Rooms solved" width="500">
-test
