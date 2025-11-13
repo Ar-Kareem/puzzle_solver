@@ -25,9 +25,13 @@ class Board:
 
     def add_all_constraints(self):
         for row in range(self.V):
-            self.model.Add(sum([self.model_vars[get_pos(x=col, y=row)] * (col + 1) for col in range(self.H)]) == self.side[row])
+            if not str(self.side[row]).strip():
+                continue
+            self.model.Add(sum([self.model_vars[get_pos(x=col, y=row)] * (col + 1) for col in range(self.H)]) == int(self.side[row]))
         for col in range(self.H):
-            self.model.Add(sum([self.model_vars[get_pos(x=col, y=row)] * (row + 1) for row in range(self.V)]) == self.bottom[col])
+            if not str(self.bottom[col]).strip():
+                continue
+            self.model.Add(sum([self.model_vars[get_pos(x=col, y=row)] * (row + 1) for row in range(self.V)]) == int(self.bottom[col]))
 
     def solve_and_print(self, verbose: bool = True):
         def board_to_solution(board: Board, solver: cp_model.CpSolverSolutionCallback) -> SingleSolution:

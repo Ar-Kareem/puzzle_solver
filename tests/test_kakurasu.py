@@ -51,6 +51,30 @@ def test_ground_2():
     assert solution[pos] == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
 
 
+def test_ground():
+    bottom = np.array(['30', '15', '9', '18', '10', '17', '30', '30', '10'])
+    side = np.array(['42', '30', '24', ' ', ' ', '17', '8', '14', '21'])
+    binst = solver.Board(bottom=bottom, side=side)
+    solutions = binst.solve_and_print()
+    assert len(solutions) == 1, f'unique solutions != 1, == {len(solutions)}'
+    solution = solutions[0].assignment
+    # print('ground = np.' + repr(np.array([[solution.get(get_pos(x=x, y=y), ' ') for x in range(bottom.shape[0])] for y in range(side.shape[0])]).astype(str)))
+    ground = np.array([['0', '0', '1', '1', '1', '1', '1', '1', '1'],
+          ['0', '1', '1', '1', '0', '1', '1', '1', '0'],
+          ['0', '0', '0', '1', '1', '0', '1', '1', '0'],
+          ['1', '0', '0', '1', '0', '0', '0', '1', '1'],
+          ['1', '1', '0', '0', '0', '1', '0', '1', '1'],
+          ['1', '0', '1', '0', '1', '0', '0', '1', '0'],
+          ['1', '0', '0', '0', '0', '0', '1', '0', '0'],
+          ['1', '1', '0', '1', '0', '0', '1', '0', '0'],
+          ['0', '0', '0', '0', '0', '1', '1', '1', '0']], dtype='<U11')
+    ground_assignment = {get_pos(x=x, y=y): ground[y][x] for x in range(ground.shape[1]) for y in range(ground.shape[0])}
+    assert set(solution.keys()) == set(ground_assignment.keys()), f'solution keys != ground assignment keys, {set(solution.keys()) ^ set(ground_assignment.keys())} \n\n\n{solution} \n\n\n{ground_assignment}'
+    for pos in solution.keys():
+      assert str(solution[pos]) == ground_assignment[pos], f'solution[{pos}] != ground_assignment[{pos}], {solution[pos]} != {ground_assignment[pos]}'
+
+
 if __name__ == '__main__':
   test_ground_1()
   test_ground_2()
+  test_ground()
