@@ -1,19 +1,15 @@
 from dataclasses import dataclass
 
 import numpy as np
-
 from ortools.sat.python import cp_model
 
-from puzzle_solver.core.utils import Pos, get_all_pos, in_bounds, set_char, get_char, Direction, get_next_pos
+from puzzle_solver.core.utils import Pos, get_all_pos, in_bounds, get_char
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution
-from puzzle_solver.core.utils_visualizer import combined_function
+from puzzle_solver.core.utils_visualizer import combined_function, id_assignment_to_wall_fn
 
 
 def factor_pairs(N: int, upper_limit_i: int, upper_limit_j: int):
     """Return all unique pairs (a, b) such that a * b == N, with a, b <= upper_limit."""
-    if N <= 0 or upper_limit_i <= 0 or upper_limit_j <= 0:
-        return []
-
     pairs = []
     i = 1
     while i * i <= N:
@@ -50,7 +46,6 @@ class Board:
         self.model = cp_model.CpModel()
         self.model_vars: dict[tuple[Pos, Pos], cp_model.IntVar] = {}
         self.rectangles: list[Rectangle] = []
-
         self.create_vars()
         self.add_all_constraints()
 
@@ -82,47 +77,19 @@ class Board:
                         self.rectangles.append(rectangle)
 
     def add_all_constraints(self):
-        # each pos has only 1 rectangle active
-        for pos in get_all_pos(self.V, self.H):
+        for pos in get_all_pos(self.V, self.H):  # each pos has only 1 rectangle active
             self.model.AddExactlyOne(rectangle.active for rectangle in self.rectangles if pos in rectangle.body)
-        # each pos has only 1 clue active
-        for pos in get_all_pos(self.V, self.H):
+        for pos in get_all_pos(self.V, self.H):  # each pos has only 1 clue active
             self.model.AddExactlyOne(self.model_vars[(pos, clue_id)] for clue_id in self.clue_pos_to_id.values() if (pos, clue_id) in self.model_vars)
-        # a rectangle being active means all its body ponts to the clue
-        for rectangle in self.rectangles:
+        for rectangle in self.rectangles:  # a rectangle being active means all its body ponts to the clue
             is_active = rectangle.active
             for pos in rectangle.body:
                 self.model.Add(self.model_vars[(pos, rectangle.clue_id)] == 1).OnlyEnforceIf(is_active)
 
     def solve_and_print(self, verbose: bool = True):
         def board_to_solution(board: Board, solver: cp_model.CpSolverSolutionCallback) -> SingleSolution:
-            assignment: dict[Pos, int] = {}
-            for rectangle in self.rectangles:
-                if solver.Value(rectangle.active) == 1:
-                    for pos in rectangle.body:
-                        assignment[pos] = f'id{rectangle.clue_id}:N={rectangle.N}:{rectangle.height}x{rectangle.width}'
-            return SingleSolution(assignment=assignment)
+            return SingleSolution(assignment={pos: f'id{rectangle.clue_id}:N={rectangle.N}:{rectangle.height}x{rectangle.width}' for rectangle in self.rectangles for pos in rectangle.body if solver.Value(rectangle.active) == 1})
         def callback(single_res: SingleSolution):
             print("Solution found")
-            res = np.full((self.V, self.H), '', dtype=object)
-            id_board = np.full((self.V, self.H), '', dtype=object)
-            for pos in get_all_pos(self.V, self.H):
-                cur = single_res.assignment[pos]
-                set_char(id_board, pos, cur)
-                left_pos = get_next_pos(pos, Direction.LEFT)
-                right_pos = get_next_pos(pos, Direction.RIGHT)
-                top_pos = get_next_pos(pos, Direction.UP)
-                bottom_pos = get_next_pos(pos, Direction.DOWN)
-                if left_pos not in single_res.assignment or single_res.assignment[left_pos] != cur:
-                    set_char(res, pos, get_char(res, pos) + 'L')
-                if right_pos not in single_res.assignment or single_res.assignment[right_pos] != cur:
-                    set_char(res, pos, get_char(res, pos) + 'R')
-                if top_pos not in single_res.assignment or single_res.assignment[top_pos] != cur:
-                    set_char(res, pos, get_char(res, pos) + 'U')
-                if bottom_pos not in single_res.assignment or single_res.assignment[bottom_pos] != cur:
-                    set_char(res, pos, get_char(res, pos) + 'D')
-            print(combined_function(self.V, self.H,
-                cell_flags=lambda r, c: res[r, c],
-                center_char=lambda r, c: self.board[r, c] if self.board[r, c] != ' ' else ' '))
-
+            print(combined_function(self.V, self.H, cell_flags=id_assignment_to_wall_fn(single_res.assignment, self.V, self.H), center_char=lambda r, c: self.board[r, c].strip()))
         return generic_solve_all(self, board_to_solution, callback=callback if verbose else None, verbose=verbose)
