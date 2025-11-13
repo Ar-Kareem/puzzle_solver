@@ -38,11 +38,8 @@ def get_puzzle_names():
             line = text.split('\n')[i]
             known_as_line = text.split('\n')[i+2]
             match = re.search(r'# (.+) \(Puzzle Type #(\d+)\)', line)  # extract "(Puzzle Type #\d+)"
+            assert match
             known_as_match = re.search(r'known as(.+?)(\.?\s*)$', known_as_line)
-            if not match:
-                print('INVALID LINE:', line)
-                assert False
-                continue
             name = match.group(1)
             num = match.group(2)
             puzzle_names[num] = name
@@ -76,14 +73,14 @@ def get_puzzle_names():
         else:
             image = base_image_url + f'{name_norm}_solved.png'
         if count%5 == 0 and count > 0:
-            gallery_txt += f'</tr>\n<tr>\n'
-        gallery_txt += f'  <td align="center">\n'
+            gallery_txt += '</tr>\n<tr>\n'
+        gallery_txt += '  <td align="center">\n'
         gallery_txt += f'    <a href="{link}"><b>{name}</b><br><br>\n'
         gallery_txt += f'      <img src="{image}" alt="{name}" width="140">\n'
-        gallery_txt += f'    </a>\n'
-        gallery_txt += f'  </td>\n'
+        gallery_txt += '    </a>\n'
+        gallery_txt += '  </td>\n'
         count += 1
-    gallery_txt += f'</tr>\n'
+    gallery_txt += '</tr>\n'
     replace_in_readme(gallery_txt, 'GALLERY')
 
 def replace_in_readme(text, section_name):

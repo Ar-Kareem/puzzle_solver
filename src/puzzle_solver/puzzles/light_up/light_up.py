@@ -2,7 +2,7 @@ import numpy as np
 from ortools.sat.python import cp_model
 from ortools.sat.python.cp_model import LinearExpr as lxp
 
-from puzzle_solver.core.utils import Pos, get_all_pos, get_char, set_char, in_bounds, get_next_pos, get_neighbors4, Direction, get_pos
+from puzzle_solver.core.utils import Pos, get_all_pos, get_char, in_bounds, get_next_pos, get_neighbors4, Direction, get_pos
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution
 from puzzle_solver.core.utils_visualizer import combined_function
 
