@@ -1,6 +1,6 @@
 # Python Puzzle Solver
 
-Solve countless (85+) classical logic puzzles automatically in Python. 
+Solve countless (90+) classical logic puzzles automatically in Python. 
 
 Can also tell you if a partial puzzle has a single unique solution or not (and retrieves all possible solutions).
 
@@ -523,7 +523,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
 
 ## Introduction
 
-The aim of this repo is to provide very efficient solvers (i.e. not brute force solvers) for countless (85+) popular pencil logic puzzles like Nonograms, Sudoku, Minesweeper, and many more lesser known ones.
+The aim of this repo is to provide very efficient solvers (i.e. not brute force solvers) for countless (90+) popular pencil logic puzzles like Nonograms, Sudoku, Minesweeper, and many more lesser known ones.
 
 If you happen to have a puzzle similar to the ones listed below and want to solve it (or see how many potential solutions a partially covered board has), then this repo is perfect for you.
 
