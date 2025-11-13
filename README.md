@@ -501,7 +501,7 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
 
 ## Introduction
 
-The aim of this repo is to provide very efficient solvers (i.e. not brute force solvers) for countless (60+) popular pencil logic puzzles like Nonograms, Sudoku, Minesweeper, and many more lesser known ones.
+The aim of this repo is to provide very efficient solvers (i.e. not brute force solvers) for countless (85+) popular pencil logic puzzles like Nonograms, Sudoku, Minesweeper, and many more lesser known ones.
 
 If you happen to have a puzzle similar to the ones listed below and want to solve it (or see how many potential solutions a partially covered board has), then this repo is perfect for you.
 
@@ -514,12 +514,7 @@ The simple use-case of this repo is if you want to solve a puzzle given the stat
 3. **Esoteric puzzles:** Most packages you can find online are only designed for popular puzzles. This package partially solves this issue by providing solvers for many puzzles. I'm open to suggestions for implementing solvers for more puzzles.
 4. **All possible solutions:** The available solvers often lack uniqueness checks and simply stop at the first possible solution without verifying uniqueness or completeness. This package supports checking whether puzzles are uniquely solvable, ambiguous, or unsolvable for all the puzzles.
 
-Play most of the puzzles online in these websites:
-- https://www.chiark.greenend.org.uk/~sgtatham/puzzles
-- https://www.puzzle-kurodoko.com/
-- https://www.brainbashers.com/puzzles.asp
-- https://krazydad.com
-- https://puzzlemadness.co.uk/
+Play most of the puzzles online in the website listed in the [Puzzle List](https://github.com/Ar-Kareem/puzzle_solver/blob/master/images/puzzle_list/README.md).
 
 
 Almost all the solvers in this repo use the CP-SAT solver from Google OR-Tools.
