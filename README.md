@@ -506,6 +506,13 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
     </a>
   </td>
 </tr>
+<tr>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tenner_grid"><b>Tenner Grid</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/tenner_grid_solved.png" alt="Tenner Grid" width="140">
+    </a>
+  </td>
+</tr>
 
 <!-- AUTO-GENERATED GALLERY END -->
 </table>
@@ -4254,6 +4261,7 @@ Here is a list of all the puzzles along with some of their aliases:
 88. [Mathrax](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/mathrax) 
 89. [Arrows](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/arrows) 
 90. [Sumscrapers](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sumscrapers) 
+91. [Tenner Grid](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tenner_grid) (Also known as "From 1 to 10", "Zehnergitter", "Grid Ten")
 
 <!-- AUTO-GENERATED ALIASES END -->
 

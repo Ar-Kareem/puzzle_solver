@@ -73,6 +73,7 @@ from puzzle_solver.puzzles.suko import suko as suko_solver
 from puzzle_solver.puzzles.sumscrapers import sumscrapers as sumscrapers_solver
 from puzzle_solver.puzzles.tapa import tapa as tapa_solver
 from puzzle_solver.puzzles.tatami import tatami as tatami_solver
+from puzzle_solver.puzzles.tenner_grid import tenner_grid as tenner_grid_solver
 from puzzle_solver.puzzles.tents import tents as tents_solver
 from puzzle_solver.puzzles.thermometers import thermometers as thermometers_solver
 from puzzle_solver.puzzles.towers import towers as towers_solver
@@ -167,6 +168,7 @@ __all__ = [
     sumscrapers_solver,
     tapa_solver,
     tatami_solver,
+    tenner_grid_solver,
     tents_solver,
     thermometers_solver,
     towers_solver,
