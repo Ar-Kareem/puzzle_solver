@@ -1,6 +1,6 @@
 # Yajilin (Puzzle Type #68)
 
-This is a dedicated solver for Yajilin.
+This is a dedicated solver for Yajilin. Also known as Yalooniq or Arrow Ring.
 
 Below are the details of how to utilize the solver. In addition, the solver gives all possible solutions to the input thus it can be utilized to figure out if a single partial input board has multiple possible solutions.
 

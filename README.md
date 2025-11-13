@@ -4221,7 +4221,7 @@ Here is a list of all the puzzles along with some of their aliases:
 65. [Suko](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/suko) 
 66. [Suguru](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/suguru) 
 67. [Number Path](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/number_path) 
-68. [Yajilin](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/yajilin) 
+68. [Yajilin](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/yajilin) (Also known as Yalooniq or Arrow Ring)
 69. [NumberMaze](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/numbermaze) (Also known as Dot Stream)
 70. [Link-a-Pix](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/link_a_pix) 
 71. [Trees Logic](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/trees_logic) 
