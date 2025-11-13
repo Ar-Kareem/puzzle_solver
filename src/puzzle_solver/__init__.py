@@ -36,6 +36,7 @@ from puzzle_solver.puzzles.link_a_pix import link_a_pix as link_a_pix_solver
 from puzzle_solver.puzzles.magnets import magnets as magnets_solver
 from puzzle_solver.puzzles.map import map as map_solver
 from puzzle_solver.puzzles.mathema_grids import mathema_grids as mathema_grids_solver
+from puzzle_solver.puzzles.mathrax import mathrax as mathrax_solver
 from puzzle_solver.puzzles.minesweeper import minesweeper as minesweeper_solver
 from puzzle_solver.puzzles.mosaic import mosaic as mosaic_solver
 from puzzle_solver.puzzles.n_queens import n_queens as n_queens_solver
@@ -127,6 +128,7 @@ __all__ = [
     magnets_solver,
     map_solver,
     mathema_grids_solver,
+    mathrax_solver,
     minesweeper_solver,
     mosaic_solver,
     n_queens_solver,

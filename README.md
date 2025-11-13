@@ -490,6 +490,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/rooms_solved.png" alt="Rooms" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/mathrax"><b>Mathrax</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/mathrax_solved.png" alt="Mathrax" width="140">
+    </a>
+  </td>
 </tr>
 
 <!-- AUTO-GENERATED GALLERY END -->
@@ -4236,6 +4241,7 @@ Here is a list of all the puzzles along with some of their aliases:
 85. [Clouds](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/clouds) (Also known as Rain Clouds or Radar)
 86. [Walls](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/walls) 
 87. [Rooms](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/rooms) (Also known as Seethrough, Doors, or "Open Office")
+88. [Mathrax](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/mathrax) 
 
 <!-- AUTO-GENERATED ALIASES END -->
 
