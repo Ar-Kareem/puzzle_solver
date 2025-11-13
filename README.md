@@ -500,6 +500,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/arrows_solved.png" alt="Arrows" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sumscrapers"><b>Sumscrapers</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/sumscrapers_solved.png" alt="Sumscrapers" width="140">
+    </a>
+  </td>
 </tr>
 
 <!-- AUTO-GENERATED GALLERY END -->
@@ -4248,6 +4253,7 @@ Here is a list of all the puzzles along with some of their aliases:
 87. [Rooms](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/rooms) (Also known as Seethrough, Doors, or "Open Office")
 88. [Mathrax](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/mathrax) 
 89. [Arrows](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/arrows) 
+90. [Sumscrapers](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/sumscrapers) 
 
 <!-- AUTO-GENERATED ALIASES END -->
 
