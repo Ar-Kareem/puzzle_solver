@@ -8,7 +8,7 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Android App**](https://play.google.com/store/apps/details?id=com.andreasabbatini.logicgamestk)
 
-* [**Instructions**](https://www.cross-plus-a.com/help.htm)
+* [**Instructions**](https://www.cross-plus-a.com/html/cros7arr.htm)
 
 **Rules**
 
