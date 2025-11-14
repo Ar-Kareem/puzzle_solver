@@ -379,7 +379,8 @@ def id_board_to_wall_fn(id_board: np.array, border_is_wall = True, border_is = N
     return lambda r, c: res[r][c]
 
 def id_assignment_to_wall_fn(id_assignment: dict[Pos, int], V: int, H: int, border_is_wall = True, border_is = None) -> Callable[[int, int], str]:
-    return id_board_to_wall_fn(np.array([[id_assignment[get_pos(x=c, y=r)] for c in range(H)] for r in range(V)]), border_is_wall, border_is)
+    arr = np.array([[id_assignment.get(get_pos(x=c, y=r), ' ') for c in range(H)] for r in range(V)])
+    return id_board_to_wall_fn(arr, border_is_wall, border_is)
 
 CellVal = Literal["B", "W", "TL", "TR", "BL", "BR"]
 GridLike = Sequence[Sequence[CellVal]]
