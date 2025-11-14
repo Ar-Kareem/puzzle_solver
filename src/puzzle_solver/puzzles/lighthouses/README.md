@@ -83,4 +83,4 @@ Time taken: 0.00 seconds
 
 **Solved puzzle**
 
-<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/archipelago_solved.png" alt="Archipelago solved" width="500">
+<img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/lighthouses_solved.png" alt="Lighthouses solved" width="500">

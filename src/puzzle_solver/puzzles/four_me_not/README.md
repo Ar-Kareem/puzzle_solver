@@ -8,6 +8,8 @@ Below are the details of how to utilize the solver. In addition, the solver give
 
 * [**Android App**](https://play.google.com/store/apps/details?id=com.andreasabbatini.logicgamestk)
 
+* [**Instructions**](https://www.cross-plus-a.com/html/cros7fbd4.htm)
+
 **Rules**
 
 This puzzle is played on a rectangular or square grid. Some of the cells have circles in them. The aim is to place circles into empty cells; all the circles must form an orthogonally continuous area. A line of connected circles must not contain more than 3 circles.
