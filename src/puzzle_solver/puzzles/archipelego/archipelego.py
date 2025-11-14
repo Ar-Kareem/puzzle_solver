@@ -87,27 +87,18 @@ class Board:
                     self.rectangles.append(Rectangle(id_=len(self.rectangles), active=self.model.NewBoolVar(f'{len(self.rectangles)}'), N=None, clue_id=None, width=width, height=height, body=body, disallow=disallow, perimeter=perimeter))
 
     def add_all_constraints(self):
-        rect_to_illegal_rectangles: dict[Rectangle, list[Rectangle]] = defaultdict(list)
-        for rectangle in self.rectangles:
-            for other_rectangle in self.rectangles:
-                is_illegal = other_rectangle.body & rectangle.disallow
-                if is_illegal and other_rectangle != rectangle:
-                    rect_to_illegal_rectangles[rectangle].append(other_rectangle)
-        print('sum of values = ', sum(len(rect_to_illegal_rectangles[rectangle]) for rectangle in self.rectangles))
         for pos in get_all_pos(self.V-1, self.H-1):  # disallow 2x2 black squares
             block = [pos, get_next_pos(pos, Direction.RIGHT), get_next_pos(pos, Direction.DOWN), get_next_pos(pos, Direction8.DOWN_RIGHT)]
             self.model.AddBoolOr([self.model_vars[p] for p in block])
         for pos in get_all_pos(self.V, self.H):
             self.model.Add(lxp.Sum([rectangle.active for rectangle in self.rectangles if pos in rectangle.body]) == self.model_vars[pos])
         for clue_id in self.clue_pos_to_id.values():  # each clue_id must have 1 rectangle active
-            # print(f'rectangles for clue_id {clue_id} (N = {self.clue_pos_to_value[self.clue_pos[clue_id]]}) = {[rectangle.id_ for rectangle in self.rectangles if rectangle.clue_id == clue_id]}')
             self.model.AddExactlyOne(rectangle.active for rectangle in self.rectangles if rectangle.clue_id == clue_id)
         for rectangle in self.rectangles:  # a rectangle being active means all its body ponts to the clue
             for pos in rectangle.body:
                 self.model.Add(self.model_vars[pos] == 1).OnlyEnforceIf(rectangle.active)
-            # a rectangle is active means any rectangle that touches it is not active
-            for illegal_rectangle in rect_to_illegal_rectangles[rectangle]:
-                self.model.Add(illegal_rectangle.active == 0).OnlyEnforceIf(rectangle.active)
+            for pos in rectangle.disallow & self.model_vars.keys():
+                self.model.Add(self.model_vars[pos] == 0).OnlyEnforceIf(rectangle.active)
         def is_neighbor(rect1: Rectangle, rect2: Rectangle) -> bool:
             return rect1.body & rect2.perimeter
         force_connected_component(self.model, {rectangle: rectangle.active for rectangle in self.rectangles}, is_neighbor=is_neighbor)
