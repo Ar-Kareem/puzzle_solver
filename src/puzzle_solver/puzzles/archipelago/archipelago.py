@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from collections import defaultdict
 
 import numpy as np
 from ortools.sat.python import cp_model
