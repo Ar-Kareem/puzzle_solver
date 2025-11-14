@@ -115,11 +115,11 @@ Puzzle Set 4: (7/7 implemented) ✅
 
 Puzzle Set 5: (7/7 implemented) ✅
 
-Puzzle Set 6: (5/7 implemented)
+Puzzle Set 6: (7/7 implemented) ✅
 
-Puzzle Set 7: (?/7 implemented)
+Puzzle Set 7: (3/7 implemented)
 
-Puzzle Set 8: (?/7 implemented)
+Puzzle Set 8: (4/7 implemented)
 
 Puzzle Set 9: (?/7 implemented)
 
