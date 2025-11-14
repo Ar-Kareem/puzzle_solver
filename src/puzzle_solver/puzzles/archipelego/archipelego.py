@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from collections import defaultdict
 
 import numpy as np
 from ortools.sat.python import cp_model
@@ -8,21 +7,6 @@ from ortools.sat.python.cp_model import LinearExpr as lxp
 from puzzle_solver.core.utils import Direction8, Pos, get_all_pos, get_pos, in_bounds, get_char, Direction, get_next_pos
 from puzzle_solver.core.utils_ortools import generic_solve_all, SingleSolution, force_connected_component
 from puzzle_solver.core.utils_visualizer import combined_function, id_assignment_to_wall_fn
-
-
-def factor_pairs(N: int, upper_limit_i: int, upper_limit_j: int):
-    """Return all unique pairs (a, b) such that a * b == N, with a, b <= upper_limit."""
-    pairs = []
-    i = 1
-    while i * i <= N:
-        if N % i == 0:
-            j = N // i
-            if i <= upper_limit_i and j <= upper_limit_j:
-                pairs.append((i, j))
-            if i != j and j <= upper_limit_i and i <= upper_limit_j:
-                pairs.append((j, i))
-        i += 1
-    return pairs
 
 
 @dataclass(frozen=True)
@@ -59,32 +43,24 @@ class Board:
 
     def create_vars(self):
         self.fixed_pos: set[Pos] = set(self.clue_pos)
-        for pos in self.clue_pos:  # for each clue on the board
-            clue_id = self.clue_pos_to_id[pos]
-            clue_num = self.clue_pos_to_value[pos]
-            other_fixed_pos = self.fixed_pos - {pos}
-            for width, height in factor_pairs(clue_num, self.V, self.H):  # for each possible width x height rectangle that can fit the clue
-                # if the digit is at pos and we have a width x height rectangle then we can translate the rectangle "0 to width" to the left and "0 to height" to the top
-                for dx in range(width):
-                    for dy in range(height):
-                        body = frozenset({Pos(x=pos.x - dx + i, y=pos.y - dy + j) for i in range(width) for j in range(height)})
-                        if any(not in_bounds(p, self.V, self.H) for p in body):  # a rectangle cannot be out of bounds
-                            continue
-                        if any(p in other_fixed_pos for p in body):  # a rectangle cannot contain a different clue; each clue is 1 rectangle only
-                            continue
-                        disallow = frozenset({get_next_pos(p, direction) for p in body for direction in Direction} - body)  # disallow touching orthoginal
-                        perimeter = frozenset({get_next_pos(p, direction) for p in body for direction in Direction8} - body - disallow)  # perimeter is diagonals
-                        self.rectangles.append(Rectangle(id_=len(self.rectangles), active=self.model.NewBoolVar(f'{len(self.rectangles)}'), N=clue_num, clue_id=clue_id, width=width, height=height, body=body, disallow=disallow, perimeter=perimeter))
         for pos in get_all_pos(self.V, self.H):
             self.model_vars[pos] = self.model.NewBoolVar(f'{pos}')
             for width in range(1, self.H - pos.x + 1):
                 for height in range(1, self.V - pos.y + 1):
                     body = frozenset({Pos(x=pos.x + i, y=pos.y + j) for i in range(width) for j in range(height)})
-                    if any(p in self.fixed_pos for p in body):
+                    collides_with = body & self.fixed_pos
+                    collide_N = None
+                    collide_clue_id = None
+                    if len(collides_with) > 1:
                         continue
+                    if len(collides_with) == 1:
+                        collide_N = self.clue_pos_to_value[list(collides_with)[0]]
+                        collide_clue_id = self.clue_pos_to_id[list(collides_with)[0]]
+                        if collide_N != width * height:
+                            continue
                     disallow = frozenset({get_next_pos(p, direction) for p in body for direction in Direction} - body)  # disallow touching orthoginal
                     perimeter = frozenset({get_next_pos(p, direction) for p in body for direction in Direction8} - body - disallow)  # perimeter is diagonals
-                    self.rectangles.append(Rectangle(id_=len(self.rectangles), active=self.model.NewBoolVar(f'{len(self.rectangles)}'), N=None, clue_id=None, width=width, height=height, body=body, disallow=disallow, perimeter=perimeter))
+                    self.rectangles.append(Rectangle(id_=len(self.rectangles), active=self.model.NewBoolVar(f'{len(self.rectangles)}'), N=collide_N, clue_id=collide_clue_id, width=width, height=height, body=body, disallow=disallow, perimeter=perimeter))
 
     def add_all_constraints(self):
         for pos in get_all_pos(self.V-1, self.H-1):  # disallow 2x2 black squares
