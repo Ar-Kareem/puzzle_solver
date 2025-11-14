@@ -522,6 +522,11 @@ These are all the puzzles that are implemented in this repo. <br> Click on any o
       <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/lighthouses_solved.png" alt="Lighthouses" width="140">
     </a>
   </td>
+  <td align="center">
+    <a href="https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/four_me_not"><b>Four Me Not</b><br><br>
+      <img src="https://raw.githubusercontent.com/Ar-Kareem/puzzle_solver/master/images/puzzles/four_me_not_solved.png" alt="Four Me Not" width="140">
+    </a>
+  </td>
 </tr>
 
 <!-- AUTO-GENERATED GALLERY END -->
@@ -4274,6 +4279,7 @@ Here is a list of all the puzzles along with some of their aliases:
 91. [Tenner Grid](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/tenner_grid) (Also known as "From 1 to 10", "Zehnergitter", "Grid Ten")
 92. [Archipelago](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/archipelago) (Also known as "Akiperago")
 93. [Lighthouses](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/lighthouses) 
+94. [Four Me Not](https://github.com/Ar-Kareem/puzzle_solver/tree/master/src/puzzle_solver/puzzles/four_me_not) (Also known as "Forbidden Four" or Fobidoshi)
 
 <!-- AUTO-GENERATED ALIASES END -->
 

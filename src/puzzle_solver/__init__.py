@@ -20,6 +20,7 @@ from puzzle_solver.puzzles.dominosa import dominosa as dominosa_solver
 from puzzle_solver.puzzles.troix import dumplings as dumplings_solver
 from puzzle_solver.puzzles.filling import filling as filling_solver
 from puzzle_solver.puzzles.flood_it import flood_it as flood_it_solver
+from puzzle_solver.puzzles.four_me_not import four_me_not as four_me_not_solver
 from puzzle_solver.puzzles.flip import flip as flip_solver
 from puzzle_solver.puzzles.galaxies import galaxies as galaxies_solver
 from puzzle_solver.puzzles.guess import guess as guess_solver
@@ -117,6 +118,7 @@ __all__ = [
     dumplings_solver,
     filling_solver,
     flood_it_solver,
+    four_me_not_solver,
     flip_solver,
     galaxies_solver,
     guess_solver,
