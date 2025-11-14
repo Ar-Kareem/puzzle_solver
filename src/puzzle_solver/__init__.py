@@ -33,6 +33,7 @@ from puzzle_solver.puzzles.keen import keen as keen_solver
 from puzzle_solver.puzzles.kropki import kropki as kropki_solver
 from puzzle_solver.puzzles.kakuro import krypto_kakuro as krypto_kakuro_solver
 from puzzle_solver.puzzles.light_up import light_up as light_up_solver
+from puzzle_solver.puzzles.lighthouses import lighthouses as lighthouses_solver
 from puzzle_solver.puzzles.linesweeper import linesweeper as linesweeper_solver
 from puzzle_solver.puzzles.link_a_pix import link_a_pix as link_a_pix_solver
 from puzzle_solver.puzzles.magnets import magnets as magnets_solver
@@ -129,6 +130,7 @@ __all__ = [
     kropki_solver,
     krypto_kakuro_solver,
     light_up_solver,
+    lighthouses_solver,
     linesweeper_solver,
     link_a_pix_solver,
     magnets_solver,
